@@ -46,144 +46,144 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alumnos.cs">
+    <Compile Include="frmAlumnos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Alumnos.Designer.cs">
-      <DependentUpon>Alumnos.cs</DependentUpon>
+    <Compile Include="frmAlumnos.Designer.cs">
+      <DependentUpon>frmAlumnos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Buscar_Alumno.cs">
+    <Compile Include="frmBuscar_Alumno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Buscar_Alumno.Designer.cs">
-      <DependentUpon>Buscar_Alumno.cs</DependentUpon>
+    <Compile Include="frmBuscar_Alumno.Designer.cs">
+      <DependentUpon>frmBuscar_Alumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Buscar_Carrera.cs">
+    <Compile Include="frmBuscar_Carrera.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Buscar_Carrera.Designer.cs">
-      <DependentUpon>Buscar_Carrera.cs</DependentUpon>
+    <Compile Include="frmBuscar_Carrera.Designer.cs">
+      <DependentUpon>frmBuscar_Carrera.cs</DependentUpon>
     </Compile>
-    <Compile Include="Buscar_Periodo.cs">
+    <Compile Include="frmBuscar_Periodo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Buscar_Periodo.Designer.cs">
-      <DependentUpon>Buscar_Periodo.cs</DependentUpon>
+    <Compile Include="frmBuscar_Periodo.Designer.cs">
+      <DependentUpon>frmBuscar_Periodo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Buscas_Clases.cs">
+    <Compile Include="frmBuscas_Clases.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Buscas_Clases.Designer.cs">
-      <DependentUpon>Buscas_Clases.cs</DependentUpon>
+    <Compile Include="frmBuscas_Clases.Designer.cs">
+      <DependentUpon>frmBuscas_Clases.cs</DependentUpon>
     </Compile>
-    <Compile Include="Calificaciones.cs">
+    <Compile Include="frmCalificaciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Calificaciones.Designer.cs">
-      <DependentUpon>Calificaciones.cs</DependentUpon>
+    <Compile Include="frmCalificaciones.Designer.cs">
+      <DependentUpon>frmCalificaciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="Carreras.cs">
+    <Compile Include="frmCarreras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Carreras.Designer.cs">
-      <DependentUpon>Carreras.cs</DependentUpon>
+    <Compile Include="frmCarreras.Designer.cs">
+      <DependentUpon>frmCarreras.cs</DependentUpon>
     </Compile>
-    <Compile Include="Clase.cs">
+    <Compile Include="frmClase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Clase.Designer.cs">
-      <DependentUpon>Clase.cs</DependentUpon>
+    <Compile Include="frmClase.Designer.cs">
+      <DependentUpon>frmClase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Clases\cl_Alumnos.cs" />
-    <Compile Include="Clases\cl_Calificaciones.cs" />
-    <Compile Include="Clases\cl_Carreras.cs" />
-    <Compile Include="Clases\cl_Clases.cs" />
-    <Compile Include="Clases\cl_Conexion.cs" />
-    <Compile Include="Clases\cl_Periodos.cs" />
-    <Compile Include="Clases\cl_Registro.cs" />
-    <Compile Include="Clases\cl_Usuarios.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Clases\Alumnos.cs" />
+    <Compile Include="Clases\Calificaciones.cs" />
+    <Compile Include="Clases\Carreras.cs" />
+    <Compile Include="Clases\Clases.cs" />
+    <Compile Include="Clases\Conexion.cs" />
+    <Compile Include="Clases\Periodos.cs" />
+    <Compile Include="Clases\Registro.cs" />
+    <Compile Include="Clases\Usuarios.cs" />
+    <Compile Include="frmForm1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmForm1.Designer.cs">
+      <DependentUpon>frmForm1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Informacion.cs">
+    <Compile Include="frmInformacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Informacion.Designer.cs">
-      <DependentUpon>Informacion.cs</DependentUpon>
+    <Compile Include="frmInformacion.Designer.cs">
+      <DependentUpon>frmInformacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Registro.cs">
+    <Compile Include="frmRegistro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registro.Designer.cs">
-      <DependentUpon>Registro.cs</DependentUpon>
+    <Compile Include="frmRegistro.Designer.cs">
+      <DependentUpon>frmRegistro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Periodos.cs">
+    <Compile Include="frmPeriodos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Periodos.Designer.cs">
-      <DependentUpon>Periodos.cs</DependentUpon>
+    <Compile Include="frmPeriodos.Designer.cs">
+      <DependentUpon>frmPeriodos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reportes.cs">
+    <Compile Include="frmReportes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes.Designer.cs">
-      <DependentUpon>Reportes.cs</DependentUpon>
+    <Compile Include="frmReportes.Designer.cs">
+      <DependentUpon>frmReportes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuarios.cs">
+    <Compile Include="frmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Usuarios.Designer.cs">
-      <DependentUpon>Usuarios.cs</DependentUpon>
+    <Compile Include="frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Alumnos.resx">
-      <DependentUpon>Alumnos.cs</DependentUpon>
+    <EmbeddedResource Include="frmAlumnos.resx">
+      <DependentUpon>frmAlumnos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Buscar_Alumno.resx">
-      <DependentUpon>Buscar_Alumno.cs</DependentUpon>
+    <EmbeddedResource Include="frmBuscar_Alumno.resx">
+      <DependentUpon>frmBuscar_Alumno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Buscar_Carrera.resx">
-      <DependentUpon>Buscar_Carrera.cs</DependentUpon>
+    <EmbeddedResource Include="frmBuscar_Carrera.resx">
+      <DependentUpon>frmBuscar_Carrera.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Buscar_Periodo.resx">
-      <DependentUpon>Buscar_Periodo.cs</DependentUpon>
+    <EmbeddedResource Include="frmBuscar_Periodo.resx">
+      <DependentUpon>frmBuscar_Periodo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Buscas_Clases.resx">
-      <DependentUpon>Buscas_Clases.cs</DependentUpon>
+    <EmbeddedResource Include="frmBuscas_Clases.resx">
+      <DependentUpon>frmBuscas_Clases.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Calificaciones.resx">
-      <DependentUpon>Calificaciones.cs</DependentUpon>
+    <EmbeddedResource Include="frmCalificaciones.resx">
+      <DependentUpon>frmCalificaciones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Carreras.resx">
-      <DependentUpon>Carreras.cs</DependentUpon>
+    <EmbeddedResource Include="frmCarreras.resx">
+      <DependentUpon>frmCarreras.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Clase.resx">
-      <DependentUpon>Clase.cs</DependentUpon>
+    <EmbeddedResource Include="frmClase.resx">
+      <DependentUpon>frmClase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frmForm1.resx">
+      <DependentUpon>frmForm1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Informacion.resx">
-      <DependentUpon>Informacion.cs</DependentUpon>
+    <EmbeddedResource Include="frmInformacion.resx">
+      <DependentUpon>frmInformacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Registro.resx">
-      <DependentUpon>Registro.cs</DependentUpon>
+    <EmbeddedResource Include="frmRegistro.resx">
+      <DependentUpon>frmRegistro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Periodos.resx">
-      <DependentUpon>Periodos.cs</DependentUpon>
+    <EmbeddedResource Include="frmPeriodos.resx">
+      <DependentUpon>frmPeriodos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -195,11 +195,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Reportes.resx">
-      <DependentUpon>Reportes.cs</DependentUpon>
+    <EmbeddedResource Include="frmReportes.resx">
+      <DependentUpon>frmReportes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Usuarios.resx">
-      <DependentUpon>Usuarios.cs</DependentUpon>
+    <EmbeddedResource Include="frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
