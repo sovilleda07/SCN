@@ -22,9 +22,8 @@ namespace Notas1.Clases
         //Constructores
         public Conexion() { }
 
-        public Conexion(string elServidor, string laBaseDatos)
+        public Conexion(string laBaseDatos)
         {
-            servidor = elServidor;
             baseDatos = laBaseDatos;
             EstablecerConexion();
         }
@@ -35,12 +34,12 @@ namespace Notas1.Clases
         /// Requiere el nombre del servidor más la instancia del mismo.
         /// Requiere el nombre de la base de datos a inicializar.
         /// </summary>
-        private void EstablecerConexion()
+        public void EstablecerConexion()
         {
             try
             {
-                conn = new SqlConnection(@"server = " + servidor + ";" +
-                    "integrated security = true; database = " + baseDatos + ";");
+                conn = new SqlConnection(@"server = (local);
+                                        integrated security = true; database = " + baseDatos + ";");
 
                 // Establecer conexión
                 conn.Open();
