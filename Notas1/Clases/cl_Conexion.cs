@@ -3,65 +3,72 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+
+// Agregar los namespaces necesarios
+using System.Data;
 using System.Data.SqlClient;
 
 namespace Notas1.Clases
 {
     class cl_Conexion
     {
-        private const string error = "Hay problemas para conectarse a la base de datos";
-        // Creamos el string de conexion.
-        private SqlConnection con;
+        // Propiedades
+        private string servidor;
+        private string baseDatos;
+        public SqlConnection conn;
+        public SqlCommand cmd;
 
-        public SqlConnection conexion
+        //Constructores
+        public cl_Conexion() { }
+
+        public cl_Conexion(string elServidor, string laBaseDatos)
         {
-            get
-            {
-                return con;
-            }
+            servidor = elServidor;
+            baseDatos = laBaseDatos;
+            EstablecerConexion();
         }
 
-        public cl_Conexion()
-        {
-            this.con = new SqlConnection(@"server = (local);
-                        integrated security = true; database = Notas; ");
-        }
-
-        // Creamos el metodo para abrir la conexion con la base de datos
-        public void Abrir()
-        {
-            try
-            {
-                con.Open();
-            }
-            catch (SqlException excepcion)
-            {
-                Exception ex = new Exception(
-                    String.Format("{0} \n\n{1}",
-                    error, excepcion.Message));
-                ex.HelpLink = "unicah.edu";
-                ex.Source = "Clase_Conexion";
-                throw ex;
-            }
-        }
-
-        //Creamos el metodo para cerrar la conexion con la base de datos.
-        public void Cerrar()
+        // Métodos
+        /// <summary>
+        /// Realiza una conexión al servidor de base de datos.
+        /// Requiere el nombre del servidor más la instancia del mismo.
+        /// Requiere el nombre de la base de datos a inicializar.
+        /// </summary>
+        private void EstablecerConexion()
         {
             try
             {
-                con.Close();
+                conn = new SqlConnection(@"server = " + servidor + ";" +
+                    "integrated security = true; database = " + baseDatos + ";");
+
+                // Establecer conexión
+                conn.Open();
             }
-            catch (SqlException excepcion)
+            catch (Exception)
             {
-                Exception ex = new Exception(
-                    String.Format("{0} \n\n{1}",
-                    error, excepcion.Message));
-                ex.HelpLink = "unicah.edu";
-                ex.Source = "Clase_Conexion";
 
+                MessageBox.Show("Servidor o base de datos no encontrados!");
             }
-
         }
+
+        /// <summary>
+        /// Ejecuta un comando SQL.
+        /// </summary>
+        /// <param name="elComando"></param>
+        /// <returns>El query SQL a ejecutar</returns>
+        public SqlCommand EjecutarComando(string elComando)
+        {
+            return cmd = new SqlCommand(elComando, conn);
+        }
+
+        /// <summary>
+        /// Cierra la conexión al servidor SQL.
+        /// </summary>
+        public void CerrarConexion()
+        {
+            conn.Close();
+        }
+
     }
 }
