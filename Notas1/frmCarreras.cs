@@ -79,5 +79,20 @@ namespace Notas1
                 MessageBox.Show("Carrera Inhabilitada satisfactoriamente", "Control de Carreras", MessageBoxButtons.OK);
             }
         }
+
+        private void txtCarrera_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            errorProvider1.Clear();
+            if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                errorProvider1.Clear();
+                errorProvider1.SetError(txtCarrera, "Ingrese solo letras");
+            }
+        }
     }
 }

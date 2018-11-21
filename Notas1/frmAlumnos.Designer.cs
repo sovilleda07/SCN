@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripGuardar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
@@ -54,11 +55,13 @@
             this.lblemail = new System.Windows.Forms.Label();
             this.txtemail = new System.Windows.Forms.TextBox();
             this.txttelefono = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.toolStrip1.SuspendLayout();
             this.panelBarraTitulo.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -230,6 +233,7 @@
             this.txtapellidos.Name = "txtapellidos";
             this.txtapellidos.Size = new System.Drawing.Size(298, 26);
             this.txtapellidos.TabIndex = 11;
+            this.txtapellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtapellidos_KeyPress);
             // 
             // txtnombres
             // 
@@ -241,6 +245,7 @@
             this.txtnombres.Name = "txtnombres";
             this.txtnombres.Size = new System.Drawing.Size(298, 26);
             this.txtnombres.TabIndex = 10;
+            this.txtnombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnombres_KeyPress);
             // 
             // lblnombres
             // 
@@ -386,7 +391,11 @@
             this.txttelefono.Size = new System.Drawing.Size(258, 26);
             this.txttelefono.TabIndex = 12;
             // 
-            // Alumnos
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // frmAlumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -395,7 +404,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panelBarraTitulo);
             this.Controls.Add(this.toolStrip1);
-            this.Name = "Alumnos";
+            this.Name = "frmAlumnos";
             this.Text = "Alumnos";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -405,6 +414,7 @@
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -437,5 +447,6 @@
         private System.Windows.Forms.TextBox txtnombrecarrera;
         private System.Windows.Forms.Button btnbuscar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

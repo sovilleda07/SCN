@@ -95,5 +95,35 @@ namespace Notas1
                 MessageBox.Show("Alumno Inhabilitado satisfactoriamente", "Control de Alumnos", MessageBoxButtons.OK);
             }
         }
+
+        private void txtnombres_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            errorProvider1.Clear();
+            if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                errorProvider1.Clear();
+                errorProvider1.SetError(txtnombres, "Ingrese solo letras");
+            }
+        }
+
+        private void txtapellidos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            errorProvider1.Clear();
+            if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                errorProvider1.Clear();
+                errorProvider1.SetError(txtapellidos, "Ingrese solo letras");
+            }
+        }
     }
 }

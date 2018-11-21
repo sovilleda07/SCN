@@ -73,5 +73,25 @@ namespace Notas1
                 MessageBox.Show("Clase Inhabilitada satisfactoriamente", "Control de Clases", MessageBoxButtons.OK);
             }
         }
+
+        /// <summary>
+        /// Evento Para validar el ingreso de solo letras
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            errorProvider1.Clear();
+            if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                errorProvider1.Clear();
+                errorProvider1.SetError(txtNombre, "Ingrese solo letras");
+            }
+        }
     }
 }

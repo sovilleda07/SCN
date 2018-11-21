@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripGuardar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
@@ -47,12 +48,15 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCarrera = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtCreditos = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.nudCreditos = new System.Windows.Forms.NumericUpDown();
             this.toolStrip1.SuspendLayout();
             this.panelBarraTitulo.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCreditos)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -233,8 +237,8 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Controls.Add(this.txtNombre, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.txtCarrera, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.txtCreditos, 0, 3);
             this.tableLayoutPanel3.Controls.Add(this.btnBuscar, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.nudCreditos, 0, 3);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(203, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -259,6 +263,7 @@
             this.txtNombre.Size = new System.Drawing.Size(385, 26);
             this.txtNombre.TabIndex = 21;
             this.txtNombre.Tag = "";
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtCarrera
             // 
@@ -289,20 +294,23 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // txtCreditos
+            // errorProvider1
             // 
-            this.txtCreditos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCreditos.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCreditos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCreditos.Location = new System.Drawing.Point(3, 195);
-            this.txtCreditos.Multiline = true;
-            this.txtCreditos.Name = "txtCreditos";
-            this.txtCreditos.Size = new System.Drawing.Size(385, 26);
-            this.txtCreditos.TabIndex = 23;
-            this.txtCreditos.Tag = "";
+            this.errorProvider1.ContainerControl = this;
             // 
-            // Clase
+            // nudCreditos
+            // 
+            this.nudCreditos.Location = new System.Drawing.Point(3, 195);
+            this.nudCreditos.Name = "nudCreditos";
+            this.nudCreditos.Size = new System.Drawing.Size(60, 20);
+            this.nudCreditos.TabIndex = 24;
+            this.nudCreditos.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // frmClase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -311,7 +319,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panelBarraTitulo);
             this.Controls.Add(this.toolStrip1);
-            this.Name = "Clase";
+            this.Name = "frmClase";
             this.Text = "Clase";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -321,6 +329,8 @@
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCreditos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -346,6 +356,7 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtCarrera;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.TextBox txtCreditos;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.NumericUpDown nudCreditos;
     }
 }
