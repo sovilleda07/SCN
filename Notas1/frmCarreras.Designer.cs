@@ -40,8 +40,8 @@
             this.lblcalificaciones = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtCarrera = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.panelBarraTitulo.SuspendLayout();
@@ -183,6 +183,16 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(794, 275);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
+            // txtCarrera
+            // 
+            this.txtCarrera.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCarrera.Location = new System.Drawing.Point(162, 3);
+            this.txtCarrera.MaximumSize = new System.Drawing.Size(591, 228);
+            this.txtCarrera.Multiline = true;
+            this.txtCarrera.Name = "txtCarrera";
+            this.txtCarrera.Size = new System.Drawing.Size(591, 228);
+            this.txtCarrera.TabIndex = 1;
+            // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -194,16 +204,6 @@
             this.label2.Size = new System.Drawing.Size(153, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Descripcion";
-            // 
-            // txtCarrera
-            // 
-            this.txtCarrera.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCarrera.Location = new System.Drawing.Point(162, 3);
-            this.txtCarrera.MaximumSize = new System.Drawing.Size(591, 228);
-            this.txtCarrera.Multiline = true;
-            this.txtCarrera.Name = "txtCarrera";
-            this.txtCarrera.Size = new System.Drawing.Size(591, 228);
-            this.txtCarrera.TabIndex = 1;
             // 
             // label1
             // 
@@ -219,7 +219,7 @@
             this.label1.Text = "DATOS CARRERA";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Carreras
+            // frmCarreras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -228,7 +228,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panelBarraTitulo);
             this.Controls.Add(this.toolStrip1);
-            this.Name = "Carreras";
+            this.Name = "frmCarreras";
             this.Text = "Carreras";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

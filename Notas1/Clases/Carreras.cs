@@ -22,7 +22,7 @@ namespace Notas1.Clases
         /// </summary>
         /// <param name="laCarrera"></param>
         /// <returns>true si se realiza la inserción, false de lo contrario</returns>
-        public static bool InsertarClase(Carreras laCarrera)
+        public static bool InsertarCarrera(Carreras laCarrera)
         {
             // Instanciamos la conexión
             Conexion conexion = new Conexion("Notas");
@@ -222,7 +222,7 @@ namespace Notas1.Clases
                     Carreras laCarrera = new Carreras();
 
                     // Asignamos los valores del Reader al objeto
-                    laCarrera.codigo = Convert.ToInt16(rdr[0]));
+                    laCarrera.codigo = Convert.ToInt16(rdr[0]);
                     laCarrera.descripcion = rdr.GetString(1);
 
                     // Agregamos la Carrera a la lista

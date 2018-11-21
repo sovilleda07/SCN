@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Notas1.Clases;
 
 namespace Notas1
 {
@@ -22,6 +23,11 @@ namespace Notas1
             this.Close();
         }
 
+        /// <summary>
+        /// Evento para Agregar una Carrera
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void toolStripGuardar_Click(object sender, EventArgs e)
         {
 
@@ -31,7 +37,22 @@ namespace Notas1
             }
             else
             {
-                MessageBox.Show("Carrera registrada satisfactoriamente", "Control de Carreras", MessageBoxButtons.OK);
+                // Instanciamos la clase Carreras
+                Carreras laCarrera = new Carreras();
+                // Nuestro objeto adquiere los valores del formulario
+                laCarrera.descripcion = txtCarrera.Text;
+
+                // Verificamos si se realizó el método
+                if (Carreras.InsertarCarrera(laCarrera))
+                {
+                    MessageBox.Show("Carrera Agregada", "Información");
+                }
+                else
+                {
+                    MessageBox.Show("Ha ocurrido un error, verifique los datos", "Informacion");
+                }
+
+                
             }
         }
 
