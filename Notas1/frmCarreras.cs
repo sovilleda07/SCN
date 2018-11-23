@@ -18,9 +18,73 @@ namespace Notas1
             InitializeComponent();
         }
 
-        private void toolStripSalir_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Carga todos los componentes al iniciar el formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void frmCarreras_Load(object sender, EventArgs e)
         {
-            this.Close();
+            ListarListBoxCarreras();
+        }
+
+        /// <summary>
+        /// Método para limpiar la pantlla después de cada operación
+        /// </summary>
+        private void Limpiar()
+        {
+            txtCarrera.Text = "";
+            lstCarreras.SelectedIndex = -1;
+            txtCarrera.Focus();
+            toolStripGuardar.Enabled = true;
+            toolStripActualizar.Enabled = true;
+            toolStripInhabilitar.Enabled = true;
+            ListarListBoxCarreras();
+        }
+
+        /// <summary>
+        /// Evento click para que cuando se seleccione
+        /// Un elemento del ListBox, traiga los datos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void lstCarreras_Click(object sender, EventArgs e)
+        {
+            // Creamos un objeto de tipo Carreras
+            Carreras laCarrera = new Carreras();
+
+            // Obtenemos la informacion de las carreras, enviando su nombre
+            laCarrera = Carreras.ObtenerInformacionCarrera(lstCarreras.SelectedItem.ToString());
+
+            txtCarrera.Text = laCarrera.descripcion;
+            toolStripGuardar.Enabled = false;
+        }
+
+        /// <summary>
+        /// Método para cargar los datos de las carreras al ListBox
+        /// </summary>
+        private void ListarListBoxCarreras()
+        {
+            // Limpiamos los items existentes
+            lstCarreras.Items.Clear();
+
+            // Instanciamos la Clase Carreras
+            Carreras laCarrera = new Carreras();
+
+            // Almacenamos todos las carreras existentes
+            // y habilitadas en una lista
+            List<Carreras> listaCarreras = Carreras.LeerTodosHabilitados();
+
+            // Si hay algun elemento en la lista
+            // Lo agregamos al ListBox
+            if (listaCarreras.Any())
+            {
+                listaCarreras.ForEach(carrera => lstCarreras.Items.Add(carrera.descripcion.ToString()));
+            }
+            else
+            {
+                lstCarreras.Items.Add("No hay Carreras Disponibles");
+            }
         }
 
         /// <summary>
@@ -46,6 +110,7 @@ namespace Notas1
                 if (Carreras.InsertarCarrera(laCarrera))
                 {
                     MessageBox.Show("Carrera Agregada", "Información");
+                    Limpiar();
                 }
                 else
                 {
@@ -56,30 +121,88 @@ namespace Notas1
             }
         }
 
+        /// <summary>
+        /// Evento para Actualizar una carrera
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void toolStripActualizar_Click(object sender, EventArgs e)
         {
-            if (txtCarrera.Text == "")
+            // Verificamos que se ingresó todos los datos
+            if (txtCarrera.Text == "" || lstCarreras.SelectedIndex == -1)
             {
-                MessageBox.Show("Debe ingresar la descripción de la carrera", "Error de Actualización", MessageBoxButtons.OK);
+                MessageBox.Show("Ingrese y seleccione una carrera para actualizar", "Información");
             }
             else
             {
-                MessageBox.Show("Carrera actualizada satisfactoriamente", "Control de Carreras", MessageBoxButtons.OK);
+                // Instanciamos la clase Carreras
+                Carreras laCarrera = new Carreras();
+
+                //nuestro objeto adquiere los valores del formulario
+                laCarrera.descripcion = lstCarreras.SelectedItem.ToString();
+                laCarrera.descripcionNueva = txtCarrera.Text;
+
+
+                // Verificamos el método
+                if (Carreras.ActualizarCarrera(laCarrera))
+                {
+                    MessageBox.Show("Carrera actualizada");
+                    Limpiar();
+                }
+                else
+                {
+                    MessageBox.Show("Error");
+                }
             }
         }
 
+        /// <summary>
+        /// Evento para inhabilitar una carrera
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void toolStripInhabilitar_Click(object sender, EventArgs e)
         {
-            if (txtCarrera.Text == "")
+            if (lstCarreras.SelectedIndex == -1)
             {
-                MessageBox.Show("Debe ingresar la descripción de la carrera", "Error de Inhabilitación", MessageBoxButtons.OK);
+                MessageBox.Show("Seleccione una carrera para inhabilitar", "Información");
             }
             else
             {
-                MessageBox.Show("Carrera Inhabilitada satisfactoriamente", "Control de Carreras", MessageBoxButtons.OK);
+                // Instanciamos la clase Carreras
+                Carreras laCarrera = new Carreras();
+
+                //nuestro objeto adquiere los valores del formulario
+                laCarrera.descripcion = lstCarreras.SelectedItem.ToString();
+
+                // Verificamos el método
+                if (Carreras.InhabilitarCarrera(laCarrera))
+                {
+                    MessageBox.Show("Carrera Inhabilitada Satisfactoriamente");
+                    Limpiar();
+                }
+                else
+                {
+                    MessageBox.Show("Error");
+                }
             }
         }
 
+        /// <summary>
+        /// Evento para salir
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void toolStripSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        /// <summary>
+        /// Evento para validar el ingreso de solo letras
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtCarrera_KeyPress(object sender, KeyPressEventArgs e)
         {
             errorProvider1.Clear();
@@ -93,6 +216,21 @@ namespace Notas1
                 errorProvider1.Clear();
                 errorProvider1.SetError(txtCarrera, "Ingrese solo letras");
             }
+        }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Evento que limpia la pantallas
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void toolStripLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
         }
     }
 }

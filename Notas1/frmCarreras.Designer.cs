@@ -43,8 +43,10 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.txtCarrera = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.lstCarreras = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.toolStripLimpiar = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.panelBarraTitulo.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -64,6 +66,7 @@
             this.toolStripSeparator1,
             this.toolStripInhabilitar,
             this.toolStripSeparator3,
+            this.toolStripLimpiar,
             this.toolStripSalir});
             this.toolStrip1.Location = new System.Drawing.Point(0, 411);
             this.toolStrip1.Name = "toolStrip1";
@@ -178,13 +181,16 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.txtCarrera, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lstCarreras, 1, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 53);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 110F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(794, 275);
             this.tableLayoutPanel2.TabIndex = 0;
+            this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
             // 
             // txtCarrera
             // 
@@ -193,7 +199,7 @@
             this.txtCarrera.MaximumSize = new System.Drawing.Size(591, 228);
             this.txtCarrera.Multiline = true;
             this.txtCarrera.Name = "txtCarrera";
-            this.txtCarrera.Size = new System.Drawing.Size(591, 228);
+            this.txtCarrera.Size = new System.Drawing.Size(591, 159);
             this.txtCarrera.TabIndex = 1;
             this.txtCarrera.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCarrera_KeyPress);
             // 
@@ -208,6 +214,15 @@
             this.label2.Size = new System.Drawing.Size(153, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Descripcion";
+            // 
+            // lstCarreras
+            // 
+            this.lstCarreras.FormattingEnabled = true;
+            this.lstCarreras.Location = new System.Drawing.Point(162, 168);
+            this.lstCarreras.Name = "lstCarreras";
+            this.lstCarreras.Size = new System.Drawing.Size(214, 95);
+            this.lstCarreras.TabIndex = 2;
+            this.lstCarreras.Click += new System.EventHandler(this.lstCarreras_Click);
             // 
             // label1
             // 
@@ -227,6 +242,18 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // toolStripLimpiar
+            // 
+            this.toolStripLimpiar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
+            this.toolStripLimpiar.Image = global::Notas1.Properties.Resources.icons8_delete_24;
+            this.toolStripLimpiar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripLimpiar.Name = "toolStripLimpiar";
+            this.toolStripLimpiar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
+            this.toolStripLimpiar.Size = new System.Drawing.Size(104, 36);
+            this.toolStripLimpiar.Text = "Limpiar";
+            this.toolStripLimpiar.Click += new System.EventHandler(this.toolStripLimpiar_Click);
+            // 
             // frmCarreras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -238,6 +265,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Name = "frmCarreras";
             this.Text = "Carreras";
+            this.Load += new System.EventHandler(this.frmCarreras_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panelBarraTitulo.ResumeLayout(false);
@@ -268,5 +296,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ListBox lstCarreras;
+        private System.Windows.Forms.ToolStripButton toolStripLimpiar;
     }
 }

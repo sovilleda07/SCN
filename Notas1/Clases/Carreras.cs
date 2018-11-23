@@ -21,7 +21,7 @@ namespace Notas1.Clases
         /// Método para insertar una carrera
         /// </summary>
         /// <param name="laCarrera"></param>
-        /// <returns>true si se realiza la inserción, false de lo contrario</returns>
+        /// <returns>true si se realiza el método, false de lo contrario</returns>
         public static bool InsertarCarrera(Carreras laCarrera)
         {
             // Instanciamos la conexión
@@ -34,7 +34,7 @@ namespace Notas1.Clases
             cmd.CommandType = CommandType.StoredProcedure;
 
             // Parámetros del Stored Procedure
-            cmd.Parameters.Add(new SqlParameter("@descripcion", SqlDbType.NVarChar, 25));
+            cmd.Parameters.Add(new SqlParameter("@descripcion", SqlDbType.NVarChar, 45));
             cmd.Parameters["@descripcion"].Value = laCarrera.descripcion;
 
             try
@@ -64,7 +64,7 @@ namespace Notas1.Clases
         /// Método para actualizar una carrera
         /// </summary>
         /// <param name="laCarrera"></param>
-        /// <returns>true si se realiza la inserción, false de lo contrario</returns>
+        /// <returns>true si se realiza el método, false de lo contrario</returns>
         public static bool ActualizarCarrera(Carreras laCarrera)
         {
             // Instanciamos la conexión
@@ -77,9 +77,9 @@ namespace Notas1.Clases
             cmd.CommandType = CommandType.StoredProcedure;
 
             // Parámetros del Stored Procedure
-            cmd.Parameters.Add(new SqlParameter("@descripcion", SqlDbType.NVarChar, 25));
+            cmd.Parameters.Add(new SqlParameter("@descripcion", SqlDbType.NVarChar, 45));
             cmd.Parameters["@descripcion"].Value = laCarrera.descripcion;
-            cmd.Parameters.Add(new SqlParameter("@descripcionNueva", SqlDbType.NVarChar, 25));
+            cmd.Parameters.Add(new SqlParameter("@descripcionNueva", SqlDbType.NVarChar, 45));
             cmd.Parameters["@descripcionNueva"].Value = laCarrera.descripcionNueva;
 
             try
@@ -95,6 +95,7 @@ namespace Notas1.Clases
             catch (SqlException ex)
             {
                 MessageBox.Show("Ha ocurrido un error" + ex.Errors[0].ToString());
+                MessageBox.Show(ex.StackTrace.ToString());
 
                 return false;
             }
@@ -110,7 +111,7 @@ namespace Notas1.Clases
         /// Método para inhabilitar una carrera
         /// </summary>
         /// <param name="laCarrera"></param>
-        /// <returns>true si se realiza la inserción, false de lo contrario</returns>
+        /// <returns>true si se realiza el método, false de lo contrario</returns>
         public static bool InhabilitarCarrera(Carreras laCarrera)
         {
             // Instanciamos la conexión
@@ -123,7 +124,7 @@ namespace Notas1.Clases
             cmd.CommandType = CommandType.StoredProcedure;
 
             // Parámetros del Stored Procedure
-            cmd.Parameters.Add(new SqlParameter("@descripcion", SqlDbType.NVarChar, 25));
+            cmd.Parameters.Add(new SqlParameter("@descripcion", SqlDbType.NVarChar, 45));
             cmd.Parameters["@descripcion"].Value = laCarrera.descripcion;
 
             try
@@ -149,6 +150,11 @@ namespace Notas1.Clases
 
         }
 
+        /// <summary>
+        /// Meétodo para Habilitar una carrera
+        /// </summary>
+        /// <param name="laCarrera"></param>
+        /// <returns>true si se realiza el método, false de lo contrario</returns>
         public static bool HabilitarCarrera(Carreras laCarrera)
         {
             // Instanciamos la conexión
@@ -161,7 +167,7 @@ namespace Notas1.Clases
             cmd.CommandType = CommandType.StoredProcedure;
 
             // Parámetros del Stored Procedure
-            cmd.Parameters.Add(new SqlParameter("@descripcion", SqlDbType.NVarChar, 25));
+            cmd.Parameters.Add(new SqlParameter("@descripcion", SqlDbType.NVarChar, 45));
             cmd.Parameters["@descripcion"].Value = laCarrera.descripcion;
 
             try
@@ -189,7 +195,7 @@ namespace Notas1.Clases
         /// <summary>
         /// Método para listar todos las Carreras
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Una lista con todas las carreras</returns>
         public static List<Carreras> LeerTodosHabilitados()
         {
             // Instanciamos la clase Conexion
@@ -242,6 +248,55 @@ namespace Notas1.Clases
             {
                 conexion.CerrarConexion();
             }
+        }
+
+        public static Carreras ObtenerInformacionCarrera(string carrera)
+        {
+            // Instanciamos la clase Conexion
+            Conexion conexion = new Conexion("Notas");
+            // Creamos la variable que contendrá el Query
+            string sql;
+            // Instanciamos la clase Carreras
+            Carreras resultado = new Carreras();
+
+            // Query SQL
+            sql = @"SELECT *
+                    FROM SCN.Carreras
+                    WHERE descripcion = @carrera";
+
+            // Enviamos el comando a ejecutar
+            SqlCommand cmd = conexion.EjecutarComando(sql);
+
+            // Crearemos la lectura
+            SqlDataReader rdr;
+
+            try
+            {
+                using (cmd)
+                {
+                    cmd.Parameters.Add("@carrera", SqlDbType.NVarChar, 45).Value = carrera;
+                    // Ejecutamos el query vía un ExecuteReader
+                    rdr = cmd.ExecuteReader();
+                }
+
+                while (rdr.Read())
+                {
+                    resultado.codigo = Convert.ToInt16(rdr[0]);
+                    resultado.descripcion = rdr.GetString(1);
+                }
+
+                return resultado;
+            }
+            catch (Exception)
+            {
+                return resultado;
+            }
+            finally
+            {
+                conexion.CerrarConexion();
+            }
+
+
         }
 
 
