@@ -36,6 +36,8 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripInhabilitar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLimpiar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSalir = new System.Windows.Forms.ToolStripButton();
             this.panelBarraTitulo = new System.Windows.Forms.Panel();
             this.lblcalificaciones = new System.Windows.Forms.Label();
@@ -46,17 +48,18 @@
             this.lblcreditos = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtCarrera = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.nudCreditos = new System.Windows.Forms.NumericUpDown();
+            this.dgvClases = new System.Windows.Forms.DataGridView();
+            this.cmbCarrera = new System.Windows.Forms.ComboBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.toolStrip1.SuspendLayout();
             this.panelBarraTitulo.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCreditos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClases)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -71,6 +74,8 @@
             this.toolStripSeparator1,
             this.toolStripInhabilitar,
             this.toolStripSeparator3,
+            this.toolStripLimpiar,
+            this.toolStripSeparator4,
             this.toolStripSalir});
             this.toolStrip1.Location = new System.Drawing.Point(0, 411);
             this.toolStrip1.Name = "toolStrip1";
@@ -129,6 +134,23 @@
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 39);
             // 
+            // toolStripLimpiar
+            // 
+            this.toolStripLimpiar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
+            this.toolStripLimpiar.Image = global::Notas1.Properties.Resources.icons8_delete_24;
+            this.toolStripLimpiar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripLimpiar.Name = "toolStripLimpiar";
+            this.toolStripLimpiar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
+            this.toolStripLimpiar.Size = new System.Drawing.Size(104, 36);
+            this.toolStripLimpiar.Text = "Limpiar";
+            this.toolStripLimpiar.Click += new System.EventHandler(this.toolStripLimpiar_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 39);
+            // 
             // toolStripSalir
             // 
             this.toolStripSalir.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
@@ -159,7 +181,7 @@
             this.lblcalificaciones.Name = "lblcalificaciones";
             this.lblcalificaciones.Size = new System.Drawing.Size(800, 80);
             this.lblcalificaciones.TabIndex = 23;
-            this.lblcalificaciones.Text = "CLASE";
+            this.lblcalificaciones.Text = "CLASES";
             this.lblcalificaciones.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel1
@@ -236,9 +258,9 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Controls.Add(this.txtNombre, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.txtCarrera, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.btnBuscar, 1, 2);
             this.tableLayoutPanel3.Controls.Add(this.nudCreditos, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.dgvClases, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.cmbCarrera, 0, 2);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(203, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -260,46 +282,14 @@
             this.txtNombre.Location = new System.Drawing.Point(3, 67);
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(385, 26);
+            this.txtNombre.Size = new System.Drawing.Size(474, 26);
             this.txtNombre.TabIndex = 21;
             this.txtNombre.Tag = "";
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
-            // txtCarrera
-            // 
-            this.txtCarrera.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCarrera.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCarrera.Enabled = false;
-            this.txtCarrera.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCarrera.Location = new System.Drawing.Point(3, 131);
-            this.txtCarrera.Multiline = true;
-            this.txtCarrera.Name = "txtCarrera";
-            this.txtCarrera.Size = new System.Drawing.Size(385, 26);
-            this.txtCarrera.TabIndex = 22;
-            this.txtCarrera.Tag = "";
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Image = global::Notas1.Properties.Resources.search_icon24;
-            this.btnBuscar.Location = new System.Drawing.Point(394, 131);
-            this.btnBuscar.MaximumSize = new System.Drawing.Size(38, 32);
-            this.btnBuscar.MinimumSize = new System.Drawing.Size(38, 32);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(38, 32);
-            this.btnBuscar.TabIndex = 16;
-            this.btnBuscar.TabStop = false;
-            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnBuscar.UseMnemonic = false;
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
             // nudCreditos
             // 
+            this.nudCreditos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nudCreditos.Location = new System.Drawing.Point(3, 195);
             this.nudCreditos.Name = "nudCreditos";
             this.nudCreditos.Size = new System.Drawing.Size(60, 20);
@@ -309,6 +299,33 @@
             0,
             0,
             0});
+            // 
+            // dgvClases
+            // 
+            this.dgvClases.AllowUserToAddRows = false;
+            this.dgvClases.AllowUserToDeleteRows = false;
+            this.dgvClases.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvClases.Location = new System.Drawing.Point(3, 259);
+            this.dgvClases.Name = "dgvClases";
+            this.dgvClases.ReadOnly = true;
+            this.dgvClases.Size = new System.Drawing.Size(474, 63);
+            this.dgvClases.TabIndex = 25;
+            this.dgvClases.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClases_CellClick);
+            // 
+            // cmbCarrera
+            // 
+            this.cmbCarrera.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCarrera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbCarrera.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCarrera.FormattingEnabled = true;
+            this.cmbCarrera.Location = new System.Drawing.Point(3, 131);
+            this.cmbCarrera.Name = "cmbCarrera";
+            this.cmbCarrera.Size = new System.Drawing.Size(385, 26);
+            this.cmbCarrera.TabIndex = 26;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmClase
             // 
@@ -321,6 +338,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Name = "frmClase";
             this.Text = "Clase";
+            this.Load += new System.EventHandler(this.frmClase_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panelBarraTitulo.ResumeLayout(false);
@@ -329,8 +347,9 @@
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCreditos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClases)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,11 +371,13 @@
         private System.Windows.Forms.Label lblcarrera;
         private System.Windows.Forms.Label lblcreditos;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtCarrera;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.NumericUpDown nudCreditos;
+        private System.Windows.Forms.ToolStripButton toolStripLimpiar;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.DataGridView dgvClases;
+        private System.Windows.Forms.ComboBox cmbCarrera;
     }
 }
