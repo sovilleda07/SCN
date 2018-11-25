@@ -16,6 +16,7 @@ namespace Notas1
         // Propiedad para almacenar el nombre de una clase 
         // Al ser seleccionada en el DataGridView
         private string nombreClase;
+
         public frmClase()
         {
             InitializeComponent();

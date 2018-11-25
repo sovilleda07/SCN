@@ -54,7 +54,7 @@ BEGIN
 	DECLARE @existe INT;
 	SET @existe = 0;
 	SELECT @existe = COUNT(SCN.Carreras.descripcion) FROM SCN.Carreras WHERE descripcion=@descripcion AND habilitado = 0
-	IF (@existe > 1)
+	IF (@existe > 0)
 		BEGIN
 			RAISERROR(N'La Carrera "%s" ya está inhabilitada', 16, 1, @descripcion);
 			RETURN 0
@@ -75,7 +75,7 @@ BEGIN
 	DECLARE @existe INT;
 	SET @existe = 0;
 	SELECT @existe = COUNT(SCN.Carreras.descripcion) FROM SCN.Carreras WHERE descripcion=@descripcion AND habilitado = 1
-	IF (@existe > 1)
+	IF (@existe > 0)
 		BEGIN
 			RAISERROR(N'La Carrera "%s" ya está habilitada', 16, 1, @descripcion);
 			RETURN 0

@@ -319,9 +319,10 @@
   <ItemGroup>
     <None Include="Resources\delete-icon28.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <Content Include="SQL\SCN_DB.sql" />
     <Content Include="SQL\sp_Carreras.sql" />
+    <Content Include="SQL\sp_Clases.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
