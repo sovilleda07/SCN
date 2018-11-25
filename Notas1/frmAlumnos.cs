@@ -17,32 +17,11 @@ namespace Notas1
             InitializeComponent();
         }
 
-       
-
-        private void toolStripGuardar_Click(object sender, EventArgs e)
+        private void frmAlumnos_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void toolStripActualizar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripInhabilitar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripSalir_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripSalir_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
         private void gbdatos_Enter(object sender, EventArgs e)
         {
@@ -54,15 +33,10 @@ namespace Notas1
 
         }
 
-        private void btnbuscar_Click(object sender, EventArgs e)
-        {
-            frmBuscar_Carrera car = new frmBuscar_Carrera();
-            car.ShowDialog();
-        }
-
+        // CRUD
         private void toolStripGuardar_Click_1(object sender, EventArgs e)
         {
-            if (txtnombres.Text == "" || txtapellidos.Text == "" || txtnombrecarrera.Text == "")
+            if (txtNombres.Text == "" || txtApellidos.Text == "")
             {
                 MessageBox.Show("Debe ingresar los datos del alumno", "Error de Ingreso", MessageBoxButtons.OK);
             }
@@ -74,7 +48,7 @@ namespace Notas1
 
         private void toolStripActualizar_Click_1(object sender, EventArgs e)
         {
-            if (txtnombres.Text == "" || txtapellidos.Text == "")
+            if (txtNombres.Text == "" || txtApellidos.Text == "")
             {
                 MessageBox.Show("Debe ingresar los datos del alumno", "Error de Actualización", MessageBoxButtons.OK);
             }
@@ -86,7 +60,7 @@ namespace Notas1
 
         private void toolStripInhabilitar_Click_1(object sender, EventArgs e)
         {
-            if (txtnombres.Text == "" || txtapellidos.Text == "")
+            if (txtNombres.Text == "" || txtApellidos.Text == "")
             {
                 MessageBox.Show("Debe ingresar los datos del alumno", "Error de Inhabilitación", MessageBoxButtons.OK);
             }
@@ -95,7 +69,19 @@ namespace Notas1
                 MessageBox.Show("Alumno Inhabilitado satisfactoriamente", "Control de Alumnos", MessageBoxButtons.OK);
             }
         }
+        
+        private void toolStripSalir_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
+        // VALIDACIÓN
+
+        /// <summary>
+        /// Evento para validar la entrada de sólo letras
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtnombres_KeyPress(object sender, KeyPressEventArgs e)
         {
             errorProvider1.Clear();
@@ -107,10 +93,15 @@ namespace Notas1
             {
                 e.Handled = true;
                 errorProvider1.Clear();
-                errorProvider1.SetError(txtnombres, "Ingrese solo letras");
+                errorProvider1.SetError(txtNombres, "Ingrese solo letras");
             }
         }
 
+        /// <summary>
+        /// Evento para validar la entrada de sólo letras
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtapellidos_KeyPress(object sender, KeyPressEventArgs e)
         {
             errorProvider1.Clear();
@@ -122,8 +113,50 @@ namespace Notas1
             {
                 e.Handled = true;
                 errorProvider1.Clear();
-                errorProvider1.SetError(txtapellidos, "Ingrese solo letras");
+                errorProvider1.SetError(txtApellidos, "Ingrese solo letras");
             }
         }
+
+        /// <summary>
+        /// Evento para validar la entrada de sólo números
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            errorProvider1.Clear();
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                errorProvider1.Clear();
+                errorProvider1.SetError(txtTelefono, "Ingrese solo números");
+            }
+        }
+
+        /// <summary>
+        /// Evento para validar la entrada de sólo números
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void maskedTextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            errorProvider1.Clear();
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                errorProvider1.Clear();
+                errorProvider1.SetError(mtxtTelefono, "Ingrese solo números");
+            }
+        }
+
+        
     }
 }

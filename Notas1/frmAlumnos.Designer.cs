@@ -35,6 +35,8 @@
             this.toolStripActualizar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripInhabilitar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLimpiar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSalir = new System.Windows.Forms.ToolStripButton();
             this.panelBarraTitulo = new System.Windows.Forms.Panel();
@@ -42,19 +44,19 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lblapellidos = new System.Windows.Forms.Label();
-            this.txtapellidos = new System.Windows.Forms.TextBox();
-            this.txtnombres = new System.Windows.Forms.TextBox();
+            this.txtApellidos = new System.Windows.Forms.TextBox();
+            this.txtNombres = new System.Windows.Forms.TextBox();
             this.lblnombres = new System.Windows.Forms.Label();
-            this.btnbuscar = new System.Windows.Forms.Button();
             this.lblcarrera = new System.Windows.Forms.Label();
-            this.txtnombrecarrera = new System.Windows.Forms.TextBox();
+            this.cmbCarrera = new System.Windows.Forms.ComboBox();
+            this.mtxtTelefono = new System.Windows.Forms.MaskedTextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.txtObservaciones = new System.Windows.Forms.TextBox();
             this.lbltelefono = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblemail = new System.Windows.Forms.Label();
-            this.txtemail = new System.Windows.Forms.TextBox();
-            this.txttelefono = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.toolStrip1.SuspendLayout();
             this.panelBarraTitulo.SuspendLayout();
@@ -75,6 +77,8 @@
             this.toolStripActualizar,
             this.toolStripSeparator1,
             this.toolStripInhabilitar,
+            this.toolStripSeparator4,
+            this.toolStripLimpiar,
             this.toolStripSeparator3,
             this.toolStripSalir});
             this.toolStrip1.Location = new System.Drawing.Point(0, 391);
@@ -127,7 +131,22 @@
             this.toolStripInhabilitar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
             this.toolStripInhabilitar.Size = new System.Drawing.Size(129, 36);
             this.toolStripInhabilitar.Text = "Inhabilitar";
-            this.toolStripInhabilitar.Click += new System.EventHandler(this.toolStripInhabilitar_Click_1);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 39);
+            // 
+            // toolStripLimpiar
+            // 
+            this.toolStripLimpiar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
+            this.toolStripLimpiar.Image = global::Notas1.Properties.Resources.icons8_delete_24;
+            this.toolStripLimpiar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripLimpiar.Name = "toolStripLimpiar";
+            this.toolStripLimpiar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
+            this.toolStripLimpiar.Size = new System.Drawing.Size(104, 36);
+            this.toolStripLimpiar.Text = "Limpiar";
             // 
             // toolStripSeparator3
             // 
@@ -191,12 +210,12 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel2.Controls.Add(this.lblapellidos, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.txtapellidos, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.txtnombres, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.txtApellidos, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.txtNombres, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.lblnombres, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.btnbuscar, 2, 4);
             this.tableLayoutPanel2.Controls.Add(this.lblcarrera, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.txtnombrecarrera, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.cmbCarrera, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.mtxtTelefono, 1, 6);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -223,29 +242,29 @@
             this.lblapellidos.Text = "Apellidos";
             this.lblapellidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtapellidos
+            // txtApellidos
             // 
-            this.txtapellidos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtApellidos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtapellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtapellidos.Location = new System.Drawing.Point(113, 108);
-            this.txtapellidos.Multiline = true;
-            this.txtapellidos.Name = "txtapellidos";
-            this.txtapellidos.Size = new System.Drawing.Size(298, 26);
-            this.txtapellidos.TabIndex = 11;
-            this.txtapellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtapellidos_KeyPress);
+            this.txtApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellidos.Location = new System.Drawing.Point(113, 108);
+            this.txtApellidos.Multiline = true;
+            this.txtApellidos.Name = "txtApellidos";
+            this.txtApellidos.Size = new System.Drawing.Size(298, 26);
+            this.txtApellidos.TabIndex = 11;
+            this.txtApellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtapellidos_KeyPress);
             // 
-            // txtnombres
+            // txtNombres
             // 
-            this.txtnombres.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtNombres.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtnombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnombres.Location = new System.Drawing.Point(113, 73);
-            this.txtnombres.Multiline = true;
-            this.txtnombres.Name = "txtnombres";
-            this.txtnombres.Size = new System.Drawing.Size(298, 26);
-            this.txtnombres.TabIndex = 10;
-            this.txtnombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnombres_KeyPress);
+            this.txtNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombres.Location = new System.Drawing.Point(113, 73);
+            this.txtNombres.Multiline = true;
+            this.txtNombres.Name = "txtNombres";
+            this.txtNombres.Size = new System.Drawing.Size(298, 26);
+            this.txtNombres.TabIndex = 10;
+            this.txtNombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnombres_KeyPress);
             // 
             // lblnombres
             // 
@@ -258,21 +277,6 @@
             this.lblnombres.Text = "Nombres";
             this.lblnombres.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnbuscar
-            // 
-            this.btnbuscar.Image = global::Notas1.Properties.Resources.search_icon24;
-            this.btnbuscar.Location = new System.Drawing.Point(417, 143);
-            this.btnbuscar.MaximumSize = new System.Drawing.Size(38, 32);
-            this.btnbuscar.MinimumSize = new System.Drawing.Size(38, 32);
-            this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(38, 32);
-            this.btnbuscar.TabIndex = 14;
-            this.btnbuscar.TabStop = false;
-            this.btnbuscar.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnbuscar.UseMnemonic = false;
-            this.btnbuscar.UseVisualStyleBackColor = true;
-            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
-            // 
             // lblcarrera
             // 
             this.lblcarrera.AutoSize = true;
@@ -284,18 +288,23 @@
             this.lblcarrera.Text = "Carrera";
             this.lblcarrera.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtnombrecarrera
+            // cmbCarrera
             // 
-            this.txtnombrecarrera.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtnombrecarrera.Enabled = false;
-            this.txtnombrecarrera.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnombrecarrera.Location = new System.Drawing.Point(113, 143);
-            this.txtnombrecarrera.Multiline = true;
-            this.txtnombrecarrera.Name = "txtnombrecarrera";
-            this.txtnombrecarrera.Size = new System.Drawing.Size(298, 26);
-            this.txtnombrecarrera.TabIndex = 13;
-            this.txtnombrecarrera.TabStop = false;
+            this.cmbCarrera.FormattingEnabled = true;
+            this.cmbCarrera.Location = new System.Drawing.Point(113, 143);
+            this.cmbCarrera.Name = "cmbCarrera";
+            this.cmbCarrera.Size = new System.Drawing.Size(298, 21);
+            this.cmbCarrera.TabIndex = 12;
+            // 
+            // mtxtTelefono
+            // 
+            this.mtxtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtTelefono.Location = new System.Drawing.Point(113, 213);
+            this.mtxtTelefono.Mask = "0000-0000";
+            this.mtxtTelefono.Name = "mtxtTelefono";
+            this.mtxtTelefono.Size = new System.Drawing.Size(298, 24);
+            this.mtxtTelefono.TabIndex = 13;
+            this.mtxtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.maskedTextBox1_KeyPress);
             // 
             // tableLayoutPanel3
             // 
@@ -307,8 +316,8 @@
             this.tableLayoutPanel3.Controls.Add(this.lbltelefono, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.label1, 0, 4);
             this.tableLayoutPanel3.Controls.Add(this.lblemail, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.txtemail, 1, 3);
-            this.tableLayoutPanel3.Controls.Add(this.txttelefono, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.txtEmail, 1, 3);
+            this.tableLayoutPanel3.Controls.Add(this.txtTelefono, 1, 2);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(473, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -369,27 +378,28 @@
             this.lblemail.Text = "E-mail ";
             this.lblemail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtemail
+            // txtEmail
             // 
-            this.txtemail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtemail.Location = new System.Drawing.Point(153, 108);
-            this.txtemail.Multiline = true;
-            this.txtemail.Name = "txtemail";
-            this.txtemail.Size = new System.Drawing.Size(258, 26);
-            this.txtemail.TabIndex = 12;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(153, 108);
+            this.txtEmail.Multiline = true;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(258, 26);
+            this.txtEmail.TabIndex = 12;
             // 
-            // txttelefono
+            // txtTelefono
             // 
-            this.txttelefono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txttelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttelefono.Location = new System.Drawing.Point(153, 73);
-            this.txttelefono.Multiline = true;
-            this.txttelefono.Name = "txttelefono";
-            this.txttelefono.Size = new System.Drawing.Size(258, 26);
-            this.txttelefono.TabIndex = 12;
+            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Location = new System.Drawing.Point(153, 73);
+            this.txtTelefono.Multiline = true;
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(258, 26);
+            this.txtTelefono.TabIndex = 12;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // errorProvider1
             // 
@@ -406,6 +416,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Name = "frmAlumnos";
             this.Text = "Alumnos";
+            this.Load += new System.EventHandler(this.frmAlumnos_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panelBarraTitulo.ResumeLayout(false);
@@ -436,17 +447,19 @@
         private System.Windows.Forms.Label lbltelefono;
         private System.Windows.Forms.Label lblcarrera;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.TextBox txtapellidos;
-        private System.Windows.Forms.TextBox txttelefono;
+        private System.Windows.Forms.TextBox txtApellidos;
+        private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.TextBox txtObservaciones;
         private System.Windows.Forms.Label lblnombres;
         private System.Windows.Forms.Label lblemail;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtnombres;
-        private System.Windows.Forms.TextBox txtemail;
-        private System.Windows.Forms.TextBox txtnombrecarrera;
-        private System.Windows.Forms.Button btnbuscar;
+        private System.Windows.Forms.TextBox txtNombres;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ComboBox cmbCarrera;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripButton toolStripLimpiar;
+        private System.Windows.Forms.MaskedTextBox mtxtTelefono;
     }
 }
