@@ -321,6 +321,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="SQL\SCN_DB.sql" />
+    <Content Include="SQL\sp_Alumnos.sql" />
     <Content Include="SQL\sp_Carreras.sql" />
     <Content Include="SQL\sp_Clases.sql" />
   </ItemGroup>

@@ -229,6 +229,10 @@ namespace Notas1.Clases
             }
         }
 
+        /// <summary>
+        /// Método para cargar los datos al DataGridView
+        /// </summary>
+        /// <returns>Un DataView con toda la información</returns>
         public static DataView GetDataView()
         {
             // Instanciamos la conexión
@@ -236,20 +240,116 @@ namespace Notas1.Clases
             // Creamos la variable que contendrá el Query
             string sql;
 
-            sql = @"SELECT     SCN.Alumnos.id               as Código,
+            sql = @"SELECT     SCN.Alumnos.id                       as Código,
                                SCN.Alumnos.nombres                  as Combres,
-                               SCM.Alumnos.apellidos                as Apellido,
+                               SCN.Alumnos.apellidos                as Apellidos,
                                SCN.Alumnos.telefono                 as Teléfono,
-                               SCN.Alumnos,correoElectronico        as Carrera
-                    FROM SNC.Carreras
+                               SCN.Alumnos.correoElectronico        as Correo,
+                               SCN.Alumnos.observaciones            as Observaciones,
+                               SCN.Carreras.descripcion             as Carrera
+                    FROM SCN.Carreras
                     INNER JOIN SCN.Alumnos
                     ON SCN.Carreras.codigo = SCN.Alumnos.Carreras_codigo
-                    WHERE SCN.Alumno.habilitado = 1";
+                    WHERE SCN.Alumnos.habilitado = 1";
+
+            try
+            {
+                SqlDataAdapter data = new SqlDataAdapter();
+
+                //Enviamos el comando a ejecutar
+                SqlCommand cmd = conexion.EjecutarComando(sql);
+                data.SelectCommand = cmd;
+
+                DataSet ds = new DataSet();
+                // Tabla con que vamos a llenar los datos
+                data.Fill(ds, "SCN.Alumnos");
+                DataTable dt = ds.Tables["SCN.Alumnos"];
+
+                DataView dv = new DataView(dt,
+                    "",
+                    "Código",
+                    DataViewRowState.Unchanged);
+                return dv;
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                conexion.CerrarConexion();
+            }
         }
 
+        /// <summary>
+        /// Método para obtener información de un alumno
+        /// por medio de su código
+        /// </summary>
+        /// <param name="codigo"></param>
+        /// <returns>Un objeto de tipo Alumno con los datos</returns>
+        public static Alumnos ObtenerInformacionAlumnos(int codigo)
+        {
+            // Instanciamos la clase Conexion
+            Conexion conexion = new Conexion("Notas");
 
+            // Creamos la variable que contendrá el Query
+            string sql;
 
+            // Intanciamos la clase Alumnos
+            Alumnos resultado = new Alumnos();
 
+            // Query SQL
+            sql = @"SELECT      SCN.Alumnos.id,
+                                SCN.Alumnos.nombres,
+                                SCN.Alumnos.apellidos,
+                                SCN.Alumnos.telefono,
+                                SCN.Alumnos.correoElectronico,
+                                SCN.Alumnos.observaciones,
+                                SCN.Carreras.descripcion
+                    FROM SCN.Carreras
+                    INNER JOIN SCN.Alumnos
+                    ON SCN.Carreras.codigo = SCN.Alumnos.Carreras_codigo
+                    WHERE SCN.Alumnos.id = @codigo";
 
+            // Enviamos el comando a ejecutar
+            SqlCommand cmd = conexion.EjecutarComando(sql);
+
+            // Crearemos la lectura
+            SqlDataReader rdr;
+
+            try
+            {
+                using (cmd)
+                {
+                    cmd.Parameters.Add("@codigo", SqlDbType.Int).Value = codigo;
+                    // Ejecutamos el query vía un ExecuteReader
+                    rdr = cmd.ExecuteReader(); 
+                }
+
+                while (rdr.Read())
+                {
+                    resultado.id = Convert.ToInt16(rdr[0]);
+                    resultado.nombres = rdr.GetString(1);
+                    resultado.apellidos = rdr.GetString(2);
+                    resultado.telefono = rdr.GetString(3);
+                    resultado.correo = rdr.GetString(4);
+                    resultado.observaciones = rdr.GetString(5);
+                    resultado.descripcionCarrera = rdr.GetString(6);
+                }
+
+                return resultado;
+            }
+            catch (Exception)
+            {
+
+                return resultado;
+            }
+            finally
+            {
+                conexion.CerrarConexion();
+            }
+        }
+        
     }
 }
