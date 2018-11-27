@@ -320,6 +320,8 @@
     <None Include="Resources\delete-icon28.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-about-48.png" />
+    <None Include="Resources\icons8-about-24.png" />
     <Content Include="SQL\SCN_DB.sql" />
     <Content Include="SQL\sp_Alumnos.sql" />
     <Content Include="SQL\sp_Carreras.sql" />

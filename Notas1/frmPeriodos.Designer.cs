@@ -163,8 +163,8 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.1571F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.24169F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
@@ -176,7 +176,7 @@
             // 
             this.lblcodigoperiodo.AutoSize = true;
             this.lblcodigoperiodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcodigoperiodo.Location = new System.Drawing.Point(20, 74);
+            this.lblcodigoperiodo.Location = new System.Drawing.Point(20, 94);
             this.lblcodigoperiodo.Margin = new System.Windows.Forms.Padding(20, 0, 2, 0);
             this.lblcodigoperiodo.Name = "lblcodigoperiodo";
             this.lblcodigoperiodo.Size = new System.Drawing.Size(103, 20);
@@ -187,7 +187,7 @@
             // 
             this.txtDescripcion.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(153, 77);
+            this.txtDescripcion.Location = new System.Drawing.Point(153, 97);
             this.txtDescripcion.MaximumSize = new System.Drawing.Size(500, 100);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
@@ -245,7 +245,7 @@
             this.txtPeriodo.TabIndex = 21;
             this.txtPeriodo.Tag = "";
             // 
-            // Periodos
+            // frmPeriodos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -254,7 +254,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panelBarraTitulo);
             this.Controls.Add(this.toolStrip1);
-            this.Name = "Periodos";
+            this.Name = "frmPeriodos";
             this.Text = "Periodos";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

@@ -45,8 +45,17 @@
             this.Clase = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripGuardar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripActualizar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripInhabilitar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLimpiar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSalir = new System.Windows.Forms.ToolStripButton();
             this.panelBarraTitulo.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -55,6 +64,7 @@
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelBarraTitulo
@@ -86,12 +96,11 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 80);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(39, 83);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 370);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(705, 298);
             this.tableLayoutPanel1.TabIndex = 29;
             // 
             // tableLayoutPanel3
@@ -101,7 +110,7 @@
             this.tableLayoutPanel3.Controls.Add(this.pictureBox1, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.flowLayoutPanel2, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(403, 3);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(355, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
@@ -111,7 +120,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(394, 364);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(347, 292);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // pictureBox1
@@ -120,7 +129,7 @@
             this.pictureBox1.Image = global::Notas1.Properties.Resources.Imagen1;
             this.pictureBox1.Location = new System.Drawing.Point(3, 53);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(388, 308);
+            this.pictureBox1.Size = new System.Drawing.Size(341, 308);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -136,7 +145,7 @@
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(388, 44);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(341, 44);
             this.flowLayoutPanel2.TabIndex = 4;
             // 
             // button3
@@ -146,7 +155,7 @@
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(161)))), ((int)(((byte)(94)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = global::Notas1.Properties.Resources.icons8_exit_filled_50;
-            this.button3.Location = new System.Drawing.Point(321, 3);
+            this.button3.Location = new System.Drawing.Point(274, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(64, 41);
             this.button3.TabIndex = 11;
@@ -159,7 +168,7 @@
             this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(161)))), ((int)(((byte)(94)))));
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Image = global::Notas1.Properties.Resources.icons8_print_50;
-            this.button6.Location = new System.Drawing.Point(272, 3);
+            this.button6.Location = new System.Drawing.Point(225, 3);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(43, 41);
             this.button6.TabIndex = 7;
@@ -171,7 +180,7 @@
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(161)))), ((int)(((byte)(94)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = global::Notas1.Properties.Resources.icons8_pdf_50;
-            this.button2.Location = new System.Drawing.Point(217, 3);
+            this.button2.Location = new System.Drawing.Point(170, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(49, 41);
             this.button2.TabIndex = 8;
@@ -184,7 +193,7 @@
             this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(161)))), ((int)(((byte)(94)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Image = global::Notas1.Properties.Resources.icons8_training_50;
-            this.button4.Location = new System.Drawing.Point(162, 3);
+            this.button4.Location = new System.Drawing.Point(115, 3);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(49, 41);
             this.button4.TabIndex = 10;
@@ -197,7 +206,7 @@
             this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(161)))), ((int)(((byte)(94)))));
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Image = global::Notas1.Properties.Resources.icons8_customer_50;
-            this.button5.Location = new System.Drawing.Point(113, 3);
+            this.button5.Location = new System.Drawing.Point(66, 3);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(43, 41);
             this.button5.TabIndex = 9;
@@ -216,7 +225,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(394, 364);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(346, 292);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // dataGridView1
@@ -229,7 +238,7 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 53);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(388, 308);
+            this.dataGridView1.Size = new System.Drawing.Size(340, 308);
             this.dataGridView1.TabIndex = 0;
             // 
             // Nombre
@@ -254,8 +263,16 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(388, 44);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(340, 44);
             this.flowLayoutPanel1.TabIndex = 1;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(3, 3);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(229, 21);
+            this.comboBox1.TabIndex = 30;
             // 
             // button1
             // 
@@ -271,23 +288,106 @@
             this.button1.UseMnemonic = false;
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // toolStrip1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(3, 3);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(229, 21);
-            this.comboBox1.TabIndex = 30;
+            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(225)))), ((int)(((byte)(229)))));
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripGuardar,
+            this.toolStripSeparator2,
+            this.toolStripActualizar,
+            this.toolStripSeparator1,
+            this.toolStripInhabilitar,
+            this.toolStripSeparator3,
+            this.toolStripLimpiar,
+            this.toolStripSalir});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 411);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(800, 39);
+            this.toolStrip1.TabIndex = 30;
+            this.toolStrip1.Text = "toolStrip1";
             // 
-            // Reportes
+            // toolStripGuardar
+            // 
+            this.toolStripGuardar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
+            this.toolStripGuardar.Image = global::Notas1.Properties.Resources.icons8_save_as_30;
+            this.toolStripGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripGuardar.Name = "toolStripGuardar";
+            this.toolStripGuardar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
+            this.toolStripGuardar.Size = new System.Drawing.Size(114, 36);
+            this.toolStripGuardar.Text = "Guardar";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 39);
+            // 
+            // toolStripActualizar
+            // 
+            this.toolStripActualizar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
+            this.toolStripActualizar.Image = global::Notas1.Properties.Resources.icons8_synchronize_24;
+            this.toolStripActualizar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripActualizar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripActualizar.Name = "toolStripActualizar";
+            this.toolStripActualizar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
+            this.toolStripActualizar.Size = new System.Drawing.Size(119, 36);
+            this.toolStripActualizar.Text = "Actualizar";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
+            // 
+            // toolStripInhabilitar
+            // 
+            this.toolStripInhabilitar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
+            this.toolStripInhabilitar.Image = global::Notas1.Properties.Resources.icons8_denied_321;
+            this.toolStripInhabilitar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripInhabilitar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripInhabilitar.Name = "toolStripInhabilitar";
+            this.toolStripInhabilitar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
+            this.toolStripInhabilitar.Size = new System.Drawing.Size(129, 36);
+            this.toolStripInhabilitar.Text = "Inhabilitar";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 39);
+            // 
+            // toolStripLimpiar
+            // 
+            this.toolStripLimpiar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
+            this.toolStripLimpiar.Image = global::Notas1.Properties.Resources.icons8_delete_24;
+            this.toolStripLimpiar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripLimpiar.Name = "toolStripLimpiar";
+            this.toolStripLimpiar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
+            this.toolStripLimpiar.Size = new System.Drawing.Size(104, 36);
+            this.toolStripLimpiar.Text = "Limpiar";
+            // 
+            // toolStripSalir
+            // 
+            this.toolStripSalir.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
+            this.toolStripSalir.Image = global::Notas1.Properties.Resources.icons8_delete_24;
+            this.toolStripSalir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSalir.Name = "toolStripSalir";
+            this.toolStripSalir.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
+            this.toolStripSalir.Size = new System.Drawing.Size(82, 36);
+            this.toolStripSalir.Text = "Salir";
+            // 
+            // frmReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(250)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panelBarraTitulo);
-            this.Name = "Reportes";
+            this.Name = "frmReportes";
             this.Text = "Reportes";
             this.panelBarraTitulo.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -297,7 +397,10 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -322,5 +425,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Clase;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nota;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton toolStripGuardar;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton toolStripActualizar;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton toolStripInhabilitar;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton toolStripLimpiar;
+        private System.Windows.Forms.ToolStripButton toolStripSalir;
     }
 }
