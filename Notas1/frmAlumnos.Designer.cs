@@ -30,27 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripGuardar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripActualizar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripInhabilitar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLimpiar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSalir = new System.Windows.Forms.ToolStripButton();
             this.panelBarraTitulo = new System.Windows.Forms.Panel();
             this.lblcalificaciones = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.toolStripGuardar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripActualizar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripInhabilitar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripLimpiar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSalir = new System.Windows.Forms.ToolStripButton();
+            this.dgvAlumnos = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblapellidos = new System.Windows.Forms.Label();
-            this.txtApellidos = new System.Windows.Forms.TextBox();
-            this.txtNombres = new System.Windows.Forms.TextBox();
-            this.lblnombres = new System.Windows.Forms.Label();
-            this.lblcarrera = new System.Windows.Forms.Label();
-            this.cmbCarrera = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.txtObservaciones = new System.Windows.Forms.TextBox();
             this.lbltelefono = new System.Windows.Forms.Label();
@@ -58,15 +51,22 @@
             this.lblemail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.mtxtTelefono = new System.Windows.Forms.MaskedTextBox();
-            this.dgvAlumnos = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblapellidos = new System.Windows.Forms.Label();
+            this.txtApellidos = new System.Windows.Forms.TextBox();
+            this.txtNombres = new System.Windows.Forms.TextBox();
+            this.lblnombres = new System.Windows.Forms.Label();
+            this.lblcarrera = new System.Windows.Forms.Label();
+            this.cmbCarrera = new System.Windows.Forms.ComboBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.toolStrip1.SuspendLayout();
             this.panelBarraTitulo.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -90,25 +90,85 @@
             this.toolStrip1.TabIndex = 15;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // toolStripGuardar
+            // 
+            this.toolStripGuardar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
+            this.toolStripGuardar.Image = global::Notas1.Properties.Resources.icons8_save_as_30;
+            this.toolStripGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripGuardar.Name = "toolStripGuardar";
+            this.toolStripGuardar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
+            this.toolStripGuardar.Size = new System.Drawing.Size(114, 36);
+            this.toolStripGuardar.Text = "Guardar";
+            this.toolStripGuardar.Click += new System.EventHandler(this.toolStripGuardar_Click_1);
+            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 39);
+            // 
+            // toolStripActualizar
+            // 
+            this.toolStripActualizar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
+            this.toolStripActualizar.Image = global::Notas1.Properties.Resources.icons8_synchronize_24;
+            this.toolStripActualizar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripActualizar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripActualizar.Name = "toolStripActualizar";
+            this.toolStripActualizar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
+            this.toolStripActualizar.Size = new System.Drawing.Size(119, 36);
+            this.toolStripActualizar.Text = "Actualizar";
+            this.toolStripActualizar.Click += new System.EventHandler(this.toolStripActualizar_Click_1);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
             // 
+            // toolStripInhabilitar
+            // 
+            this.toolStripInhabilitar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
+            this.toolStripInhabilitar.Image = global::Notas1.Properties.Resources.icons8_denied_32;
+            this.toolStripInhabilitar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripInhabilitar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripInhabilitar.Name = "toolStripInhabilitar";
+            this.toolStripInhabilitar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
+            this.toolStripInhabilitar.Size = new System.Drawing.Size(129, 36);
+            this.toolStripInhabilitar.Text = "Inhabilitar";
+            this.toolStripInhabilitar.Click += new System.EventHandler(this.toolStripInhabilitar_Click);
+            // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 39);
             // 
+            // toolStripLimpiar
+            // 
+            this.toolStripLimpiar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
+            this.toolStripLimpiar.Image = global::Notas1.Properties.Resources.icons8_delete_24;
+            this.toolStripLimpiar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripLimpiar.Name = "toolStripLimpiar";
+            this.toolStripLimpiar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
+            this.toolStripLimpiar.Size = new System.Drawing.Size(104, 36);
+            this.toolStripLimpiar.Text = "Limpiar";
+            this.toolStripLimpiar.Click += new System.EventHandler(this.toolStripLimpiar_Click);
+            // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 39);
+            // 
+            // toolStripSalir
+            // 
+            this.toolStripSalir.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
+            this.toolStripSalir.Image = global::Notas1.Properties.Resources.icons8_delete_24;
+            this.toolStripSalir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSalir.Name = "toolStripSalir";
+            this.toolStripSalir.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
+            this.toolStripSalir.Size = new System.Drawing.Size(82, 36);
+            this.toolStripSalir.Text = "Salir";
+            this.toolStripSalir.Click += new System.EventHandler(this.toolStripSalir_Click_1);
             // 
             // panelBarraTitulo
             // 
@@ -147,69 +207,17 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(940, 311);
             this.tableLayoutPanel1.TabIndex = 27;
             // 
-            // errorProvider1
+            // dgvAlumnos
             // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // toolStripGuardar
-            // 
-            this.toolStripGuardar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
-            this.toolStripGuardar.Image = global::Notas1.Properties.Resources.icons8_save_as_30;
-            this.toolStripGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripGuardar.Name = "toolStripGuardar";
-            this.toolStripGuardar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
-            this.toolStripGuardar.Size = new System.Drawing.Size(114, 36);
-            this.toolStripGuardar.Text = "Guardar";
-            this.toolStripGuardar.Click += new System.EventHandler(this.toolStripGuardar_Click_1);
-            // 
-            // toolStripActualizar
-            // 
-            this.toolStripActualizar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
-            this.toolStripActualizar.Image = global::Notas1.Properties.Resources.icons8_synchronize_24;
-            this.toolStripActualizar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripActualizar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripActualizar.Name = "toolStripActualizar";
-            this.toolStripActualizar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
-            this.toolStripActualizar.Size = new System.Drawing.Size(119, 36);
-            this.toolStripActualizar.Text = "Actualizar";
-            this.toolStripActualizar.Click += new System.EventHandler(this.toolStripActualizar_Click_1);
-            // 
-            // toolStripInhabilitar
-            // 
-            this.toolStripInhabilitar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
-            this.toolStripInhabilitar.Image = global::Notas1.Properties.Resources.icons8_denied_32;
-            this.toolStripInhabilitar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripInhabilitar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripInhabilitar.Name = "toolStripInhabilitar";
-            this.toolStripInhabilitar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
-            this.toolStripInhabilitar.Size = new System.Drawing.Size(129, 36);
-            this.toolStripInhabilitar.Text = "Inhabilitar";
-            this.toolStripInhabilitar.Click += new System.EventHandler(this.toolStripInhabilitar_Click);
-            // 
-            // toolStripLimpiar
-            // 
-            this.toolStripLimpiar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
-            this.toolStripLimpiar.Image = global::Notas1.Properties.Resources.icons8_delete_24;
-            this.toolStripLimpiar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripLimpiar.Name = "toolStripLimpiar";
-            this.toolStripLimpiar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
-            this.toolStripLimpiar.Size = new System.Drawing.Size(104, 36);
-            this.toolStripLimpiar.Text = "Limpiar";
-            this.toolStripLimpiar.Click += new System.EventHandler(this.toolStripLimpiar_Click);
-            // 
-            // toolStripSalir
-            // 
-            this.toolStripSalir.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
-            this.toolStripSalir.Image = global::Notas1.Properties.Resources.icons8_delete_24;
-            this.toolStripSalir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSalir.Name = "toolStripSalir";
-            this.toolStripSalir.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
-            this.toolStripSalir.Size = new System.Drawing.Size(82, 36);
-            this.toolStripSalir.Text = "Salir";
-            this.toolStripSalir.Click += new System.EventHandler(this.toolStripSalir_Click_1);
+            this.dgvAlumnos.AllowUserToAddRows = false;
+            this.dgvAlumnos.AllowUserToDeleteRows = false;
+            this.dgvAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAlumnos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvAlumnos.Location = new System.Drawing.Point(3, 220);
+            this.dgvAlumnos.Name = "dgvAlumnos";
+            this.dgvAlumnos.ReadOnly = true;
+            this.dgvAlumnos.Size = new System.Drawing.Size(934, 88);
+            this.dgvAlumnos.TabIndex = 16;
             // 
             // tableLayoutPanel2
             // 
@@ -225,95 +233,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(934, 211);
             this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.lblapellidos, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.txtApellidos, 1, 3);
-            this.tableLayoutPanel3.Controls.Add(this.txtNombres, 1, 2);
-            this.tableLayoutPanel3.Controls.Add(this.lblnombres, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.lblcarrera, 0, 4);
-            this.tableLayoutPanel3.Controls.Add(this.cmbCarrera, 1, 4);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 6;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(461, 205);
-            this.tableLayoutPanel3.TabIndex = 5;
-            // 
-            // lblapellidos
-            // 
-            this.lblapellidos.AutoSize = true;
-            this.lblapellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblapellidos.Location = new System.Drawing.Point(3, 102);
-            this.lblapellidos.Name = "lblapellidos";
-            this.lblapellidos.Size = new System.Drawing.Size(82, 20);
-            this.lblapellidos.TabIndex = 5;
-            this.lblapellidos.Text = "Apellidos";
-            this.lblapellidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtApellidos
-            // 
-            this.txtApellidos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellidos.Location = new System.Drawing.Point(113, 105);
-            this.txtApellidos.Multiline = true;
-            this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(295, 26);
-            this.txtApellidos.TabIndex = 11;
-            // 
-            // txtNombres
-            // 
-            this.txtNombres.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombres.Location = new System.Drawing.Point(113, 71);
-            this.txtNombres.Multiline = true;
-            this.txtNombres.Name = "txtNombres";
-            this.txtNombres.Size = new System.Drawing.Size(295, 26);
-            this.txtNombres.TabIndex = 10;
-            // 
-            // lblnombres
-            // 
-            this.lblnombres.AutoSize = true;
-            this.lblnombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnombres.Location = new System.Drawing.Point(3, 68);
-            this.lblnombres.Name = "lblnombres";
-            this.lblnombres.Size = new System.Drawing.Size(80, 20);
-            this.lblnombres.TabIndex = 4;
-            this.lblnombres.Text = "Nombres";
-            this.lblnombres.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblcarrera
-            // 
-            this.lblcarrera.AutoSize = true;
-            this.lblcarrera.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcarrera.Location = new System.Drawing.Point(3, 136);
-            this.lblcarrera.Name = "lblcarrera";
-            this.lblcarrera.Size = new System.Drawing.Size(69, 20);
-            this.lblcarrera.TabIndex = 9;
-            this.lblcarrera.Text = "Carrera";
-            this.lblcarrera.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // cmbCarrera
-            // 
-            this.cmbCarrera.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCarrera.FormattingEnabled = true;
-            this.cmbCarrera.Location = new System.Drawing.Point(113, 139);
-            this.cmbCarrera.Name = "cmbCarrera";
-            this.cmbCarrera.Size = new System.Drawing.Size(295, 21);
-            this.cmbCarrera.TabIndex = 12;
             // 
             // tableLayoutPanel4
             // 
@@ -397,6 +316,7 @@
             // 
             // mtxtTelefono
             // 
+            this.mtxtTelefono.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mtxtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtxtTelefono.Location = new System.Drawing.Point(153, 71);
             this.mtxtTelefono.Mask = "0000-0000";
@@ -404,17 +324,99 @@
             this.mtxtTelefono.Size = new System.Drawing.Size(255, 24);
             this.mtxtTelefono.TabIndex = 13;
             // 
-            // dgvAlumnos
+            // tableLayoutPanel3
             // 
-            this.dgvAlumnos.AllowUserToAddRows = false;
-            this.dgvAlumnos.AllowUserToDeleteRows = false;
-            this.dgvAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAlumnos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvAlumnos.Location = new System.Drawing.Point(3, 220);
-            this.dgvAlumnos.Name = "dgvAlumnos";
-            this.dgvAlumnos.ReadOnly = true;
-            this.dgvAlumnos.Size = new System.Drawing.Size(934, 88);
-            this.dgvAlumnos.TabIndex = 16;
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.lblapellidos, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.txtApellidos, 1, 3);
+            this.tableLayoutPanel3.Controls.Add(this.txtNombres, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.lblnombres, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.lblcarrera, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.cmbCarrera, 1, 4);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 6;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(461, 205);
+            this.tableLayoutPanel3.TabIndex = 5;
+            // 
+            // lblapellidos
+            // 
+            this.lblapellidos.AutoSize = true;
+            this.lblapellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblapellidos.Location = new System.Drawing.Point(3, 102);
+            this.lblapellidos.Name = "lblapellidos";
+            this.lblapellidos.Size = new System.Drawing.Size(82, 20);
+            this.lblapellidos.TabIndex = 5;
+            this.lblapellidos.Text = "Apellidos";
+            this.lblapellidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtApellidos
+            // 
+            this.txtApellidos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellidos.Location = new System.Drawing.Point(113, 105);
+            this.txtApellidos.Multiline = true;
+            this.txtApellidos.Name = "txtApellidos";
+            this.txtApellidos.Size = new System.Drawing.Size(295, 26);
+            this.txtApellidos.TabIndex = 11;
+            // 
+            // txtNombres
+            // 
+            this.txtNombres.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombres.Location = new System.Drawing.Point(113, 71);
+            this.txtNombres.Multiline = true;
+            this.txtNombres.Name = "txtNombres";
+            this.txtNombres.Size = new System.Drawing.Size(295, 26);
+            this.txtNombres.TabIndex = 10;
+            // 
+            // lblnombres
+            // 
+            this.lblnombres.AutoSize = true;
+            this.lblnombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnombres.Location = new System.Drawing.Point(3, 68);
+            this.lblnombres.Name = "lblnombres";
+            this.lblnombres.Size = new System.Drawing.Size(80, 20);
+            this.lblnombres.TabIndex = 4;
+            this.lblnombres.Text = "Nombres";
+            this.lblnombres.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblcarrera
+            // 
+            this.lblcarrera.AutoSize = true;
+            this.lblcarrera.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcarrera.Location = new System.Drawing.Point(3, 136);
+            this.lblcarrera.Name = "lblcarrera";
+            this.lblcarrera.Size = new System.Drawing.Size(69, 20);
+            this.lblcarrera.TabIndex = 9;
+            this.lblcarrera.Text = "Carrera";
+            this.lblcarrera.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cmbCarrera
+            // 
+            this.cmbCarrera.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cmbCarrera.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCarrera.FormattingEnabled = true;
+            this.cmbCarrera.Location = new System.Drawing.Point(113, 139);
+            this.cmbCarrera.Name = "cmbCarrera";
+            this.cmbCarrera.Size = new System.Drawing.Size(295, 21);
+            this.cmbCarrera.TabIndex = 12;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmAlumnos
             // 
@@ -432,13 +434,13 @@
             this.toolStrip1.PerformLayout();
             this.panelBarraTitulo.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).EndInit();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

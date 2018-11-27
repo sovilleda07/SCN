@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAlumnos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,9 @@
     <Compile Include="frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAlumnos.resx">
       <DependentUpon>frmAlumnos.cs</DependentUpon>
     </EmbeddedResource>
@@ -322,6 +331,11 @@
   <ItemGroup>
     <None Include="Resources\icons8-about-48.png" />
     <None Include="Resources\icons8-about-24.png" />
+    <None Include="Resources\icons8-contacts-32.png" />
+    <None Include="Resources\icons8-print-32.png" />
+    <None Include="Resources\icons8-training-32 %281%29.png" />
+    <None Include="Resources\icons8-pdf-32.png" />
+    <None Include="Resources\icons8-broom-32.png" />
     <Content Include="SQL\SCN_DB.sql" />
     <Content Include="SQL\sp_Alumnos.sql" />
     <Content Include="SQL\sp_Carreras.sql" />
