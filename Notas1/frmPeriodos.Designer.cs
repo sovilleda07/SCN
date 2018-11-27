@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripGuardar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
@@ -43,10 +44,16 @@
             this.lblanio = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtAnio = new System.Windows.Forms.TextBox();
-            this.txtPeriodo = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.nudCreditos = new System.Windows.Forms.NumericUpDown();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLimpiar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip1.SuspendLayout();
             this.panelBarraTitulo.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCreditos)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -60,6 +67,9 @@
             this.toolStripActualizar,
             this.toolStripSeparator1,
             this.toolStripInhabilitar,
+            this.toolStripSeparator3,
+            this.toolStripLimpiar,
+            this.toolStripSeparator4,
             this.toolStripSalir});
             this.toolStrip1.Location = new System.Drawing.Point(0, 411);
             this.toolStrip1.Name = "toolStrip1";
@@ -157,7 +167,7 @@
             this.tableLayoutPanel1.Controls.Add(this.lblanio, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.txtAnio, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.txtPeriodo, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.nudCreditos, 1, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 80);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -231,21 +241,55 @@
             this.txtAnio.TabIndex = 20;
             this.txtAnio.Tag = "";
             // 
-            // txtPeriodo
+            // errorProvider1
             // 
-            this.txtPeriodo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPeriodo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPeriodo.Location = new System.Drawing.Point(153, 191);
-            this.txtPeriodo.MaximumSize = new System.Drawing.Size(500, 26);
-            this.txtPeriodo.Multiline = true;
-            this.txtPeriodo.Name = "txtPeriodo";
-            this.txtPeriodo.Size = new System.Drawing.Size(500, 26);
-            this.txtPeriodo.TabIndex = 21;
-            this.txtPeriodo.Tag = "";
+            this.errorProvider1.ContainerControl = this;
             // 
-            // Periodos
+            // nudCreditos
+            // 
+            this.nudCreditos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nudCreditos.Location = new System.Drawing.Point(153, 191);
+            this.nudCreditos.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.nudCreditos.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudCreditos.Name = "nudCreditos";
+            this.nudCreditos.Size = new System.Drawing.Size(60, 20);
+            this.nudCreditos.TabIndex = 25;
+            this.nudCreditos.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 39);
+            // 
+            // toolStripLimpiar
+            // 
+            this.toolStripLimpiar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
+            this.toolStripLimpiar.Image = global::Notas1.Properties.Resources.icons8_delete_24;
+            this.toolStripLimpiar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripLimpiar.Name = "toolStripLimpiar";
+            this.toolStripLimpiar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
+            this.toolStripLimpiar.Size = new System.Drawing.Size(104, 36);
+            this.toolStripLimpiar.Text = "Limpiar";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 39);
+            // 
+            // frmPeriodos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -254,13 +298,15 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panelBarraTitulo);
             this.Controls.Add(this.toolStrip1);
-            this.Name = "Periodos";
+            this.Name = "frmPeriodos";
             this.Text = "Periodos";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panelBarraTitulo.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCreditos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -280,8 +326,12 @@
         private System.Windows.Forms.Label lblanio;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtAnio;
-        private System.Windows.Forms.TextBox txtPeriodo;
         private System.Windows.Forms.Label lblcodigoperiodo;
         private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.NumericUpDown nudCreditos;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton toolStripLimpiar;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
     }
 }
