@@ -35,6 +35,9 @@
             this.toolStripActualizar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripInhabilitar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLimpiar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSalir = new System.Windows.Forms.ToolStripButton();
             this.panelBarraTitulo = new System.Windows.Forms.Panel();
             this.lblcalificaciones = new System.Windows.Forms.Label();
@@ -44,16 +47,15 @@
             this.lblanio = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtAnio = new System.Windows.Forms.TextBox();
+            this.nudPeriodo = new System.Windows.Forms.NumericUpDown();
+            this.dgvPeriodos = new System.Windows.Forms.DataGridView();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.nudCreditos = new System.Windows.Forms.NumericUpDown();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripLimpiar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip1.SuspendLayout();
             this.panelBarraTitulo.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPeriodo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPeriodos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCreditos)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -123,6 +125,28 @@
             this.toolStripInhabilitar.Text = "Inhabilitar";
             this.toolStripInhabilitar.Click += new System.EventHandler(this.toolStripInhabilitar_Click);
             // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 39);
+            // 
+            // toolStripLimpiar
+            // 
+            this.toolStripLimpiar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
+            this.toolStripLimpiar.Image = global::Notas1.Properties.Resources.icons8_delete_24;
+            this.toolStripLimpiar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripLimpiar.Name = "toolStripLimpiar";
+            this.toolStripLimpiar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
+            this.toolStripLimpiar.Size = new System.Drawing.Size(104, 36);
+            this.toolStripLimpiar.Text = "Limpiar";
+            this.toolStripLimpiar.Click += new System.EventHandler(this.toolStripLimpiar_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 39);
+            // 
             // toolStripSalir
             // 
             this.toolStripSalir.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
@@ -167,7 +191,8 @@
             this.tableLayoutPanel1.Controls.Add(this.lblanio, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.txtAnio, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.nudCreditos, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.nudPeriodo, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.dgvPeriodos, 1, 6);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 80);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -240,54 +265,46 @@
             this.txtAnio.Size = new System.Drawing.Size(500, 26);
             this.txtAnio.TabIndex = 20;
             this.txtAnio.Tag = "";
+            this.txtAnio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAnio_KeyPress);
             // 
-            // errorProvider1
+            // nudPeriodo
             // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // nudCreditos
-            // 
-            this.nudCreditos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nudCreditos.Location = new System.Drawing.Point(153, 191);
-            this.nudCreditos.Maximum = new decimal(new int[] {
+            this.nudPeriodo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nudPeriodo.Location = new System.Drawing.Point(153, 191);
+            this.nudPeriodo.Maximum = new decimal(new int[] {
             3,
             0,
             0,
             0});
-            this.nudCreditos.Minimum = new decimal(new int[] {
+            this.nudPeriodo.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.nudCreditos.Name = "nudCreditos";
-            this.nudCreditos.Size = new System.Drawing.Size(60, 20);
-            this.nudCreditos.TabIndex = 25;
-            this.nudCreditos.Value = new decimal(new int[] {
+            this.nudPeriodo.Name = "nudPeriodo";
+            this.nudPeriodo.Size = new System.Drawing.Size(60, 20);
+            this.nudPeriodo.TabIndex = 25;
+            this.nudPeriodo.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             // 
-            // toolStripSeparator3
+            // dgvPeriodos
             // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 39);
+            this.dgvPeriodos.AllowUserToAddRows = false;
+            this.dgvPeriodos.AllowUserToDeleteRows = false;
+            this.dgvPeriodos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPeriodos.Location = new System.Drawing.Point(153, 285);
+            this.dgvPeriodos.Name = "dgvPeriodos";
+            this.dgvPeriodos.ReadOnly = true;
+            this.dgvPeriodos.Size = new System.Drawing.Size(544, 43);
+            this.dgvPeriodos.TabIndex = 27;
+            this.dgvPeriodos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPeriodos_CellClick);
             // 
-            // toolStripLimpiar
+            // errorProvider1
             // 
-            this.toolStripLimpiar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
-            this.toolStripLimpiar.Image = global::Notas1.Properties.Resources.icons8_delete_24;
-            this.toolStripLimpiar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripLimpiar.Name = "toolStripLimpiar";
-            this.toolStripLimpiar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
-            this.toolStripLimpiar.Size = new System.Drawing.Size(104, 36);
-            this.toolStripLimpiar.Text = "Limpiar";
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 39);
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmPeriodos
             // 
@@ -300,13 +317,15 @@
             this.Controls.Add(this.toolStrip1);
             this.Name = "frmPeriodos";
             this.Text = "Periodos";
+            this.Load += new System.EventHandler(this.frmPeriodos_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panelBarraTitulo.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPeriodo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPeriodos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCreditos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -329,9 +348,10 @@
         private System.Windows.Forms.Label lblcodigoperiodo;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.NumericUpDown nudCreditos;
+        private System.Windows.Forms.NumericUpDown nudPeriodo;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton toolStripLimpiar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.DataGridView dgvPeriodos;
     }
 }
