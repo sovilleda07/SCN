@@ -26,6 +26,7 @@ namespace Notas1
         private void frmCarreras_Load(object sender, EventArgs e)
         {
             ListarListBoxCarreras();
+            Limpiar();
         }
 
         /// <summary>
@@ -37,8 +38,8 @@ namespace Notas1
             lstCarreras.SelectedIndex = -1;
             txtCarrera.Focus();
             toolStripGuardar.Enabled = true;
-            toolStripActualizar.Enabled = true;
-            toolStripInhabilitar.Enabled = true;
+            toolStripActualizar.Enabled = false;
+            toolStripInhabilitar.Enabled = false;
             ListarListBoxCarreras();
         }
 
@@ -58,6 +59,8 @@ namespace Notas1
 
             txtCarrera.Text = laCarrera.descripcion;
             toolStripGuardar.Enabled = false;
+            toolStripActualizar.Enabled = true;
+            toolStripInhabilitar.Enabled = true;
         }
 
         /// <summary>

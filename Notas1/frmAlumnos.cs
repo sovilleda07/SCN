@@ -50,8 +50,8 @@ namespace Notas1
             dgvEstilo(dgvAlumnos);
 
             toolStripGuardar.Enabled = true;
-            toolStripActualizar.Enabled = true;
-            toolStripInhabilitar.Enabled = true;
+            toolStripActualizar.Enabled = false;
+            toolStripInhabilitar.Enabled = false;
 
             txtNombres.Focus();
             errorProvider1.Clear();
@@ -110,7 +110,7 @@ namespace Notas1
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void dgvAlumnos_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvAlumnos_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             // Instanciamos la Clase Alumnos
             Alumnos elAlumno = new Alumnos();
@@ -125,10 +125,12 @@ namespace Notas1
             mtxtTelefono.Text = elAlumno.telefono;
             txtEmail.Text = elAlumno.correo;
             txtObservaciones.Text = elAlumno.observaciones;
-             
-            toolStripGuardar.Enabled = false;
 
+            toolStripGuardar.Enabled = false;
+            toolStripActualizar.Enabled = true;
+            toolStripInhabilitar.Enabled = true;
         }
+
 
         /// <summary>
         /// Método para establecer estilo
@@ -354,5 +356,7 @@ namespace Notas1
 
             }
         }
+
+        
     }
 }

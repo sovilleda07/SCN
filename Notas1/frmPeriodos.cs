@@ -50,8 +50,8 @@ namespace Notas1
             nudPeriodo.Value = 1;
 
             toolStripGuardar.Enabled = true;
-            toolStripActualizar.Enabled = true;
-            toolStripInhabilitar.Enabled = true;
+            toolStripActualizar.Enabled = false;
+            toolStripInhabilitar.Enabled = false;
 
             txtDescripcion.Focus();
             errorProvider1.Clear();
@@ -93,6 +93,8 @@ namespace Notas1
             nudPeriodo.Value = elPeriodo.periodo;
 
             toolStripGuardar.Enabled = false;
+            toolStripActualizar.Enabled = true;
+            toolStripInhabilitar.Enabled = true;
         }
 
         /// <summary>

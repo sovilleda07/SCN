@@ -287,17 +287,18 @@
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(474, 36);
-            this.txtNombre.TabIndex = 21;
+            this.txtNombre.TabIndex = 1;
             this.txtNombre.Tag = "";
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // nudCreditos
             // 
             this.nudCreditos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nudCreditos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudCreditos.Location = new System.Drawing.Point(3, 165);
             this.nudCreditos.Name = "nudCreditos";
-            this.nudCreditos.Size = new System.Drawing.Size(60, 20);
-            this.nudCreditos.TabIndex = 24;
+            this.nudCreditos.Size = new System.Drawing.Size(60, 24);
+            this.nudCreditos.TabIndex = 3;
             this.nudCreditos.Value = new decimal(new int[] {
             1,
             0,
@@ -316,6 +317,7 @@
             this.dgvClases.ReadOnly = true;
             this.dgvClases.Size = new System.Drawing.Size(474, 48);
             this.dgvClases.TabIndex = 25;
+            this.dgvClases.TabStop = false;
             this.dgvClases.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClases_CellClick);
             // 
             // cmbCarrera
@@ -329,7 +331,7 @@
             this.cmbCarrera.Margin = new System.Windows.Forms.Padding(3, 3, 150, 3);
             this.cmbCarrera.Name = "cmbCarrera";
             this.cmbCarrera.Size = new System.Drawing.Size(474, 26);
-            this.cmbCarrera.TabIndex = 26;
+            this.cmbCarrera.TabIndex = 2;
             // 
             // errorProvider1
             // 

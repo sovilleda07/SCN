@@ -128,12 +128,12 @@
             // toolStripLimpiar
             // 
             this.toolStripLimpiar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
-            this.toolStripLimpiar.Image = global::Notas1.Properties.Resources.icons8_delete_24;
+            this.toolStripLimpiar.Image = global::Notas1.Properties.Resources.icons8_broom_32;
             this.toolStripLimpiar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripLimpiar.Name = "toolStripLimpiar";
             this.toolStripLimpiar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
-            this.toolStripLimpiar.Size = new System.Drawing.Size(104, 36);
+            this.toolStripLimpiar.Size = new System.Drawing.Size(112, 36);
             this.toolStripLimpiar.Text = "Limpiar";
             this.toolStripLimpiar.Click += new System.EventHandler(this.toolStripLimpiar_Click);
             // 

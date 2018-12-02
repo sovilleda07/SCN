@@ -48,8 +48,8 @@ namespace Notas1
             dgvEstilo(dgvClases);
 
             toolStripGuardar.Enabled = true;
-            toolStripActualizar.Enabled = true;
-            toolStripInhabilitar.Enabled = true;
+            toolStripActualizar.Enabled = false;
+            toolStripInhabilitar.Enabled = false;
 
             txtNombre.Focus();
 
@@ -261,6 +261,8 @@ namespace Notas1
             this.nombreClase = laClase.nombre;
 
             toolStripGuardar.Enabled = false;
+            toolStripActualizar.Enabled = true;
+            toolStripInhabilitar.Enabled = true;
         }
 
         /// <summary>

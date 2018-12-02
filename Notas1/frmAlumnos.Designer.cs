@@ -144,12 +144,12 @@
             // toolStripLimpiar
             // 
             this.toolStripLimpiar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
-            this.toolStripLimpiar.Image = global::Notas1.Properties.Resources.icons8_delete_24;
+            this.toolStripLimpiar.Image = global::Notas1.Properties.Resources.icons8_broom_32;
             this.toolStripLimpiar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripLimpiar.Name = "toolStripLimpiar";
             this.toolStripLimpiar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
-            this.toolStripLimpiar.Size = new System.Drawing.Size(104, 36);
+            this.toolStripLimpiar.Size = new System.Drawing.Size(112, 36);
             this.toolStripLimpiar.Text = "Limpiar";
             this.toolStripLimpiar.Click += new System.EventHandler(this.toolStripLimpiar_Click);
             // 
@@ -218,6 +218,8 @@
             this.dgvAlumnos.ReadOnly = true;
             this.dgvAlumnos.Size = new System.Drawing.Size(934, 88);
             this.dgvAlumnos.TabIndex = 16;
+            this.dgvAlumnos.TabStop = false;
+            this.dgvAlumnos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlumnos_CellClick_1);
             // 
             // tableLayoutPanel2
             // 
@@ -268,7 +270,7 @@
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.Size = new System.Drawing.Size(255, 28);
-            this.txtObservaciones.TabIndex = 13;
+            this.txtObservaciones.TabIndex = 6;
             // 
             // lbltelefono
             // 
@@ -312,7 +314,7 @@
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(255, 26);
-            this.txtEmail.TabIndex = 12;
+            this.txtEmail.TabIndex = 5;
             // 
             // mtxtTelefono
             // 
@@ -322,7 +324,7 @@
             this.mtxtTelefono.Mask = "0000-0000";
             this.mtxtTelefono.Name = "mtxtTelefono";
             this.mtxtTelefono.Size = new System.Drawing.Size(255, 24);
-            this.mtxtTelefono.TabIndex = 13;
+            this.mtxtTelefono.TabIndex = 4;
             // 
             // tableLayoutPanel3
             // 
@@ -369,7 +371,7 @@
             this.txtApellidos.Multiline = true;
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(295, 26);
-            this.txtApellidos.TabIndex = 11;
+            this.txtApellidos.TabIndex = 2;
             // 
             // txtNombres
             // 
@@ -380,7 +382,7 @@
             this.txtNombres.Multiline = true;
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(295, 26);
-            this.txtNombres.TabIndex = 10;
+            this.txtNombres.TabIndex = 1;
             // 
             // lblnombres
             // 
@@ -412,7 +414,7 @@
             this.cmbCarrera.Location = new System.Drawing.Point(113, 139);
             this.cmbCarrera.Name = "cmbCarrera";
             this.cmbCarrera.Size = new System.Drawing.Size(295, 21);
-            this.cmbCarrera.TabIndex = 12;
+            this.cmbCarrera.TabIndex = 3;
             // 
             // errorProvider1
             // 

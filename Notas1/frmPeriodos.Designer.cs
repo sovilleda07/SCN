@@ -133,12 +133,12 @@
             // toolStripLimpiar
             // 
             this.toolStripLimpiar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
-            this.toolStripLimpiar.Image = global::Notas1.Properties.Resources.icons8_delete_24;
+            this.toolStripLimpiar.Image = global::Notas1.Properties.Resources.icons8_broom_32;
             this.toolStripLimpiar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripLimpiar.Name = "toolStripLimpiar";
             this.toolStripLimpiar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
-            this.toolStripLimpiar.Size = new System.Drawing.Size(104, 36);
+            this.toolStripLimpiar.Size = new System.Drawing.Size(112, 36);
             this.toolStripLimpiar.Text = "Limpiar";
             this.toolStripLimpiar.Click += new System.EventHandler(this.toolStripLimpiar_Click);
             // 
@@ -226,7 +226,7 @@
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(500, 41);
-            this.txtDescripcion.TabIndex = 22;
+            this.txtDescripcion.TabIndex = 1;
             this.txtDescripcion.Tag = "";
             // 
             // lblanio
@@ -262,13 +262,14 @@
             this.txtAnio.Multiline = true;
             this.txtAnio.Name = "txtAnio";
             this.txtAnio.Size = new System.Drawing.Size(500, 26);
-            this.txtAnio.TabIndex = 20;
+            this.txtAnio.TabIndex = 2;
             this.txtAnio.Tag = "";
             this.txtAnio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAnio_KeyPress);
             // 
             // nudPeriodo
             // 
             this.nudPeriodo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nudPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudPeriodo.Location = new System.Drawing.Point(153, 193);
             this.nudPeriodo.Maximum = new decimal(new int[] {
             3,
@@ -281,8 +282,8 @@
             0,
             0});
             this.nudPeriodo.Name = "nudPeriodo";
-            this.nudPeriodo.Size = new System.Drawing.Size(60, 20);
-            this.nudPeriodo.TabIndex = 25;
+            this.nudPeriodo.Size = new System.Drawing.Size(60, 24);
+            this.nudPeriodo.TabIndex = 3;
             this.nudPeriodo.Value = new decimal(new int[] {
             1,
             0,
@@ -299,6 +300,7 @@
             this.dgvPeriodos.ReadOnly = true;
             this.dgvPeriodos.Size = new System.Drawing.Size(544, 98);
             this.dgvPeriodos.TabIndex = 27;
+            this.dgvPeriodos.TabStop = false;
             this.dgvPeriodos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPeriodos_CellClick);
             // 
             // errorProvider1
