@@ -38,7 +38,7 @@ namespace Notas1.Clases
             cmd.CommandType = CommandType.StoredProcedure;
 
             // Parámetros del Stored Procedure
-            cmd.Parameters.Add(new SqlParameter("@descripcion", SqlDbType.NVarChar, 10));
+            cmd.Parameters.Add(new SqlParameter("@descripcion", SqlDbType.NVarChar, 20));
             cmd.Parameters["@descripcion"].Value = elPeriodo.descripcion;
 
             cmd.Parameters.Add(new SqlParameter("@anio", SqlDbType.NVarChar, 5));
@@ -87,10 +87,14 @@ namespace Notas1.Clases
             cmd.CommandType = CommandType.StoredProcedure;
 
             // Parámetros del Stored Procedure
-            cmd.Parameters.Add(new SqlParameter("@descripcion", SqlDbType.NVarChar, 10));
+
+            cmd.Parameters.Add(new SqlParameter("@codigoPeriodo ", SqlDbType.Int));
+            cmd.Parameters["@codigoPeriodo "].Value = elPeriodo.codigo;
+
+            cmd.Parameters.Add(new SqlParameter("@descripcion", SqlDbType.NVarChar, 20));
             cmd.Parameters["@descripcion"].Value = elPeriodo.descripcion;
 
-            cmd.Parameters.Add(new SqlParameter("@descripcionNueva", SqlDbType.NVarChar, 10));
+            cmd.Parameters.Add(new SqlParameter("@descripcionNueva", SqlDbType.NVarChar, 20));
             cmd.Parameters["@descripcionNueva"].Value = elPeriodo.descripcionNueva;
 
             cmd.Parameters.Add(new SqlParameter("@anio", SqlDbType.NVarChar, 5));
@@ -139,8 +143,8 @@ namespace Notas1.Clases
             cmd.CommandType = CommandType.StoredProcedure;
 
             // Parámetros del Stored Procedure
-            cmd.Parameters.Add(new SqlParameter("@descripcion", SqlDbType.NVarChar, 10));
-            cmd.Parameters["@descripcion"].Value = elPeriodo.descripcion;
+            cmd.Parameters.Add(new SqlParameter("@codigoPeriodo ", SqlDbType.Int));
+            cmd.Parameters["@codigoPeriodo "].Value = elPeriodo.codigo;
 
             try
             {
@@ -182,8 +186,8 @@ namespace Notas1.Clases
             cmd.CommandType = CommandType.StoredProcedure;
 
             // Parámetros del Stored Procedure
-            cmd.Parameters.Add(new SqlParameter("@descripcion", SqlDbType.NVarChar, 10));
-            cmd.Parameters["@descripcion"].Value = elPeriodo.descripcion;
+            cmd.Parameters.Add(new SqlParameter("@codigoPeriodo ", SqlDbType.Int));
+            cmd.Parameters["@codigoPeriodo "].Value = elPeriodo.codigo;
 
             try
             {
@@ -206,70 +210,7 @@ namespace Notas1.Clases
                 conexion.CerrarConexion();
             }
         }
-
-        /// <summary>
-        /// Método para listar todos los Periodos
-        /// </summary>
-        /// <returns>Una lista con todos los periodos</returns>
-        //public static List<Periodos> LeerTodosHabilitados()
-        //{
-        //    // Instanciamos la conexión
-        //    Conexion conexion = new Conexion("Notas");
-
-        //    // Creamos una lista de tipo Periodo
-        //    List<Periodos> resultados = new List<Periodos>();
-
-        //    // Creamos el query
-        //    string sql = @"SELECT codigo, descripcion, anio, periodo
-        //                 FROM SCN.Periodos
-        //                 WHERE habilitado = 1";
-
-        //    // Enviamos el comando a ejecutar
-        //    SqlCommand cmd = conexion.EjecutarComando(sql);
-
-        //    try
-        //    {
-        //        // Establecemos la conexión
-        //        conexion.EstablecerConexion();
-
-        //        // Ejecutamos el query vía un ExecuteReader
-        //        SqlDataReader rdr = cmd.ExecuteReader();
-
-        //        // Recorremos los elementos del Reader y los almacenamos
-        //        // en la lista de tipo Periodos
-
-        //        while (rdr.Read())
-        //        {
-        //            Periodos elPeriodo = new Periodos();
-
-        //            // Asignamos los valores del Reader al objeto
-        //            elPeriodo.codigo = Convert.ToInt16(rdr[0]);
-        //            elPeriodo.descripcion = rdr.GetString(1);
-        //            elPeriodo.anio = rdr.GetString(2);
-        //            elPeriodo.periodo = Convert.ToInt16(rdr[3]);
-
-        //            // Agregamos el Periodo a la lista
-        //            resultados.Add(elPeriodo);
-
-        //        }
-
-        //        // retornamos la lista de los Periodos
-        //        return resultados;
-
-        //    }
-        //    catch (SqlException ex)
-        //    {
-        //        MessageBox.Show("Ha ocurrido un error" + ex.Errors[0].ToString());
-
-        //        return resultados;
-        //    }
-        //    finally
-        //    {
-        //        conexion.CerrarConexion();
-        //    }
-
-        //}        
-
+  
         /// <summary>
         /// Método para cargar los datos del DataGridView
         /// </summary>

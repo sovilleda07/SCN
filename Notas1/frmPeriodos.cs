@@ -160,6 +160,7 @@ namespace Notas1
                 Periodos elPeriodo = new Periodos();
 
                 // Nuestro objeto adquiere los valores del formulario
+                elPeriodo.codigo = this.codigoPeriodo;
                 elPeriodo.descripcion = this.nombrePeriodo;
                 elPeriodo.descripcionNueva = txtDescripcion.Text;
                 elPeriodo.anio = txtAnio.Text;
@@ -168,7 +169,7 @@ namespace Notas1
                 // Verificamos el método
                 if (Periodos.ActualizarPeriodo(elPeriodo))
                 {
-                    MessageBox.Show("Periodo Agregado", "Información");
+                    MessageBox.Show("Periodo Actualizado", "Información");
                     Limpiar();
                 }
                 else
@@ -195,6 +196,7 @@ namespace Notas1
                 Periodos elPeriodo = new Periodos();
 
                 // Nuestro objeto adquiere los valores del formulario
+                elPeriodo.codigo = this.codigoPeriodo;
                 elPeriodo.descripcion = this.nombrePeriodo;
 
                 // Verficamos el método
@@ -239,7 +241,7 @@ namespace Notas1
         private void txtAnio_KeyPress(object sender, KeyPressEventArgs e)
         {
             errorProvider1.Clear();
-            if (char.IsNumber(e.KeyChar))
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
             }

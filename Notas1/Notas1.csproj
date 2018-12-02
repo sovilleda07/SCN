@@ -324,6 +324,7 @@
     <Content Include="SQL\sp_Alumnos.sql" />
     <Content Include="SQL\sp_Carreras.sql" />
     <Content Include="SQL\sp_Clases.sql" />
+    <Content Include="SQL\sp_Periodos.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
