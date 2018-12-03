@@ -64,7 +64,7 @@ namespace Notas1
 
         private void btnbuscar_Click(object sender, EventArgs e)
         {
-            frmBuscas_Clases clase = new frmBuscas_Clases();
+            frmBuscar_Clases clase = new frmBuscar_Clases();
             clase.ShowDialog();
         }
 

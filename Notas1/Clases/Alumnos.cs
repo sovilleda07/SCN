@@ -241,7 +241,7 @@ namespace Notas1.Clases
             string sql;
 
             sql = @"SELECT     SCN.Alumnos.id                       as Código,
-                               SCN.Alumnos.nombres                  as Combres,
+                               SCN.Alumnos.nombres                  as Nombres,
                                SCN.Alumnos.apellidos                as Apellidos,
                                SCN.Alumnos.telefono                 as Teléfono,
                                SCN.Alumnos.correoElectronico        as Correo,
@@ -350,6 +350,62 @@ namespace Notas1.Clases
                 conexion.CerrarConexion();
             }
         }
-        
+
+        /// <summary>
+        /// Método para cargar al DataGridView
+        /// Los datos de un Alumno, según su carrera
+        /// </summary>
+        /// <param name="carrera"></param>
+        /// <returns></returns>
+        public static DataView GetDataViewAlumnoCarrera(string carrera)
+        {
+            // Instanciamos la conexión
+            Conexion conexion = new Conexion("Notas");
+            // Creamos la variable que contendrá el Query
+            string sql;
+
+            sql = @"DECLARE @codigoCarrera INT;
+                    SET @codigoCarrera = (SELECT codigo FROM SCN.Carreras WHERE descripcion = @carrera)
+
+                    SELECT     SCN.Alumnos.id                       as Código,
+                               SCN.Alumnos.nombres                  as Nombres,
+                               SCN.Alumnos.apellidos                as Apellidos,
+                               SCN.Alumnos.telefono                 as Teléfono,
+                               SCN.Alumnos.observaciones            as Observaciones,
+                    FROM SCN.Alumnos
+                    INNER JOIN SCN.Carreras
+                    ON SCN.Carreras.codigo = @codigoCarrera 
+                    WHERE SCN.Alumnos.habilitado = 1";
+
+            try
+            {
+                SqlDataAdapter data = new SqlDataAdapter();
+
+                //Enviamos el comando a ejecutar
+                SqlCommand cmd = conexion.EjecutarComando(sql);
+                data.SelectCommand = cmd;
+
+                DataSet ds = new DataSet();
+                // Tabla con que vamos a llenar los datos
+                data.Fill(ds, "SCN.Alumnos");
+                DataTable dt = ds.Tables["SCN.Alumnos"];
+
+                DataView dv = new DataView(dt,
+                    "",
+                    "Código",
+                    DataViewRowState.Unchanged);
+                return dv;
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                conexion.CerrarConexion();
+            }
+        }
+
     }
 }

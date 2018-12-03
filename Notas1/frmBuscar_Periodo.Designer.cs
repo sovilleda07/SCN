@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.lblcalificaciones = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvPeriodos = new System.Windows.Forms.DataGridView();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPeriodos)).BeginInit();
             this.SuspendLayout();
             // 
             // lblcalificaciones
@@ -47,14 +47,19 @@
             this.lblcalificaciones.TabIndex = 45;
             this.lblcalificaciones.Text = "BUSCAR PERIODOS";
             this.lblcalificaciones.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblcalificaciones.Click += new System.EventHandler(this.lblcalificaciones_Click);
             // 
-            // dataGridView1
+            // dgvPeriodos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(36, 98);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(338, 191);
-            this.dataGridView1.TabIndex = 46;
+            this.dgvPeriodos.AllowUserToAddRows = false;
+            this.dgvPeriodos.AllowUserToDeleteRows = false;
+            this.dgvPeriodos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPeriodos.Location = new System.Drawing.Point(36, 98);
+            this.dgvPeriodos.Name = "dgvPeriodos";
+            this.dgvPeriodos.ReadOnly = true;
+            this.dgvPeriodos.Size = new System.Drawing.Size(338, 191);
+            this.dgvPeriodos.TabIndex = 46;
+            this.dgvPeriodos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPeriodos_CellClick);
             // 
             // btnCancelar
             // 
@@ -86,7 +91,7 @@
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // Buscar_Periodo
+            // frmBuscar_Periodo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -94,13 +99,14 @@
             this.ClientSize = new System.Drawing.Size(422, 356);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvPeriodos);
             this.Controls.Add(this.lblcalificaciones);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Buscar_Periodo";
+            this.Name = "frmBuscar_Periodo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buscar_Periodo";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmBuscar_Periodo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPeriodos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -108,7 +114,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblcalificaciones;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvPeriodos;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAgregar;
     }

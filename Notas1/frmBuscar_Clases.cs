@@ -11,35 +11,26 @@ using Notas1.Clases;
 
 namespace Notas1
 {
-    public partial class frmBuscar_Alumno : Form
+    public partial class frmBuscar_Clases : Form
     {
-        // Propiedad para el constructor
-        private string descripcionCarrera;
-
         // Propiedades para obtener valores
-        public static int codigoAlumno;
-        public static string nombre;
-        public static string apellido;
+        public static int codigoClases;
+        public static string descripcionClase;
+        public static string carrera;
 
-        // Constructores
-        public frmBuscar_Alumno()
+        public frmBuscar_Clases()
         {
             InitializeComponent();
         }
 
-        public frmBuscar_Alumno(string carrera)
-        {
-            descripcionCarrera = carrera;
-        }
-
         /// <summary>
-        /// Cargar todos los componentes al iniciar el formulario
+        /// Cargar todos los componentes al inicar el formulario
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void frmBuscar_Alumno_Load(object sender, EventArgs e)
+        private void frmBuscas_Clases_Load(object sender, EventArgs e)
         {
-            CargarDGVAlumnos();
+            CargarDGVClases();
         }
 
         // -----------------------Carga de Datos---------------------
@@ -47,41 +38,40 @@ namespace Notas1
         /// <summary>
         /// Método para Cargar los datos al DataGrid
         /// </summary>
-        private void CargarDGVAlumnos()
+        private void CargarDGVClases()
         {
             try
             {
-                dgvAlumnos.DataSource = Alumnos.GetDataViewAlumnoCarrera(descripcionCarrera);
+                dgvClases.DataSource = Clases.Clases.GetDataView();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+
         }
 
         /// <summary>
-        /// Evento para cargar los datos del alumno
-        /// al ser seleccionado en el DataGridView
+        /// Evento para cargar los datos de la clase
+        /// Al ser seleccionada en el DataGridView
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void dgvAlumnos_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvClases_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            codigoAlumno = Convert.ToInt16(dgvAlumnos.Rows[e.RowIndex].Cells["Código"].Value);
-            nombre = Convert.ToString(dgvAlumnos.Rows[e.RowIndex].Cells["Nombres"].Value);
-            apellido = Convert.ToString(dgvAlumnos.Rows[e.RowIndex].Cells["Apellidos"].Value);
+            codigoClases = Convert.ToInt16(dgvClases.Rows[e.RowIndex].Cells["Código"].Value);
+            descripcionClase = Convert.ToString(dgvClases.Rows[e.RowIndex].Cells["Nombre"].Value);
+            carrera = Convert.ToString(dgvClases.Rows[e.RowIndex].Cells["Carrera"].Value);
         }
 
-        
-
         /// <summary>
-        /// Evento para enviar los datos al otro Formulario
+        /// Evento para enviar los datos al otro formulario
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (dgvAlumnos.SelectedRows.Count == 1)
+            if (dgvClases.SelectedRows.Count == 1)
             {
                 this.Close();
             }
@@ -89,19 +79,20 @@ namespace Notas1
             {
                 MessageBox.Show("Debe Seleccionar una fila");
             }
+            
         }
 
         /// <summary>
-        /// Evento para cerrar el formulario
+        /// Evento para Cerrar el Formulario
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            codigoAlumno = 0;
-            nombre = null;
-            apellido = null;
-            dgvAlumnos.DataSource = null;
+            codigoClases = 0;
+            descripcionClase = null;
+            carrera = null;
+            dgvClases.DataSource = null;
             this.Close();
         }
 

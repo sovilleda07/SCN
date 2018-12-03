@@ -31,8 +31,8 @@
             this.lblcalificaciones = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvAlumnos = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).BeginInit();
             this.SuspendLayout();
             // 
             // lblcalificaciones
@@ -78,15 +78,19 @@
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // dataGridView1
+            // dgvAlumnos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(42, 109);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(338, 191);
-            this.dataGridView1.TabIndex = 45;
+            this.dgvAlumnos.AllowUserToAddRows = false;
+            this.dgvAlumnos.AllowUserToDeleteRows = false;
+            this.dgvAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAlumnos.Location = new System.Drawing.Point(35, 114);
+            this.dgvAlumnos.Name = "dgvAlumnos";
+            this.dgvAlumnos.ReadOnly = true;
+            this.dgvAlumnos.Size = new System.Drawing.Size(338, 191);
+            this.dgvAlumnos.TabIndex = 45;
+            this.dgvAlumnos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlumnos_CellClick);
             // 
-            // Buscar_Alumno
+            // frmBuscar_Alumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -95,12 +99,13 @@
             this.Controls.Add(this.lblcalificaciones);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvAlumnos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Buscar_Alumno";
+            this.Name = "frmBuscar_Alumno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buscar_Alumno";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmBuscar_Alumno_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -110,6 +115,6 @@
         private System.Windows.Forms.Label lblcalificaciones;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvAlumnos;
     }
 }

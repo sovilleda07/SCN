@@ -76,11 +76,11 @@
     <Compile Include="frmBuscar_Periodo.Designer.cs">
       <DependentUpon>frmBuscar_Periodo.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBuscas_Clases.cs">
+    <Compile Include="frmBuscar_Clases.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBuscas_Clases.Designer.cs">
-      <DependentUpon>frmBuscas_Clases.cs</DependentUpon>
+    <Compile Include="frmBuscar_Clases.Designer.cs">
+      <DependentUpon>frmBuscar_Clases.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCalificaciones.cs">
       <SubType>Form</SubType>
@@ -167,8 +167,8 @@
     <EmbeddedResource Include="frmBuscar_Periodo.resx">
       <DependentUpon>frmBuscar_Periodo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBuscas_Clases.resx">
-      <DependentUpon>frmBuscas_Clases.cs</DependentUpon>
+    <EmbeddedResource Include="frmBuscar_Clases.resx">
+      <DependentUpon>frmBuscar_Clases.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCalificaciones.resx">
       <DependentUpon>frmCalificaciones.cs</DependentUpon>

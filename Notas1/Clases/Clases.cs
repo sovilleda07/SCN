@@ -217,7 +217,8 @@ namespace Notas1.Clases
             // Creamos la variable que contendrá el Query
             string sql;
 
-            sql = @"SELECT  SCN.Clases.nombre           as  Nombre,
+            sql = @"SELECT  SCN.Clases.codigo           as  Código,
+                            SCN.Clases.nombre           as  Nombre,
                             SCN.Clases.creditos         as  Créditos,
                             SCN.Carreras.descripcion    as  Carrera
                      FROM SCN.Carreras
@@ -308,6 +309,64 @@ namespace Notas1.Clases
             }
 
 
+        }
+
+        /// <summary>
+        /// Método para listar todas las Clases
+        /// </summary>
+        /// <returns>Una lista con todas las Clases</returns>
+        public static List<Clases> LeerClasesHabilitadas()
+        {
+            // Instanciamos la clase conexión
+            Conexion conexion = new Conexion("Notas");
+
+            // Creamos una lista de tipo de cliente
+            List<Clases> resultados = new List<Clases>();
+
+            // Creamos el query
+            string sql = @"SELECT codigo, nombre
+                            FROM SCN.Clases
+                            WHERE habilitado = 1";
+
+            // Enviamos el comando a ejecutar
+            SqlCommand cmd = conexion.EjecutarComando(sql);
+
+            try
+            {
+                // Establecemos la conexión
+                conexion.EstablecerConexion();
+
+                // Ejecutamos el query vía un ExecuteReader
+                SqlDataReader rdr = cmd.ExecuteReader();
+
+                // Recorremos los elementos del Reader y los almacenamos 
+                // en la lista de tipos Clases
+
+                while (rdr.Read())
+                {
+                    Clases laClase = new Clases();
+
+                    // Asignamos los valores del Reader al objeto
+                    laClase.codigo = Convert.ToInt16(rdr[0]);
+                    laClase.nombre = rdr.GetString(1);
+
+                    // Agregamos la Clase a la lista
+                    resultados.Add(laClase);
+                }
+
+                // Retornamos la lista de las Clases
+                return resultados;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Ha ocurrido un error" + ex.Errors[0].ToString());
+
+                return resultados;
+            }
+            finally
+            {
+                conexion.CerrarConexion();
+            }
         }
 
 
