@@ -34,7 +34,7 @@ namespace Notas1
         }
 
         // -----------------------Carga de Datos---------------------
-
+        
         /// <summary>
         /// Método para Cargar los datos al DataGrid
         /// </summary>
@@ -43,6 +43,7 @@ namespace Notas1
             try
             {
                 dgvClases.DataSource = Clases.Clases.GetDataView();
+                dgvClases.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
             catch (Exception ex)
             {

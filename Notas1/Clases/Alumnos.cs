@@ -364,18 +364,19 @@ namespace Notas1.Clases
             // Creamos la variable que contendrá el Query
             string sql;
 
-            sql = @"DECLARE @codigoCarrera INT;
-                    SET @codigoCarrera = (SELECT codigo FROM SCN.Carreras WHERE descripcion = @carrera)
+            sql = @"DECLARE @codigoCarreras INT;
+                    SET @codigoCarreras = (SELECT codigo FROM SCN.Carreras WHERE descripcion = @carrera)
 
                     SELECT     SCN.Alumnos.id                       as Código,
                                SCN.Alumnos.nombres                  as Nombres,
                                SCN.Alumnos.apellidos                as Apellidos,
                                SCN.Alumnos.telefono                 as Teléfono,
-                               SCN.Alumnos.observaciones            as Observaciones,
+                               SCN.Alumnos.observaciones            as Observaciones
                     FROM SCN.Alumnos
                     INNER JOIN SCN.Carreras
-                    ON SCN.Carreras.codigo = @codigoCarrera 
-                    WHERE SCN.Alumnos.habilitado = 1";
+                    ON SCN.Carreras.codigo = SCN.Alumnos.Carreras_codigo
+                    AND SCN.Carreras.codigo = @codigoCarreras
+                    AND SCN.Alumnos.habilitado = 1";
 
             try
             {
@@ -383,6 +384,7 @@ namespace Notas1.Clases
 
                 //Enviamos el comando a ejecutar
                 SqlCommand cmd = conexion.EjecutarComando(sql);
+                cmd.Parameters.Add("@carrera", SqlDbType.NVarChar,50).Value = carrera;
                 data.SelectCommand = cmd;
 
                 DataSet ds = new DataSet();

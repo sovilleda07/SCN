@@ -27,11 +27,6 @@ namespace Notas1
             InitializeComponent();
         }
 
-        public frmBuscar_Alumno(string carrera)
-        {
-            descripcionCarrera = carrera;
-        }
-
         /// <summary>
         /// Cargar todos los componentes al iniciar el formulario
         /// </summary>
@@ -39,6 +34,7 @@ namespace Notas1
         /// <param name="e"></param>
         private void frmBuscar_Alumno_Load(object sender, EventArgs e)
         {
+            descripcionCarrera = frmRegistro.carreraNombre;
             CargarDGVAlumnos();
         }
 
@@ -52,6 +48,7 @@ namespace Notas1
             try
             {
                 dgvAlumnos.DataSource = Alumnos.GetDataViewAlumnoCarrera(descripcionCarrera);
+                //dgvAlumnos.Columns[2].AutoSizeMode= DataGridViewAutoSizeColumnMode.Fill ;
             }
             catch (Exception ex)
             {

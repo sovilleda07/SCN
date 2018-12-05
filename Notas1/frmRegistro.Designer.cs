@@ -35,30 +35,34 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripActualizar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLimpiar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSalir = new System.Windows.Forms.ToolStripButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnAlumno = new System.Windows.Forms.Button();
             this.lblnombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
+            this.btnAlumno = new System.Windows.Forms.Button();
+            this.txtApellido = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.lblcreditos = new System.Windows.Forms.Label();
-            this.btnPeriodo = new System.Windows.Forms.Button();
-            this.txtPeriodo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtPeriodo = new System.Windows.Forms.TextBox();
+            this.btnPeriodo = new System.Windows.Forms.Button();
+            this.txtAnio = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtClase = new System.Windows.Forms.TextBox();
+            this.btnClase = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.btneliminarclase = new System.Windows.Forms.Button();
             this.btnagregarclase = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtAnio = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtApellido = new System.Windows.Forms.TextBox();
-            this.txtClase = new System.Windows.Forms.TextBox();
-            this.btnClase = new System.Windows.Forms.Button();
+            this.dgvRegistro = new System.Windows.Forms.DataGridView();
+            this.toolStripBuscar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.panelBarraTitulo.SuspendLayout();
             this.toolStripmatricula.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -67,7 +71,7 @@
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRegistro)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBarraTitulo
@@ -101,11 +105,15 @@
             this.toolStripGuardar,
             this.toolStripSeparator2,
             this.toolStripActualizar,
+            this.toolStripSeparator4,
+            this.toolStripBuscar,
             this.toolStripSeparator1,
+            this.toolStripLimpiar,
+            this.toolStripSeparator3,
             this.toolStripSalir});
-            this.toolStripmatricula.Location = new System.Drawing.Point(0, 413);
+            this.toolStripmatricula.Location = new System.Drawing.Point(0, 411);
             this.toolStripmatricula.Name = "toolStripmatricula";
-            this.toolStripmatricula.Size = new System.Drawing.Size(800, 37);
+            this.toolStripmatricula.Size = new System.Drawing.Size(800, 39);
             this.toolStripmatricula.TabIndex = 28;
             this.toolStripmatricula.Text = "toolStrip1";
             // 
@@ -117,14 +125,14 @@
             this.toolStripGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripGuardar.Name = "toolStripGuardar";
             this.toolStripGuardar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
-            this.toolStripGuardar.Size = new System.Drawing.Size(114, 34);
+            this.toolStripGuardar.Size = new System.Drawing.Size(114, 36);
             this.toolStripGuardar.Text = "Guardar";
             this.toolStripGuardar.Click += new System.EventHandler(this.toolStripGuardar_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 37);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 39);
             // 
             // toolStripActualizar
             // 
@@ -134,14 +142,31 @@
             this.toolStripActualizar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripActualizar.Name = "toolStripActualizar";
             this.toolStripActualizar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
-            this.toolStripActualizar.Size = new System.Drawing.Size(119, 34);
+            this.toolStripActualizar.Size = new System.Drawing.Size(119, 36);
             this.toolStripActualizar.Text = "Actualizar";
             this.toolStripActualizar.Click += new System.EventHandler(this.toolStripActualizar_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 37);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
+            // 
+            // toolStripLimpiar
+            // 
+            this.toolStripLimpiar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
+            this.toolStripLimpiar.Image = global::Notas1.Properties.Resources.icons8_broom_32;
+            this.toolStripLimpiar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripLimpiar.Name = "toolStripLimpiar";
+            this.toolStripLimpiar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
+            this.toolStripLimpiar.Size = new System.Drawing.Size(112, 36);
+            this.toolStripLimpiar.Text = "Limpiar";
+            this.toolStripLimpiar.Click += new System.EventHandler(this.toolStripLimpiar_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 39);
             // 
             // toolStripSalir
             // 
@@ -152,7 +177,7 @@
             this.toolStripSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSalir.Name = "toolStripSalir";
             this.toolStripSalir.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
-            this.toolStripSalir.Size = new System.Drawing.Size(82, 34);
+            this.toolStripSalir.Size = new System.Drawing.Size(82, 36);
             this.toolStripSalir.Text = "Salir";
             this.toolStripSalir.Click += new System.EventHandler(this.toolStripSalir_Click);
             // 
@@ -168,7 +193,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 333);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 331);
             this.tableLayoutPanel1.TabIndex = 29;
             // 
             // tableLayoutPanel2
@@ -183,7 +208,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(794, 160);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(794, 159);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // tableLayoutPanel3
@@ -208,7 +233,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.16883F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.493506F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.03896F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(391, 154);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(391, 153);
             this.tableLayoutPanel3.TabIndex = 4;
             // 
             // label2
@@ -219,31 +244,16 @@
             this.label2.Location = new System.Drawing.Point(15, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 31);
+            this.label2.Size = new System.Drawing.Size(92, 30);
             this.label2.TabIndex = 14;
             this.label2.Text = "ALUMNO";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // btnAlumno
-            // 
-            this.btnAlumno.Image = global::Notas1.Properties.Resources.search_icon24;
-            this.btnAlumno.Location = new System.Drawing.Point(344, 34);
-            this.btnAlumno.MaximumSize = new System.Drawing.Size(38, 32);
-            this.btnAlumno.MinimumSize = new System.Drawing.Size(38, 32);
-            this.btnAlumno.Name = "btnAlumno";
-            this.btnAlumno.Size = new System.Drawing.Size(38, 32);
-            this.btnAlumno.TabIndex = 28;
-            this.btnAlumno.TabStop = false;
-            this.btnAlumno.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnAlumno.UseMnemonic = false;
-            this.btnAlumno.UseVisualStyleBackColor = true;
-            this.btnAlumno.Click += new System.EventHandler(this.btnAlumno_Click);
             // 
             // lblnombre
             // 
             this.lblnombre.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnombre.Location = new System.Drawing.Point(3, 78);
+            this.lblnombre.Location = new System.Drawing.Point(3, 77);
             this.lblnombre.Name = "lblnombre";
             this.lblnombre.Size = new System.Drawing.Size(104, 48);
             this.lblnombre.TabIndex = 16;
@@ -255,11 +265,38 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombre.Enabled = false;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(113, 34);
+            this.txtNombre.Location = new System.Drawing.Point(113, 33);
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(225, 24);
             this.txtNombre.TabIndex = 11;
+            // 
+            // btnAlumno
+            // 
+            this.btnAlumno.Image = global::Notas1.Properties.Resources.search_icon24;
+            this.btnAlumno.Location = new System.Drawing.Point(344, 33);
+            this.btnAlumno.MaximumSize = new System.Drawing.Size(38, 32);
+            this.btnAlumno.MinimumSize = new System.Drawing.Size(38, 32);
+            this.btnAlumno.Name = "btnAlumno";
+            this.btnAlumno.Size = new System.Drawing.Size(38, 32);
+            this.btnAlumno.TabIndex = 28;
+            this.btnAlumno.TabStop = false;
+            this.btnAlumno.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnAlumno.UseMnemonic = false;
+            this.btnAlumno.UseVisualStyleBackColor = true;
+            this.btnAlumno.Click += new System.EventHandler(this.btnAlumno_Click);
+            // 
+            // txtApellido
+            // 
+            this.txtApellido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtApellido.Enabled = false;
+            this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellido.Location = new System.Drawing.Point(113, 80);
+            this.txtApellido.Multiline = true;
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(225, 24);
+            this.txtApellido.TabIndex = 29;
             // 
             // tableLayoutPanel4
             // 
@@ -287,7 +324,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.92208F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.07792F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(391, 154);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(391, 153);
             this.tableLayoutPanel4.TabIndex = 3;
             // 
             // label1
@@ -312,6 +349,28 @@
             this.lblcreditos.TabIndex = 31;
             this.lblcreditos.Text = "Clase";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 55);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(70, 20);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Periodo";
+            // 
+            // txtPeriodo
+            // 
+            this.txtPeriodo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPeriodo.Enabled = false;
+            this.txtPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPeriodo.Location = new System.Drawing.Point(103, 58);
+            this.txtPeriodo.Multiline = true;
+            this.txtPeriodo.Name = "txtPeriodo";
+            this.txtPeriodo.Size = new System.Drawing.Size(235, 24);
+            this.txtPeriodo.TabIndex = 12;
+            // 
             // btnPeriodo
             // 
             this.btnPeriodo.Image = global::Notas1.Properties.Resources.search_icon24;
@@ -327,41 +386,69 @@
             this.btnPeriodo.UseVisualStyleBackColor = true;
             this.btnPeriodo.Click += new System.EventHandler(this.button2_Click);
             // 
-            // txtPeriodo
+            // txtAnio
             // 
-            this.txtPeriodo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtAnio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPeriodo.Enabled = false;
-            this.txtPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPeriodo.Location = new System.Drawing.Point(103, 58);
-            this.txtPeriodo.Multiline = true;
-            this.txtPeriodo.Name = "txtPeriodo";
-            this.txtPeriodo.Size = new System.Drawing.Size(235, 24);
-            this.txtPeriodo.TabIndex = 12;
+            this.txtAnio.Enabled = false;
+            this.txtAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnio.Location = new System.Drawing.Point(103, 101);
+            this.txtAnio.Multiline = true;
+            this.txtAnio.Name = "txtAnio";
+            this.txtAnio.Size = new System.Drawing.Size(235, 24);
+            this.txtAnio.TabIndex = 33;
             // 
-            // label3
+            // label4
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 55);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 20);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Periodo";
+            this.label4.AutoSize = true;
+            this.label4.Enabled = false;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(3, 98);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 20);
+            this.label4.TabIndex = 34;
+            this.label4.Text = "Año";
+            // 
+            // txtClase
+            // 
+            this.txtClase.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtClase.Enabled = false;
+            this.txtClase.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClase.Location = new System.Drawing.Point(103, 22);
+            this.txtClase.Multiline = true;
+            this.txtClase.Name = "txtClase";
+            this.txtClase.Size = new System.Drawing.Size(235, 24);
+            this.txtClase.TabIndex = 35;
+            // 
+            // btnClase
+            // 
+            this.btnClase.Image = global::Notas1.Properties.Resources.search_icon24;
+            this.btnClase.Location = new System.Drawing.Point(344, 22);
+            this.btnClase.MaximumSize = new System.Drawing.Size(38, 32);
+            this.btnClase.MinimumSize = new System.Drawing.Size(38, 32);
+            this.btnClase.Name = "btnClase";
+            this.btnClase.Size = new System.Drawing.Size(38, 32);
+            this.btnClase.TabIndex = 36;
+            this.btnClase.TabStop = false;
+            this.btnClase.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnClase.UseMnemonic = false;
+            this.btnClase.UseVisualStyleBackColor = true;
+            this.btnClase.Click += new System.EventHandler(this.btnClase_Click);
             // 
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 1;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.dataGridView1, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.dgvRegistro, 0, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 169);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 168);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(794, 161);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(794, 160);
             this.tableLayoutPanel5.TabIndex = 1;
             // 
             // tableLayoutPanel6
@@ -407,76 +494,31 @@
             this.btnagregarclase.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnagregarclase.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // dgvRegistro
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 53);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(788, 105);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvRegistro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRegistro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvRegistro.Location = new System.Drawing.Point(3, 53);
+            this.dgvRegistro.Name = "dgvRegistro";
+            this.dgvRegistro.Size = new System.Drawing.Size(788, 104);
+            this.dgvRegistro.TabIndex = 1;
             // 
-            // txtAnio
+            // toolStripBuscar
             // 
-            this.txtAnio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAnio.Enabled = false;
-            this.txtAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAnio.Location = new System.Drawing.Point(103, 101);
-            this.txtAnio.Multiline = true;
-            this.txtAnio.Name = "txtAnio";
-            this.txtAnio.Size = new System.Drawing.Size(235, 24);
-            this.txtAnio.TabIndex = 33;
+            this.toolStripBuscar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
+            this.toolStripBuscar.Image = global::Notas1.Properties.Resources.icons8_broom_32;
+            this.toolStripBuscar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBuscar.Name = "toolStripBuscar";
+            this.toolStripBuscar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
+            this.toolStripBuscar.Size = new System.Drawing.Size(105, 36);
+            this.toolStripBuscar.Text = "Buscar";
+            this.toolStripBuscar.Click += new System.EventHandler(this.toolStripBuscar_Click);
             // 
-            // label4
+            // toolStripSeparator4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Enabled = false;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 98);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 20);
-            this.label4.TabIndex = 34;
-            this.label4.Text = "Año";
-            // 
-            // txtApellido
-            // 
-            this.txtApellido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtApellido.Enabled = false;
-            this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido.Location = new System.Drawing.Point(113, 81);
-            this.txtApellido.Multiline = true;
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(225, 24);
-            this.txtApellido.TabIndex = 29;
-            // 
-            // txtClase
-            // 
-            this.txtClase.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtClase.Enabled = false;
-            this.txtClase.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClase.Location = new System.Drawing.Point(103, 22);
-            this.txtClase.Multiline = true;
-            this.txtClase.Name = "txtClase";
-            this.txtClase.Size = new System.Drawing.Size(235, 24);
-            this.txtClase.TabIndex = 35;
-            // 
-            // btnClase
-            // 
-            this.btnClase.Image = global::Notas1.Properties.Resources.search_icon24;
-            this.btnClase.Location = new System.Drawing.Point(344, 22);
-            this.btnClase.MaximumSize = new System.Drawing.Size(38, 32);
-            this.btnClase.MinimumSize = new System.Drawing.Size(38, 32);
-            this.btnClase.Name = "btnClase";
-            this.btnClase.Size = new System.Drawing.Size(38, 32);
-            this.btnClase.TabIndex = 36;
-            this.btnClase.TabStop = false;
-            this.btnClase.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnClase.UseMnemonic = false;
-            this.btnClase.UseVisualStyleBackColor = true;
-            this.btnClase.Click += new System.EventHandler(this.btnClase_Click);
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 39);
             // 
             // frmRegistro
             // 
@@ -501,7 +543,7 @@
             this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRegistro)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -525,7 +567,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Button btneliminarclase;
         private System.Windows.Forms.Button btnagregarclase;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvRegistro;
         private System.Windows.Forms.Label lblcalificaciones;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label2;
@@ -540,5 +582,9 @@
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtClase;
         private System.Windows.Forms.Button btnClase;
+        private System.Windows.Forms.ToolStripButton toolStripLimpiar;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripButton toolStripBuscar;
     }
 }
