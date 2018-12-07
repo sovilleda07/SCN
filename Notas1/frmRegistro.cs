@@ -18,7 +18,13 @@ namespace Notas1
         private int codigoClase;
         private int codigoAlumno;
         //private string descripcionCarrera;
-        public static string carreraNombre; 
+        public static string carreraNombre;
+        // Propiedades para actualizar
+        private int codigoPeriodoViejo;
+        private int codigoClaseViejo;
+        private int codigoAlumnoViejo;
+
+        private int codigoRegistro;
 
         public frmRegistro()
         {
@@ -111,6 +117,31 @@ namespace Notas1
             }
             
         }
+        
+        /// <summary>
+        /// Evento para cargar los datos del alumno
+        /// Al ser selecionado en el DataGridView
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void dgvRegistro_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Instanciamos la clase Registro
+            Registro elRegistro = new Registro();
+
+            elRegistro = Registro.ObtenerInformacion(Convert.ToInt16(dgvRegistro.Rows[e.RowIndex].Cells["Código"].Value));
+
+            txtNombre.Text = elRegistro.alumnoNombre;
+            txtApellido.Text = elRegistro.alumnoApellido;
+            this.codigoAlumnoViejo = elRegistro.Alumnos_id;
+            this.codigoClaseViejo = elRegistro.Clases_codigo;
+            this.codigoPeriodoViejo = elRegistro.Periodos_codigo;
+            this.codigoRegistro = elRegistro.codigo;
+
+            MessageBox.Show(this.codigoRegistro.ToString());
+
+
+        }
 
         // ---------------------------- CRUD -----------------------------
         /// <summary>
@@ -149,14 +180,44 @@ namespace Notas1
 
         private void toolStripActualizar_Click(object sender, EventArgs e)
         {
-            if (txtNombre.Text == "" || txtPeriodo.Text == "")
+            if (txtClase.Text == "" || txtPeriodo.Text == "" || txtNombre.Text == "" || txtApellido.Text == "")
             {
-                MessageBox.Show("Debe ingresar los datos", "Error de Actualización", MessageBoxButtons.OK);
+                MessageBox.Show("Debe ingresar todos los datos", "Información");
             }
             else
             {
-                MessageBox.Show("Registro Actualizado", "Control de Registro", MessageBoxButtons.OK);
+                if (dgvRegistro.SelectedRows.Count == 1)
+                {
+                    // Instanciamos la clase Registro
+                    Registro elRegistro = new Registro();
+
+                    // Nuestro objeto adquiere los valores del formulario
+                    elRegistro.codigo = this.codigoRegistro;
+                    elRegistro.Alumnos_id = this.codigoAlumnoViejo;
+                    elRegistro.Clases_codigo = this.codigoClaseViejo;
+                    elRegistro.Periodos_codigo = this.codigoPeriodoViejo;
+
+                    elRegistro.Alumnos_idNuevo = this.codigoAlumno;
+                    elRegistro.Clases_codigoNuevo = this.codigoClase;
+                    elRegistro.Periodos_codigoNuevo = this.codigoPeriodo;
+
+                    //// Verificamos si se realizó el método
+                    //if (Registro.ActualizarRegistro(elRegistro))
+                    //{
+                    //    MessageBox.Show("Registro Actualizado", "Información");
+                    //    Limpiar();
+                    //}
+                    //else
+                    //{
+                    //    MessageBox.Show("Ha ocurrido un error, verifique los datos", "Informacion");
+                    //}
+                }
+                else
+                {
+                    MessageBox.Show("Debe Seleccionar una fila");
+                }
             }
+
         }
 
         /// <summary>
@@ -178,6 +239,8 @@ namespace Notas1
                     // Está en un método en la la Clase Registro,
                     // hacemos referencia a él.
                     dgvRegistro.DataSource = Registro.GetDataViewRegistro(this.codigoClase, this.codigoPeriodo);
+                    toolStripGuardar.Enabled = false;
+                    toolStripActualizar.Enabled = true; 
                 }
                 catch (Exception ex)
                 {

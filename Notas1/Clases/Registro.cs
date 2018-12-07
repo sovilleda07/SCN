@@ -20,6 +20,21 @@ namespace Notas1.Clases
         public int Clases_codigo { get; set; }
         public int Periodos_codigo { get; set; }
 
+
+        public int codigoNuevo { get; set; }
+        public DateTime fechaNueva { get; set; }
+        public int Alumnos_idNuevo { get; set; }
+        public int Clases_codigoNuevo { get; set; }
+        public int Periodos_codigoNuevo { get; set; }
+
+        public string alumnoNombre { get; set; }
+        public string alumnoApellido { get; set; }
+        public string claseNombre { get; set; }
+        public string periodoDescripcion { get; set; }
+        public string periodoAnio { get; set; }
+        public int periodoNumero { get; set; }
+
+
         // Constructor
         public Registro() { }
 
@@ -77,10 +92,71 @@ namespace Notas1.Clases
 
         }
 
+        /// <summary>
+        /// /Método para actualizar el registro de una clase
+        /// </summary>
+        /// <param name="elRegistro"></param>
+        /// <returns>true si se realiza el método, false de lo contrario</returns>
         public static bool ActualizarRegistro(Registro elRegistro)
         {
-            return true;
+            // Instanciamos la conexión
+            Conexion conexion = new Conexion("Notas");
+
+            // Enviamos el comando a ejecutar
+            SqlCommand cmd = conexion.EjecutarComando("sp_ActualizarRegistro");
+
+            // Establecemos el comando como un Stored Procedure
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            // Parámetros del Stored Procedure
+
+            cmd.Parameters.Add(new SqlParameter("@codigoRegistro", SqlDbType.Int));
+            cmd.Parameters["@codigoRegistro"].Value = elRegistro.codigo;
+
+            cmd.Parameters.Add(new SqlParameter("@fecha", SqlDbType.DateTime));
+            cmd.Parameters["@fecha"].Value = System.DateTime.Now;
+
+            cmd.Parameters.Add(new SqlParameter("@alumnosId", SqlDbType.Int));
+            cmd.Parameters["@alumnosId"].Value = elRegistro.Alumnos_id;
+
+            cmd.Parameters.Add(new SqlParameter("@clasescodigo", SqlDbType.Int));
+            cmd.Parameters["@clasescodigo"].Value = elRegistro.Clases_codigo;
+
+            cmd.Parameters.Add(new SqlParameter("@periodosCodigo", SqlDbType.Int));
+            cmd.Parameters["@periodosCodigo"].Value = elRegistro.Periodos_codigo;
+
+            cmd.Parameters.Add(new SqlParameter("@alumnosIdNuevo", SqlDbType.Int));
+            cmd.Parameters["@alumnosId"].Value = elRegistro.Alumnos_idNuevo;
+
+            cmd.Parameters.Add(new SqlParameter("@clasescodigoNuevo", SqlDbType.Int));
+            cmd.Parameters["@clasescodigo"].Value = elRegistro.Clases_codigoNuevo;
+
+            cmd.Parameters.Add(new SqlParameter("@periodosCodigoNuevo", SqlDbType.Int));
+            cmd.Parameters["@periodosCodigo"].Value = elRegistro.Periodos_codigoNuevo;
+
+            try
+            {
+                // Establecemos la conexión
+                conexion.EstablecerConexion();
+                // Ejecutamos el query vía un ExecuteNonQuery
+                cmd.ExecuteNonQuery();
+
+                return true;
+
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Ha ocurrido un error" + ex.Errors[0].ToString());
+
+                return false;
+            }
+            finally
+            {
+                conexion.CerrarConexion();
+            }
+
         }
+
 
         /// <summary>
         /// Método para Cargar los datos al DataGridView
@@ -150,19 +226,22 @@ namespace Notas1.Clases
             // Creamos la variable que contendrá el Query
             string sql;
 
-            sql = @"SELECT      SCN.Registro.codigo             as Registro,
-                                SCN.Alumnos.id                  as Código,
+            sql = @"SELECT		SCN.Alumnos.id					as Id,
                                 SCN.Alumnos.nombres				as Nombres,
-		                        SCN.Alumnos.apellidos			as Apellidos,
+                                SCN.Alumnos.apellidos			as Apellidos,
 		                        SCN.Clases.nombre				as Clase,
-		                        SCN.Periodos.descripcion		as Periodo
-                    FROM SCN.Registro 
+		                        SCN.Periodos.descripcion		as Periodo,
+                                SCN.Periodos.anio               as Año,
+		                        SCN.Registro.codigo				as Código
+                    FROM SCN.Registro
                     INNER JOIN SCN.Alumnos
-                    ON SCN.Registro.Alumnos_id = SCN.Alumnos.id
+                    ON SCN.Alumnos.id = SCN.Registro.Alumnos_id
                     INNER JOIN SCN.Clases
-                    ON SCN.Clases.codigo = @clase
+                    ON SCN.Clases.codigo = SCN.Registro.Clases_codigo
                     INNER JOIN SCN.Periodos
-                    ON SCN.Periodos.codigo = @periodo";
+                    ON SCN.Periodos.codigo = SCN.Registro.Periodos_codigo
+                    WHERE SCN.Registro.Clases_codigo = @clase
+                    AND SCN.Registro.Periodos_codigo = @periodo";
             try
             {
                 SqlDataAdapter data = new SqlDataAdapter();
@@ -197,6 +276,88 @@ namespace Notas1.Clases
                 conexion.CerrarConexion();
             }
 
+
+        }
+
+        /// <summary>
+        /// Método para obtener información de un Registro
+        /// por medio de su código
+        /// </summary>
+        /// <param name="codigo"></param>
+        /// <returns>Un objeto de tipo Registro con los datos</returns>
+        public static Registro ObtenerInformacion(int codigo)
+        {
+            // Instanciamos la clase Conexión
+            Conexion conexion = new Conexion("Notas");
+
+            // Creamos la variable que contendrá el Query
+            string sql;
+
+            // Instanciamos la Clase Registro
+            Registro resultado = new Registro();
+
+            // Query SQL
+            sql = @"SELECT      SCN.Registro.codigo,
+                                SCN.Alumnos.id,
+                                SCN.Alumnos.nombres,
+                                SCN.Alumnos.apellidos,
+                                SCN.Clases.codigo,
+                                SCN.Clases.nombre,
+                                SCN.Periodos.codigo,
+                                SCN.Periodos.descripcion,
+                                SCN.Periodos.anio,
+                                SCN.Periodos.periodo
+                    FROM SCN.Periodos
+                    INNER JOIN SCN.Registro
+                    ON SCN.Periodos.codigo = SCN.Registro.Periodos_codigo
+                    INNER JOIN SCN.Clases
+                    ON SCN.Clases.codigo = SCN.Registro.Clases_codigo
+                    INNER JOIN SCN.Alumnos
+                    ON SCN.Alumnos.id = SCN.Registro.Alumnos_id
+                    WHERE SCN.Registro.codigo = @codigo";
+
+            // Enviamos el comando a ejecutar
+            SqlCommand cmd = conexion.EjecutarComando(sql);
+
+            // Crearemos la lectura
+            SqlDataReader rdr;
+
+            try
+            {
+                using (cmd)
+                {
+                    cmd.Parameters.Add("@codigo", SqlDbType.Int).Value = codigo;
+
+                    // Ejecutamos el quey vía un ExecuteReader
+                    rdr = cmd.ExecuteReader();
+                }
+
+                while (rdr.Read())
+                {
+                    resultado.codigo = Convert.ToInt16(rdr[0]);
+                    resultado.Alumnos_id = Convert.ToInt16(rdr[1]);
+                    resultado.alumnoNombre = rdr.GetString(2);
+                    resultado.alumnoApellido = rdr.GetString(3);
+                    resultado.Clases_codigo = Convert.ToInt16(rdr[4]);
+                    resultado.claseNombre = rdr.GetString(5);
+                    resultado.Periodos_codigo = Convert.ToInt16(rdr[6]);
+                    resultado.periodoDescripcion = rdr.GetString(7);
+                    resultado.periodoAnio = rdr.GetString(8);
+                    resultado.periodoNumero = Convert.ToInt16(rdr[9]);
+
+                }
+
+                return resultado;
+            }
+            catch (Exception)
+            {
+
+                return resultado;
+            }
+            finally
+            {
+                conexion.CerrarConexion();
+            }
 
         }
 

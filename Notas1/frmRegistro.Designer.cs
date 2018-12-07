@@ -34,6 +34,8 @@
             this.toolStripGuardar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripActualizar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripBuscar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLimpiar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -58,11 +60,7 @@
             this.btnClase = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.btneliminarclase = new System.Windows.Forms.Button();
-            this.btnagregarclase = new System.Windows.Forms.Button();
             this.dgvRegistro = new System.Windows.Forms.DataGridView();
-            this.toolStripBuscar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.panelBarraTitulo.SuspendLayout();
             this.toolStripmatricula.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -70,7 +68,6 @@
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistro)).BeginInit();
             this.SuspendLayout();
             // 
@@ -145,6 +142,23 @@
             this.toolStripActualizar.Size = new System.Drawing.Size(119, 36);
             this.toolStripActualizar.Text = "Actualizar";
             this.toolStripActualizar.Click += new System.EventHandler(this.toolStripActualizar_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 39);
+            // 
+            // toolStripBuscar
+            // 
+            this.toolStripBuscar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
+            this.toolStripBuscar.Image = global::Notas1.Properties.Resources.icons8_broom_32;
+            this.toolStripBuscar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBuscar.Name = "toolStripBuscar";
+            this.toolStripBuscar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
+            this.toolStripBuscar.Size = new System.Drawing.Size(105, 36);
+            this.toolStripBuscar.Text = "Buscar";
+            this.toolStripBuscar.Click += new System.EventHandler(this.toolStripBuscar_Click);
             // 
             // toolStripSeparator1
             // 
@@ -456,8 +470,6 @@
             this.tableLayoutPanel6.ColumnCount = 2;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Controls.Add(this.btneliminarclase, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.btnagregarclase, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
@@ -465,34 +477,6 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(788, 44);
             this.tableLayoutPanel6.TabIndex = 0;
-            // 
-            // btneliminarclase
-            // 
-            this.btneliminarclase.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btneliminarclase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(225)))), ((int)(((byte)(229)))));
-            this.btneliminarclase.Location = new System.Drawing.Point(396, 2);
-            this.btneliminarclase.Margin = new System.Windows.Forms.Padding(2);
-            this.btneliminarclase.Name = "btneliminarclase";
-            this.btneliminarclase.Size = new System.Drawing.Size(390, 34);
-            this.btneliminarclase.TabIndex = 42;
-            this.btneliminarclase.Text = "Eliminar";
-            this.btneliminarclase.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btneliminarclase.UseVisualStyleBackColor = false;
-            // 
-            // btnagregarclase
-            // 
-            this.btnagregarclase.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnagregarclase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(225)))), ((int)(((byte)(229)))));
-            this.btnagregarclase.Location = new System.Drawing.Point(50, 2);
-            this.btnagregarclase.Margin = new System.Windows.Forms.Padding(50, 2, 2, 2);
-            this.btnagregarclase.Name = "btnagregarclase";
-            this.btnagregarclase.Size = new System.Drawing.Size(342, 34);
-            this.btnagregarclase.TabIndex = 41;
-            this.btnagregarclase.Text = "Agregar";
-            this.btnagregarclase.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnagregarclase.UseVisualStyleBackColor = false;
             // 
             // dgvRegistro
             // 
@@ -502,23 +486,7 @@
             this.dgvRegistro.Name = "dgvRegistro";
             this.dgvRegistro.Size = new System.Drawing.Size(788, 104);
             this.dgvRegistro.TabIndex = 1;
-            // 
-            // toolStripBuscar
-            // 
-            this.toolStripBuscar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
-            this.toolStripBuscar.Image = global::Notas1.Properties.Resources.icons8_broom_32;
-            this.toolStripBuscar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBuscar.Name = "toolStripBuscar";
-            this.toolStripBuscar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
-            this.toolStripBuscar.Size = new System.Drawing.Size(105, 36);
-            this.toolStripBuscar.Text = "Buscar";
-            this.toolStripBuscar.Click += new System.EventHandler(this.toolStripBuscar_Click);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 39);
+            this.dgvRegistro.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRegistro_CellClick);
             // 
             // frmRegistro
             // 
@@ -542,7 +510,6 @@
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistro)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -565,8 +532,6 @@
         private System.Windows.Forms.Label lblcreditos;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.Button btneliminarclase;
-        private System.Windows.Forms.Button btnagregarclase;
         private System.Windows.Forms.DataGridView dgvRegistro;
         private System.Windows.Forms.Label lblcalificaciones;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
