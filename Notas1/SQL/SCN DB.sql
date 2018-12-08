@@ -45,11 +45,7 @@ CREATE TABLE SCN.Calificaciones (
     nota3 decimal(4,2)  NOT NULL,
     promedio decimal(4,2)  NOT NULL,
     Registro_codigo int  NOT NULL,
-    Registro_fecha datetime  NOT NULL,
-    Registro_Alumnos_id int  NOT NULL,
-    Registro_Clases_codigo int  NOT NULL,
-    Registro_Periodos_codigo int  NOT NULL,
-    CONSTRAINT PK_Calificaciones_codigo PRIMARY KEY CLUSTERED (codigo)
+       CONSTRAINT PK_Calificaciones_codigo PRIMARY KEY CLUSTERED (codigo)
 );
 
 -- Table: Carreras
@@ -73,7 +69,7 @@ CREATE TABLE SCN.Clases (
 -- Table: Periodos
 CREATE TABLE SCN.Periodos (
     codigo int  NOT NULL IDENTITY(1,1),
-    descripcion NVARCHAR(10)  NOT NULL,
+    descripcion NVARCHAR(20)  NOT NULL,
     anio NVARCHAR(5)  NOT NULL,
     periodo int  NOT NULL,
     habilitado int  NOT NULL,
@@ -87,7 +83,8 @@ CREATE TABLE SCN.Registro (
     Alumnos_id int  NOT NULL,
     Clases_codigo int  NOT NULL,
     Periodos_codigo int  NOT NULL,
-    CONSTRAINT PK_Registro_codigo PRIMARY KEY CLUSTERED  (codigo,fecha,Alumnos_id,Clases_codigo,Periodos_codigo)
+	estadoCalificacion int NOT NULL,
+    CONSTRAINT PK_Registro_codigo PRIMARY KEY CLUSTERED  (codigo)
 );
 
 -- Table: Usuarios
@@ -112,8 +109,8 @@ GO
 ALTER TABLE SCN.Calificaciones
 	ADD CONSTRAINT
 		FK_Calificaciones_Registro$TieneUn$Registro
-		FOREIGN KEY (Registro_codigo,Registro_fecha,Registro_Alumnos_id,Registro_Clases_codigo,Registro_Periodos_codigo)
-		REFERENCES SCN.Registro (codigo,fecha,Alumnos_id,Clases_codigo,Periodos_codigo)
+		FOREIGN KEY (Registro_codigo)
+		REFERENCES SCN.Registro (codigo)
 		ON UPDATE NO ACTION
 		ON DELETE NO ACTION;
 GO
@@ -189,6 +186,11 @@ GO
 ALTER TABLE SCN.Usuarios
 	ADD CONSTRAINT DFLT_Usuario_Habilitado
 		DEFAULT '1' FOR habilitado
+GO
+
+ALTER TABLE SCN.Registro
+	ADD CONSTRAINT DFLT_Estado_Calificacion
+		DEFAULT '0' FOR estadoCalificacion
 GO
 
 --INSERCIÓN DE DATOS PARA EL USUARIO

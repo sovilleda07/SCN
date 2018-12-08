@@ -34,9 +34,6 @@ GO
 SELECT * FROM SCN.Alumnos
 GO
 
-EXECUTE sp_InsertarAlumno 'Sonia Daniela','Villeda Guerra','97232402','sovilleda07@gmail.com','ninguna','Gerencia'
-GO
-
 CREATE PROCEDURE sp_ActualizarAlumno(
 	@id INT,
 	@nombres NVARCHAR(45),

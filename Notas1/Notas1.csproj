@@ -386,6 +386,12 @@
     <None Include="Resources\delete-icon28.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="SQL\SCN DB.sql" />
+    <Content Include="SQL\sp_Alumnos.sql" />
+    <Content Include="SQL\sp_Carreras.sql" />
+    <Content Include="SQL\sp_Clases.sql" />
+    <Content Include="SQL\sp_Periodos.sql" />
+    <Content Include="SQL\sp_Registro.sql" />
     <None Include="Resources\icons8-about-48.png" />
     <None Include="Resources\icons8-about-24.png" />
     <None Include="Resources\icons8-contacts-32.png" />
@@ -406,11 +412,6 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SQL\SCN_DB.sql" />
-    <Content Include="SQL\sp_Alumnos.sql" />
-    <Content Include="SQL\sp_Carreras.sql" />
-    <Content Include="SQL\sp_Clases.sql" />
-    <Content Include="SQL\sp_Periodos.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
