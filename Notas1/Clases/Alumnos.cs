@@ -409,16 +409,16 @@ namespace Notas1.Clases
             }
         }
 
-        /// <summary>
-        /// Método para cargar al DataGridView
-        /// Los datos de un Alumno, según su carrera
-        /// </summary>
-        /// <param name="carrera"></param>
-        /// <returns></returns>
-        public static DataView GetDataViewAlumnoCalificación(int clase, int carrera)
-        {
+        ///// <summary>
+        ///// Método para cargar al DataGridView
+        ///// Los datos de un Alumno, según su carrera
+        ///// </summary>
+        ///// <param name="carrera"></param>
+        ///// <returns></returns>
+        //public static DataView GetDataViewAlumnoCalificación(int clase, int carrera)
+        //{
 
-        }
+        //}
 
 
     }

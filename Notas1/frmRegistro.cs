@@ -24,7 +24,16 @@ namespace Notas1
         private int codigoClaseViejo;
         private int codigoAlumnoViejo;
 
+        // Porpiedad para obtener el codigo de registro al hacer click en el datagrid
         private int codigoRegistro;
+
+        // Propiedad para saber si el boton de buscar alumnos fue presionado
+        private bool BtnAlumnoFuePresionado = false;
+
+        // Propiedad para capturar nombres del alumno
+        private string nombreViejo;
+        private string apellidoViejo;
+
 
         public frmRegistro()
         {
@@ -53,6 +62,7 @@ namespace Notas1
             txtAnio.Text = "";
             txtNombre.Text = "";
             txtApellido.Text = "";
+            dgvRegistro.DataSource = null;
 
             toolStripGuardar.Enabled = true;
             toolStripActualizar.Enabled = false;
@@ -102,6 +112,8 @@ namespace Notas1
         /// <param name="e"></param>
         private void btnAlumno_Click(object sender, EventArgs e)
         {
+            BtnAlumnoFuePresionado = true;
+
             if (txtClase.Text == "")
             {
                 MessageBox.Show("Debe seleccionar una clase");
@@ -137,9 +149,12 @@ namespace Notas1
             this.codigoClaseViejo = elRegistro.Clases_codigo;
             this.codigoPeriodoViejo = elRegistro.Periodos_codigo;
             this.codigoRegistro = elRegistro.codigo;
+            this.nombreViejo = elRegistro.alumnoNombre;
+            this.apellidoViejo = elRegistro.alumnoApellido;
 
-            MessageBox.Show(this.codigoRegistro.ToString());
-
+            MessageBox.Show("cODrEGISTRO", this.codigoRegistro.ToString());
+            MessageBox.Show("Alumno", this.codigoAlumnoViejo.ToString());
+            MessageBox.Show("AlumnoNuevo", this.codigoAlumno.ToString());
 
         }
 
@@ -196,8 +211,17 @@ namespace Notas1
                     elRegistro.Alumnos_id = this.codigoAlumnoViejo;
                     elRegistro.Clases_codigo = this.codigoClaseViejo;
                     elRegistro.Periodos_codigo = this.codigoPeriodoViejo;
+                    
+                    // Validamos si en el registro se cambió de alumno
+                    if (BtnAlumnoFuePresionado)
+                    {
+                        elRegistro.Alumnos_idNuevo = this.codigoAlumno;
+                    }
+                    else
+                    {
+                        elRegistro.Alumnos_idNuevo = this.codigoAlumnoViejo;
+                    }
 
-                    elRegistro.Alumnos_idNuevo = this.codigoAlumno;
                     elRegistro.Clases_codigoNuevo = this.codigoClase;
                     elRegistro.Periodos_codigoNuevo = this.codigoPeriodo;
 

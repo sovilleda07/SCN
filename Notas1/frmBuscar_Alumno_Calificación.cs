@@ -33,7 +33,7 @@ namespace Notas1
         {
             try
             {
-                dgvAlumnos.DataSource = Alumnos
+               // dgvAlumnos.DataSource = Alumnos
             }
             catch (Exception)
             {
