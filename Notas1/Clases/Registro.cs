@@ -126,13 +126,13 @@ namespace Notas1.Clases
             cmd.Parameters["@periodosCodigo"].Value = elRegistro.Periodos_codigo;
 
             cmd.Parameters.Add(new SqlParameter("@alumnosIdNuevo", SqlDbType.Int));
-            cmd.Parameters["@alumnosId"].Value = elRegistro.Alumnos_idNuevo;
+            cmd.Parameters["@alumnosIdNuevo"].Value = elRegistro.Alumnos_idNuevo;
 
             cmd.Parameters.Add(new SqlParameter("@clasescodigoNuevo", SqlDbType.Int));
-            cmd.Parameters["@clasescodigo"].Value = elRegistro.Clases_codigoNuevo;
+            cmd.Parameters["@clasescodigoNuevo"].Value = elRegistro.Clases_codigoNuevo;
 
             cmd.Parameters.Add(new SqlParameter("@periodosCodigoNuevo", SqlDbType.Int));
-            cmd.Parameters["@periodosCodigo"].Value = elRegistro.Periodos_codigoNuevo;
+            cmd.Parameters["@periodosCodigoNuevo"].Value = elRegistro.Periodos_codigoNuevo;
 
             try
             {

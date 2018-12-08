@@ -201,16 +201,16 @@ namespace Notas1
                     elRegistro.Clases_codigoNuevo = this.codigoClase;
                     elRegistro.Periodos_codigoNuevo = this.codigoPeriodo;
 
-                    //// Verificamos si se realizó el método
-                    //if (Registro.ActualizarRegistro(elRegistro))
-                    //{
-                    //    MessageBox.Show("Registro Actualizado", "Información");
-                    //    Limpiar();
-                    //}
-                    //else
-                    //{
-                    //    MessageBox.Show("Ha ocurrido un error, verifique los datos", "Informacion");
-                    //}
+                    // Verificamos si se realizó el método
+                    if (Registro.ActualizarRegistro(elRegistro))
+                    {
+                        MessageBox.Show("Registro Actualizado", "Información");
+                        Limpiar();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha ocurrido un error, verifique los datos", "Informacion");
+                    }
                 }
                 else
                 {
