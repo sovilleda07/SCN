@@ -84,6 +84,12 @@
     <Compile Include="frmBuscar_Alumno.Designer.cs">
       <DependentUpon>frmBuscar_Alumno.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBuscar_Alumno_Calificación.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscar_Alumno_Calificación.Designer.cs">
+      <DependentUpon>frmBuscar_Alumno_Calificación.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBuscar_Carrera.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBuscar_Alumno.resx">
       <DependentUpon>frmBuscar_Alumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscar_Alumno_Calificación.resx">
+      <DependentUpon>frmBuscar_Alumno_Calificación.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBuscar_Carrera.resx">
       <DependentUpon>frmBuscar_Carrera.cs</DependentUpon>

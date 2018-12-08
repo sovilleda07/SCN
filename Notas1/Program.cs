@@ -16,7 +16,7 @@ namespace Notas1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RPTCalificaciones());
+            Application.Run(new frmLogin());
         }
     }
 }
