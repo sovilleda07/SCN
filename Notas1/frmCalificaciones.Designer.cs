@@ -49,16 +49,19 @@
             this.btncalcular = new System.Windows.Forms.Button();
             this.txtPromedio = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblcarrera = new System.Windows.Forms.Label();
+            this.lblPeriodo = new System.Windows.Forms.Label();
             this.lblapellidos = new System.Windows.Forms.Label();
             this.lbltelefono = new System.Windows.Forms.Label();
             this.lblnombres = new System.Windows.Forms.Label();
-            this.txtCarrera = new System.Windows.Forms.TextBox();
+            this.txtPeriodo = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtAlumno = new System.Windows.Forms.TextBox();
             this.txtClase = new System.Windows.Forms.TextBox();
             this.btnAlumno = new System.Windows.Forms.Button();
             this.btnClase = new System.Windows.Forms.Button();
+            this.btnPeriodo = new System.Windows.Forms.Button();
+            this.lblAnio = new System.Windows.Forms.Label();
+            this.txtAnio = new System.Windows.Forms.TextBox();
             this.toolStrip2.SuspendLayout();
             this.panelBarraTitulo.SuspendLayout();
             this.panelFormuarios.SuspendLayout();
@@ -318,16 +321,19 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.lblcarrera, 0, 5);
-            this.tableLayoutPanel2.Controls.Add(this.lblapellidos, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.lbltelefono, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.lblnombres, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.txtCarrera, 1, 5);
-            this.tableLayoutPanel2.Controls.Add(this.txtApellido, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.txtAlumno, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.txtClase, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.btnAlumno, 2, 3);
             this.tableLayoutPanel2.Controls.Add(this.btnClase, 2, 2);
+            this.tableLayoutPanel2.Controls.Add(this.lblPeriodo, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.txtPeriodo, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.btnPeriodo, 2, 3);
+            this.tableLayoutPanel2.Controls.Add(this.txtApellido, 1, 6);
+            this.tableLayoutPanel2.Controls.Add(this.lblapellidos, 0, 6);
+            this.tableLayoutPanel2.Controls.Add(this.btnAlumno, 2, 5);
+            this.tableLayoutPanel2.Controls.Add(this.txtAlumno, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.lbltelefono, 0, 5);
+            this.tableLayoutPanel2.Controls.Add(this.txtAnio, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.lblAnio, 0, 4);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -344,23 +350,23 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(516, 450);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
-            // lblcarrera
+            // lblPeriodo
             // 
-            this.lblcarrera.AutoSize = true;
-            this.lblcarrera.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcarrera.Location = new System.Drawing.Point(15, 250);
-            this.lblcarrera.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
-            this.lblcarrera.Name = "lblcarrera";
-            this.lblcarrera.Size = new System.Drawing.Size(69, 20);
-            this.lblcarrera.TabIndex = 9;
-            this.lblcarrera.Text = "Carrera";
-            this.lblcarrera.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPeriodo.AutoSize = true;
+            this.lblPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPeriodo.Location = new System.Drawing.Point(15, 150);
+            this.lblPeriodo.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
+            this.lblPeriodo.Name = "lblPeriodo";
+            this.lblPeriodo.Size = new System.Drawing.Size(70, 20);
+            this.lblPeriodo.TabIndex = 9;
+            this.lblPeriodo.Text = "Periodo";
+            this.lblPeriodo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblapellidos
             // 
             this.lblapellidos.AutoSize = true;
             this.lblapellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblapellidos.Location = new System.Drawing.Point(15, 200);
+            this.lblapellidos.Location = new System.Drawing.Point(15, 300);
             this.lblapellidos.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
             this.lblapellidos.Name = "lblapellidos";
             this.lblapellidos.Size = new System.Drawing.Size(82, 20);
@@ -372,7 +378,7 @@
             // 
             this.lbltelefono.AutoSize = true;
             this.lbltelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltelefono.Location = new System.Drawing.Point(15, 150);
+            this.lbltelefono.Location = new System.Drawing.Point(15, 250);
             this.lbltelefono.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
             this.lbltelefono.Name = "lbltelefono";
             this.lbltelefono.Size = new System.Drawing.Size(69, 20);
@@ -392,17 +398,17 @@
             this.lblnombres.Text = "Clase";
             this.lblnombres.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtCarrera
+            // txtPeriodo
             // 
-            this.txtCarrera.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtPeriodo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCarrera.Enabled = false;
-            this.txtCarrera.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCarrera.Location = new System.Drawing.Point(113, 253);
-            this.txtCarrera.Multiline = true;
-            this.txtCarrera.Name = "txtCarrera";
-            this.txtCarrera.Size = new System.Drawing.Size(350, 26);
-            this.txtCarrera.TabIndex = 13;
+            this.txtPeriodo.Enabled = false;
+            this.txtPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPeriodo.Location = new System.Drawing.Point(113, 153);
+            this.txtPeriodo.Multiline = true;
+            this.txtPeriodo.Name = "txtPeriodo";
+            this.txtPeriodo.Size = new System.Drawing.Size(350, 26);
+            this.txtPeriodo.TabIndex = 13;
             // 
             // txtApellido
             // 
@@ -410,7 +416,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtApellido.Enabled = false;
             this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido.Location = new System.Drawing.Point(113, 203);
+            this.txtApellido.Location = new System.Drawing.Point(113, 303);
             this.txtApellido.Multiline = true;
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(350, 26);
@@ -422,7 +428,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAlumno.Enabled = false;
             this.txtAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAlumno.Location = new System.Drawing.Point(113, 153);
+            this.txtAlumno.Location = new System.Drawing.Point(113, 253);
             this.txtAlumno.Multiline = true;
             this.txtAlumno.Name = "txtAlumno";
             this.txtAlumno.Size = new System.Drawing.Size(350, 26);
@@ -445,7 +451,7 @@
             // btnAlumno
             // 
             this.btnAlumno.Image = global::Notas1.Properties.Resources.search_icon24;
-            this.btnAlumno.Location = new System.Drawing.Point(469, 153);
+            this.btnAlumno.Location = new System.Drawing.Point(469, 253);
             this.btnAlumno.MaximumSize = new System.Drawing.Size(38, 32);
             this.btnAlumno.MinimumSize = new System.Drawing.Size(38, 32);
             this.btnAlumno.Name = "btnAlumno";
@@ -472,7 +478,46 @@
             this.btnClase.UseVisualStyleBackColor = true;
             this.btnClase.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
-            // Calificaciones
+            // btnPeriodo
+            // 
+            this.btnPeriodo.Image = global::Notas1.Properties.Resources.search_icon24;
+            this.btnPeriodo.Location = new System.Drawing.Point(469, 153);
+            this.btnPeriodo.MaximumSize = new System.Drawing.Size(38, 32);
+            this.btnPeriodo.MinimumSize = new System.Drawing.Size(38, 32);
+            this.btnPeriodo.Name = "btnPeriodo";
+            this.btnPeriodo.Size = new System.Drawing.Size(38, 32);
+            this.btnPeriodo.TabIndex = 16;
+            this.btnPeriodo.TabStop = false;
+            this.btnPeriodo.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnPeriodo.UseMnemonic = false;
+            this.btnPeriodo.UseVisualStyleBackColor = true;
+            this.btnPeriodo.Click += new System.EventHandler(this.btnPeriodo_Click);
+            // 
+            // lblAnio
+            // 
+            this.lblAnio.AutoSize = true;
+            this.lblAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnio.Location = new System.Drawing.Point(15, 200);
+            this.lblAnio.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
+            this.lblAnio.Name = "lblAnio";
+            this.lblAnio.Size = new System.Drawing.Size(41, 20);
+            this.lblAnio.TabIndex = 17;
+            this.lblAnio.Text = "Año";
+            this.lblAnio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtAnio
+            // 
+            this.txtAnio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAnio.Enabled = false;
+            this.txtAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnio.Location = new System.Drawing.Point(113, 203);
+            this.txtAnio.Multiline = true;
+            this.txtAnio.Name = "txtAnio";
+            this.txtAnio.Size = new System.Drawing.Size(350, 26);
+            this.txtAnio.TabIndex = 18;
+            // 
+            // frmCalificaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -481,7 +526,7 @@
             this.Controls.Add(this.panelFormuarios);
             this.Controls.Add(this.panelBarraTitulo);
             this.Controls.Add(this.toolStrip2);
-            this.Name = "Calificaciones";
+            this.Name = "frmCalificaciones";
             this.Text = "Calificaciones";
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
@@ -511,10 +556,10 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label lblapellidos;
         private System.Windows.Forms.Label lbltelefono;
-        private System.Windows.Forms.Label lblcarrera;
+        private System.Windows.Forms.Label lblPeriodo;
         private System.Windows.Forms.TextBox txtAlumno;
         private System.Windows.Forms.TextBox txtApellido;
-        private System.Windows.Forms.TextBox txtCarrera;
+        private System.Windows.Forms.TextBox txtPeriodo;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label lblnombres;
         private System.Windows.Forms.Label lbldireccion;
@@ -529,5 +574,8 @@
         private System.Windows.Forms.Button btncalcular;
         private System.Windows.Forms.TextBox txtPromedio;
         private System.Windows.Forms.Button btnAlumno;
+        private System.Windows.Forms.Button btnPeriodo;
+        private System.Windows.Forms.TextBox txtAnio;
+        private System.Windows.Forms.Label lblAnio;
     }
 }
