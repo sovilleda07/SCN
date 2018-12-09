@@ -106,6 +106,71 @@ namespace Notas1.Clases
             }
         }
 
+        /// <summary>
+        /// Método para traer todos las Calificaciones en específico
+        /// </summary>
+        /// <param name="clase"></param>
+        /// <param name="periodo"></param>
+        /// <returns>Un DataView con toda la información</returns>
+        public static DataView GetDataViewCalificaciones(int clase, int periodo)
+        {
+            // Instanciamos la conexión
+            Conexion conexion = new Conexion("Notas");
+
+            // Creamos la variable que contendrá el Query
+            string sql;
+
+            sql = @"SELECT			SCN.Alumnos.id				as Id,
+                                    SCN.Alumnos.nombres			as Nombres,
+                                    SCN.Alumnos.apellidos		as Apellidos,
+                                    SCN.Calificaciones.nota1	as Nota1,
+                                    SCN.Calificaciones.nota2	as Nota2,
+                                    SCN.Calificaciones.nota3	as Nota3,
+                                    SCN.Calificaciones.promedio as Promedio,
+                                    SCN.Calificaciones.codigo   as Código
+                    FROM SCN.Alumnos
+                    INNER JOIN SCN.Registro
+                    ON SCN.Registro.Alumnos_id = SCN.Alumnos.id
+                    INNER JOIN SCN.Calificaciones
+                    ON SCN.Calificaciones.Registro_codigo = SCN.Registro.codigo
+                    WHERE SCN.Registro.Clases_codigo = @clase
+                    AND SCN.Registro.Periodos_codigo = @periodo";
+
+            try
+            {
+                SqlDataAdapter data = new SqlDataAdapter();
+
+                // Enviamos el comando a ejecutar
+                SqlCommand cmd = conexion.EjecutarComando(sql);
+
+                // Especificamos las variables escalares
+                cmd.Parameters.Add("@clase", SqlDbType.Int).Value = clase;
+                cmd.Parameters.Add("@periodo", SqlDbType.Int).Value = periodo;
+
+                data.SelectCommand = cmd;
+
+                DataSet ds = new DataSet();
+                // Tabla con que vamos a llenar los datos
+                data.Fill(ds, "SCN.Calificaciones");
+                DataTable dt = ds.Tables["SCN.Calificaciones"];
+
+                DataView dv = new DataView(dt,
+                    "", "Código",
+                    DataViewRowState.Unchanged);
+                return dv;
+
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                conexion.CerrarConexion();
+            }
+        }
+
 
 
 

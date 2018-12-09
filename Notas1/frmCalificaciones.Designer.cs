@@ -224,32 +224,31 @@
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 79F));
-            this.tableLayoutPanel3.Controls.Add(this.txtNota1, 1, 2);
-            this.tableLayoutPanel3.Controls.Add(this.txtNota2, 1, 3);
-            this.tableLayoutPanel3.Controls.Add(this.txtNota3, 1, 4);
-            this.tableLayoutPanel3.Controls.Add(this.lbldireccion, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.label3, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.label4, 0, 4);
-            this.tableLayoutPanel3.Controls.Add(this.lblemail, 0, 5);
-            this.tableLayoutPanel3.Controls.Add(this.btncalcular, 2, 5);
-            this.tableLayoutPanel3.Controls.Add(this.txtPromedio, 1, 5);
             this.tableLayoutPanel3.Controls.Add(this.dgvCalificaciones, 1, 7);
+            this.tableLayoutPanel3.Controls.Add(this.lbldireccion, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.txtNota1, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.label3, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.txtNota2, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.label4, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.txtNota3, 1, 3);
+            this.tableLayoutPanel3.Controls.Add(this.lblemail, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.txtPromedio, 1, 4);
+            this.tableLayoutPanel3.Controls.Add(this.btncalcular, 2, 4);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(525, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 9;
+            this.tableLayoutPanel3.RowCount = 8;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.580357F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.79464F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(516, 448);
             this.tableLayoutPanel3.TabIndex = 3;
             // 
@@ -258,11 +257,11 @@
             this.txtNota1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNota1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNota1.Location = new System.Drawing.Point(101, 101);
+            this.txtNota1.Location = new System.Drawing.Point(93, 52);
             this.txtNota1.MaxLength = 5;
             this.txtNota1.Multiline = true;
             this.txtNota1.Name = "txtNota1";
-            this.txtNota1.Size = new System.Drawing.Size(333, 26);
+            this.txtNota1.Size = new System.Drawing.Size(341, 26);
             this.txtNota1.TabIndex = 10;
             this.txtNota1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNota1_KeyPress);
             // 
@@ -271,11 +270,11 @@
             this.txtNota2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNota2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNota2.Location = new System.Drawing.Point(101, 150);
+            this.txtNota2.Location = new System.Drawing.Point(93, 101);
             this.txtNota2.MaxLength = 5;
             this.txtNota2.Multiline = true;
             this.txtNota2.Name = "txtNota2";
-            this.txtNota2.Size = new System.Drawing.Size(333, 26);
+            this.txtNota2.Size = new System.Drawing.Size(341, 26);
             this.txtNota2.TabIndex = 11;
             this.txtNota2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNota2_KeyPress);
             // 
@@ -284,11 +283,11 @@
             this.txtNota3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNota3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNota3.Location = new System.Drawing.Point(101, 199);
+            this.txtNota3.Location = new System.Drawing.Point(93, 150);
             this.txtNota3.MaxLength = 5;
             this.txtNota3.Multiline = true;
             this.txtNota3.Name = "txtNota3";
-            this.txtNota3.Size = new System.Drawing.Size(333, 26);
+            this.txtNota3.Size = new System.Drawing.Size(341, 26);
             this.txtNota3.TabIndex = 12;
             this.txtNota3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNota3_KeyPress);
             // 
@@ -296,7 +295,7 @@
             // 
             this.lbldireccion.AutoSize = true;
             this.lbldireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbldireccion.Location = new System.Drawing.Point(3, 98);
+            this.lbldireccion.Location = new System.Drawing.Point(3, 49);
             this.lbldireccion.Name = "lbldireccion";
             this.lbldireccion.Size = new System.Drawing.Size(62, 20);
             this.lbldireccion.TabIndex = 6;
@@ -307,7 +306,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 147);
+            this.label3.Location = new System.Drawing.Point(3, 98);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 20);
             this.label3.TabIndex = 16;
@@ -318,7 +317,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 196);
+            this.label4.Location = new System.Drawing.Point(3, 147);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 20);
             this.label4.TabIndex = 17;
@@ -329,7 +328,7 @@
             // 
             this.lblemail.AutoSize = true;
             this.lblemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblemail.Location = new System.Drawing.Point(3, 245);
+            this.lblemail.Location = new System.Drawing.Point(3, 196);
             this.lblemail.Name = "lblemail";
             this.lblemail.Size = new System.Drawing.Size(84, 20);
             this.lblemail.TabIndex = 8;
@@ -341,7 +340,7 @@
             this.btncalcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncalcular.Image = global::Notas1.Properties.Resources.icons8_calculator_16;
             this.btncalcular.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btncalcular.Location = new System.Drawing.Point(439, 247);
+            this.btncalcular.Location = new System.Drawing.Point(439, 198);
             this.btncalcular.Margin = new System.Windows.Forms.Padding(2);
             this.btncalcular.Name = "btncalcular";
             this.btncalcular.Size = new System.Drawing.Size(75, 22);
@@ -357,11 +356,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPromedio.Enabled = false;
             this.txtPromedio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPromedio.Location = new System.Drawing.Point(101, 248);
+            this.txtPromedio.Location = new System.Drawing.Point(93, 199);
             this.txtPromedio.MaxLength = 5;
             this.txtPromedio.Multiline = true;
             this.txtPromedio.Name = "txtPromedio";
-            this.txtPromedio.Size = new System.Drawing.Size(333, 26);
+            this.txtPromedio.Size = new System.Drawing.Size(341, 26);
             this.txtPromedio.TabIndex = 31;
             // 
             // dgvCalificaciones
@@ -370,10 +369,10 @@
             this.dgvCalificaciones.AllowUserToDeleteRows = false;
             this.dgvCalificaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCalificaciones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvCalificaciones.Location = new System.Drawing.Point(101, 346);
+            this.dgvCalificaciones.Location = new System.Drawing.Point(93, 321);
             this.dgvCalificaciones.Name = "dgvCalificaciones";
             this.dgvCalificaciones.ReadOnly = true;
-            this.dgvCalificaciones.Size = new System.Drawing.Size(333, 43);
+            this.dgvCalificaciones.Size = new System.Drawing.Size(341, 124);
             this.dgvCalificaciones.TabIndex = 32;
             this.dgvCalificaciones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCalificaciones_CellClick);
             // 
@@ -383,24 +382,23 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.lblClase, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.txtClase, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.btnClase, 2, 2);
-            this.tableLayoutPanel2.Controls.Add(this.lblPeriodo, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.txtPeriodo, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.btnPeriodo, 2, 3);
-            this.tableLayoutPanel2.Controls.Add(this.txtApellido, 1, 6);
-            this.tableLayoutPanel2.Controls.Add(this.lblApellidos, 0, 6);
-            this.tableLayoutPanel2.Controls.Add(this.btnAlumno, 2, 5);
-            this.tableLayoutPanel2.Controls.Add(this.txtNombres, 1, 5);
-            this.tableLayoutPanel2.Controls.Add(this.lblNombres, 0, 5);
-            this.tableLayoutPanel2.Controls.Add(this.txtAnio, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.lblAnio, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.lblClase, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.txtClase, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.btnClase, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lblPeriodo, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.txtPeriodo, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.btnPeriodo, 2, 2);
+            this.tableLayoutPanel2.Controls.Add(this.lblAnio, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.txtAnio, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.lblNombres, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.txtNombres, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.txtApellido, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.lblApellidos, 0, 5);
+            this.tableLayoutPanel2.Controls.Add(this.btnAlumno, 2, 4);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 9;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel2.RowCount = 8;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
@@ -416,7 +414,7 @@
             // 
             this.lblClase.AutoSize = true;
             this.lblClase.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClase.Location = new System.Drawing.Point(15, 98);
+            this.lblClase.Location = new System.Drawing.Point(15, 56);
             this.lblClase.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
             this.lblClase.Name = "lblClase";
             this.lblClase.Size = new System.Drawing.Size(54, 20);
@@ -431,7 +429,7 @@
             this.txtClase.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtClase.Enabled = false;
             this.txtClase.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClase.Location = new System.Drawing.Point(113, 101);
+            this.txtClase.Location = new System.Drawing.Point(113, 59);
             this.txtClase.Multiline = true;
             this.txtClase.Name = "txtClase";
             this.txtClase.Size = new System.Drawing.Size(350, 26);
@@ -441,7 +439,7 @@
             // btnClase
             // 
             this.btnClase.Image = global::Notas1.Properties.Resources.search_icon24;
-            this.btnClase.Location = new System.Drawing.Point(469, 101);
+            this.btnClase.Location = new System.Drawing.Point(469, 59);
             this.btnClase.MaximumSize = new System.Drawing.Size(38, 32);
             this.btnClase.MinimumSize = new System.Drawing.Size(38, 32);
             this.btnClase.Name = "btnClase";
@@ -457,7 +455,7 @@
             // 
             this.lblPeriodo.AutoSize = true;
             this.lblPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPeriodo.Location = new System.Drawing.Point(15, 147);
+            this.lblPeriodo.Location = new System.Drawing.Point(15, 112);
             this.lblPeriodo.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
             this.lblPeriodo.Name = "lblPeriodo";
             this.lblPeriodo.Size = new System.Drawing.Size(70, 20);
@@ -471,7 +469,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPeriodo.Enabled = false;
             this.txtPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPeriodo.Location = new System.Drawing.Point(113, 150);
+            this.txtPeriodo.Location = new System.Drawing.Point(113, 115);
             this.txtPeriodo.Multiline = true;
             this.txtPeriodo.Name = "txtPeriodo";
             this.txtPeriodo.Size = new System.Drawing.Size(350, 26);
@@ -480,7 +478,7 @@
             // btnPeriodo
             // 
             this.btnPeriodo.Image = global::Notas1.Properties.Resources.search_icon24;
-            this.btnPeriodo.Location = new System.Drawing.Point(469, 150);
+            this.btnPeriodo.Location = new System.Drawing.Point(469, 115);
             this.btnPeriodo.MaximumSize = new System.Drawing.Size(38, 32);
             this.btnPeriodo.MinimumSize = new System.Drawing.Size(38, 32);
             this.btnPeriodo.Name = "btnPeriodo";
@@ -498,7 +496,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtApellido.Enabled = false;
             this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido.Location = new System.Drawing.Point(113, 297);
+            this.txtApellido.Location = new System.Drawing.Point(113, 283);
             this.txtApellido.Multiline = true;
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(350, 26);
@@ -508,7 +506,7 @@
             // 
             this.lblApellidos.AutoSize = true;
             this.lblApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellidos.Location = new System.Drawing.Point(15, 294);
+            this.lblApellidos.Location = new System.Drawing.Point(15, 280);
             this.lblApellidos.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
             this.lblApellidos.Name = "lblApellidos";
             this.lblApellidos.Size = new System.Drawing.Size(82, 20);
@@ -519,7 +517,7 @@
             // btnAlumno
             // 
             this.btnAlumno.Image = global::Notas1.Properties.Resources.search_icon24;
-            this.btnAlumno.Location = new System.Drawing.Point(469, 248);
+            this.btnAlumno.Location = new System.Drawing.Point(469, 227);
             this.btnAlumno.MaximumSize = new System.Drawing.Size(38, 32);
             this.btnAlumno.MinimumSize = new System.Drawing.Size(38, 32);
             this.btnAlumno.Name = "btnAlumno";
@@ -537,7 +535,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombres.Enabled = false;
             this.txtNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombres.Location = new System.Drawing.Point(113, 248);
+            this.txtNombres.Location = new System.Drawing.Point(113, 227);
             this.txtNombres.Multiline = true;
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(350, 26);
@@ -547,7 +545,7 @@
             // 
             this.lblNombres.AutoSize = true;
             this.lblNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombres.Location = new System.Drawing.Point(15, 245);
+            this.lblNombres.Location = new System.Drawing.Point(15, 224);
             this.lblNombres.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
             this.lblNombres.Name = "lblNombres";
             this.lblNombres.Size = new System.Drawing.Size(80, 20);
@@ -561,7 +559,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAnio.Enabled = false;
             this.txtAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAnio.Location = new System.Drawing.Point(113, 199);
+            this.txtAnio.Location = new System.Drawing.Point(113, 171);
             this.txtAnio.Multiline = true;
             this.txtAnio.Name = "txtAnio";
             this.txtAnio.Size = new System.Drawing.Size(350, 26);
@@ -571,7 +569,7 @@
             // 
             this.lblAnio.AutoSize = true;
             this.lblAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnio.Location = new System.Drawing.Point(15, 196);
+            this.lblAnio.Location = new System.Drawing.Point(15, 168);
             this.lblAnio.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
             this.lblAnio.Name = "lblAnio";
             this.lblAnio.Size = new System.Drawing.Size(41, 20);

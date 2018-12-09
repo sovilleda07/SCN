@@ -196,10 +196,34 @@ namespace Notas1
             }
         }
 
+
+
         private void toolStripBuscar_Click(object sender, EventArgs e)
         {
-
+            if (txtClase.Text == "" || txtPeriodo.Text == "")
+            {
+                MessageBox.Show("Seleccione una clase y periodo", "Información");
+            }
+            else
+            {
+                try
+                {
+                    // El origen de los datos del DataGridView
+                    // Está en un método en la Clase Calificacoones
+                    // Hacemos referencia él
+                    dgvCalificaciones.DataSource = Calificaciones.GetDataViewCalificaciones(this.codigoClase, this.codigoPeriodo);
+                    toolStripGuardar.Enabled = false;
+                    toolStripActualizar.Enabled = true;                
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
+
+
+
 
         /// <summary>
         /// Evento para limpiar el formulario
