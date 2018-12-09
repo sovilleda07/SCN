@@ -102,5 +102,10 @@ namespace Notas1
             dgvAlumnos.DataSource = null;
             this.Close();
         }
+
+        private void dgvAlumnos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

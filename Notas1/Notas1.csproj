@@ -49,7 +49,7 @@
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -386,19 +386,8 @@
     <None Include="Resources\delete-icon28.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SQL\SCN DB.sql" />
-    <Content Include="SQL\sp_Alumnos.sql" />
-    <Content Include="SQL\sp_Carreras.sql" />
-    <Content Include="SQL\sp_Clases.sql" />
-    <Content Include="SQL\sp_Periodos.sql" />
-    <Content Include="SQL\sp_Registro.sql" />
-    <None Include="Resources\icons8-about-48.png" />
-    <None Include="Resources\icons8-about-24.png" />
-    <None Include="Resources\icons8-contacts-32.png" />
-    <None Include="Resources\icons8-print-32.png" />
-    <None Include="Resources\icons8-training-32 %281%29.png" />
-    <None Include="Resources\icons8-pdf-32.png" />
-    <None Include="Resources\icons8-broom-32.png" />
+    <None Include="Resources\icons8-view-50.png" />
+    <None Include="Resources\icons8-search-32.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -412,6 +401,19 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="SQL\SCN DB.sql" />
+    <Content Include="SQL\sp_Alumnos.sql" />
+    <Content Include="SQL\sp_Carreras.sql" />
+    <Content Include="SQL\sp_Clases.sql" />
+    <Content Include="SQL\sp_Periodos.sql" />
+    <Content Include="SQL\sp_Registro.sql" />
+    <None Include="Resources\icons8-about-48.png" />
+    <None Include="Resources\icons8-about-24.png" />
+    <None Include="Resources\icons8-contacts-32.png" />
+    <None Include="Resources\icons8-print-32.png" />
+    <None Include="Resources\icons8-training-32 %281%29.png" />
+    <None Include="Resources\icons8-pdf-32.png" />
+    <None Include="Resources\icons8-broom-32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

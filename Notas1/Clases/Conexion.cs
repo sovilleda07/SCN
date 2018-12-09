@@ -38,7 +38,7 @@ namespace Notas1.Clases
         {
             try
             {
-                conn = new SqlConnection(@"server = (local);
+                conn = new SqlConnection(@"server = (local)\SAMPSON;
                                         integrated security = true; database = " + baseDatos + ";");
 
                 // Establecer conexión
@@ -50,6 +50,7 @@ namespace Notas1.Clases
                 MessageBox.Show("Servidor o base de datos no encontrados!");
             }
         }
+
 
         /// <summary>
         /// Ejecuta un comando SQL.

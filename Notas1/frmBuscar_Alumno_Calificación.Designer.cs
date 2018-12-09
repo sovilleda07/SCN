@@ -43,7 +43,7 @@
             this.lblcalificaciones.ForeColor = System.Drawing.Color.White;
             this.lblcalificaciones.Location = new System.Drawing.Point(0, 0);
             this.lblcalificaciones.Name = "lblcalificaciones";
-            this.lblcalificaciones.Size = new System.Drawing.Size(582, 95);
+            this.lblcalificaciones.Size = new System.Drawing.Size(418, 95);
             this.lblcalificaciones.TabIndex = 49;
             this.lblcalificaciones.Text = "BUSCAR ALUMNOS";
             this.lblcalificaciones.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -53,22 +53,24 @@
             this.dgvAlumnos.AllowUserToAddRows = false;
             this.dgvAlumnos.AllowUserToDeleteRows = false;
             this.dgvAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAlumnos.Location = new System.Drawing.Point(35, 120);
+            this.dgvAlumnos.Location = new System.Drawing.Point(35, 115);
             this.dgvAlumnos.Name = "dgvAlumnos";
             this.dgvAlumnos.ReadOnly = true;
-            this.dgvAlumnos.Size = new System.Drawing.Size(512, 206);
+            this.dgvAlumnos.Size = new System.Drawing.Size(351, 170);
             this.dgvAlumnos.TabIndex = 50;
             this.dgvAlumnos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlumnos_CellClick);
+            this.dgvAlumnos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlumnos_CellContentClick);
             // 
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(225)))), ((int)(((byte)(229)))));
-            this.btnCancelar.Location = new System.Drawing.Point(344, 344);
+            this.btnCancelar.Image = global::Notas1.Properties.Resources.icons8_delete_24;
+            this.btnCancelar.Location = new System.Drawing.Point(262, 290);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(50, 2, 2, 2);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(78, 34);
+            this.btnCancelar.Size = new System.Drawing.Size(92, 56);
             this.btnCancelar.TabIndex = 52;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -80,10 +82,12 @@
             this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(225)))), ((int)(((byte)(229)))));
-            this.btnAgregar.Location = new System.Drawing.Point(163, 344);
+            this.btnAgregar.Image = global::Notas1.Properties.Resources.icons8_checkmark_32;
+            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregar.Location = new System.Drawing.Point(59, 290);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(50, 2, 2, 2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(78, 34);
+            this.btnAgregar.Size = new System.Drawing.Size(92, 56);
             this.btnAgregar.TabIndex = 51;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -95,7 +99,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(250)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(582, 401);
+            this.ClientSize = new System.Drawing.Size(418, 361);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dgvAlumnos);

@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panelBarraTitulo = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblcalificaciones = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
@@ -50,20 +53,17 @@
             this.lblcarrera = new System.Windows.Forms.Label();
             this.lblapellidos = new System.Windows.Forms.Label();
             this.lbltelefono = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSalir = new System.Windows.Forms.ToolStripButton();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblcalificaciones = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panelBarraTitulo.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelBarraTitulo
@@ -75,6 +75,45 @@
             this.panelBarraTitulo.Name = "panelBarraTitulo";
             this.panelBarraTitulo.Size = new System.Drawing.Size(735, 80);
             this.panelBarraTitulo.TabIndex = 28;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.label5, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.lblcalificaciones, 0, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(735, 80);
+            this.tableLayoutPanel4.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label5.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(370, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(362, 80);
+            this.label5.TabIndex = 27;
+            this.label5.Text = "USUARIO";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblcalificaciones
+            // 
+            this.lblcalificaciones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblcalificaciones.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcalificaciones.ForeColor = System.Drawing.Color.White;
+            this.lblcalificaciones.Location = new System.Drawing.Point(3, 0);
+            this.lblcalificaciones.Name = "lblcalificaciones";
+            this.lblcalificaciones.Size = new System.Drawing.Size(361, 80);
+            this.lblcalificaciones.TabIndex = 26;
+            this.lblcalificaciones.Text = "HABILITAR";
+            this.lblcalificaciones.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel1
             // 
@@ -375,6 +414,17 @@
             this.lbltelefono.Text = "Alumno";
             this.lbltelefono.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Location = new System.Drawing.Point(113, 10);
+            this.label4.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(245, 14);
+            this.label4.TabIndex = 53;
+            this.label4.Text = "Seleccione que quiere habilitar";
+            // 
             // toolStrip1
             // 
             this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(225)))), ((int)(((byte)(229)))));
@@ -411,56 +461,6 @@
             this.toolStripSalir.Size = new System.Drawing.Size(82, 28);
             this.toolStripSalir.Text = "Salir";
             // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Controls.Add(this.label5, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.lblcalificaciones, 0, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(735, 80);
-            this.tableLayoutPanel4.TabIndex = 0;
-            // 
-            // lblcalificaciones
-            // 
-            this.lblcalificaciones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblcalificaciones.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcalificaciones.ForeColor = System.Drawing.Color.White;
-            this.lblcalificaciones.Location = new System.Drawing.Point(3, 0);
-            this.lblcalificaciones.Name = "lblcalificaciones";
-            this.lblcalificaciones.Size = new System.Drawing.Size(361, 80);
-            this.lblcalificaciones.TabIndex = 26;
-            this.lblcalificaciones.Text = "HABILITAR";
-            this.lblcalificaciones.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(370, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(362, 80);
-            this.label5.TabIndex = 27;
-            this.label5.Text = "USUARIO";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Location = new System.Drawing.Point(113, 10);
-            this.label4.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(245, 14);
-            this.label4.TabIndex = 53;
-            this.label4.Text = "Seleccione que quiere habilitar";
-            // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -473,6 +473,7 @@
             this.Name = "frmUsuarios";
             this.Text = "Usuarios";
             this.panelBarraTitulo.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
@@ -480,7 +481,6 @@
             this.tableLayoutPanel2.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

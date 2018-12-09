@@ -283,10 +283,10 @@
             this.txtNombre.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(3, 57);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 3, 150, 15);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 3, 30, 15);
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(474, 36);
+            this.txtNombre.Size = new System.Drawing.Size(561, 36);
             this.txtNombre.TabIndex = 1;
             this.txtNombre.Tag = "";
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
@@ -312,10 +312,10 @@
             this.dgvClases.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClases.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvClases.Location = new System.Drawing.Point(3, 219);
-            this.dgvClases.Margin = new System.Windows.Forms.Padding(3, 3, 150, 3);
+            this.dgvClases.Margin = new System.Windows.Forms.Padding(3, 3, 30, 3);
             this.dgvClases.Name = "dgvClases";
             this.dgvClases.ReadOnly = true;
-            this.dgvClases.Size = new System.Drawing.Size(474, 48);
+            this.dgvClases.Size = new System.Drawing.Size(561, 48);
             this.dgvClases.TabIndex = 25;
             this.dgvClases.TabStop = false;
             this.dgvClases.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClases_CellClick);
@@ -328,9 +328,9 @@
             this.cmbCarrera.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCarrera.FormattingEnabled = true;
             this.cmbCarrera.Location = new System.Drawing.Point(3, 111);
-            this.cmbCarrera.Margin = new System.Windows.Forms.Padding(3, 3, 150, 3);
+            this.cmbCarrera.Margin = new System.Windows.Forms.Padding(3, 3, 30, 3);
             this.cmbCarrera.Name = "cmbCarrera";
-            this.cmbCarrera.Size = new System.Drawing.Size(474, 26);
+            this.cmbCarrera.Size = new System.Drawing.Size(561, 26);
             this.cmbCarrera.TabIndex = 2;
             // 
             // errorProvider1
