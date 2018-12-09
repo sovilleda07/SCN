@@ -31,9 +31,6 @@ BEGIN
 END
 GO
 
-SELECT * FROM SCN.Alumnos
-GO
-
 CREATE PROCEDURE sp_ActualizarAlumno(
 	@id INT,
 	@nombres NVARCHAR(45),

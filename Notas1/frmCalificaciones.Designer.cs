@@ -43,16 +43,16 @@
             this.panelFormuarios = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtNota1 = new System.Windows.Forms.TextBox();
-            this.txtNota2 = new System.Windows.Forms.TextBox();
-            this.txtNota3 = new System.Windows.Forms.TextBox();
-            this.lbldireccion = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblemail = new System.Windows.Forms.Label();
-            this.btncalcular = new System.Windows.Forms.Button();
-            this.txtPromedio = new System.Windows.Forms.TextBox();
             this.dgvCalificaciones = new System.Windows.Forms.DataGridView();
+            this.lbldireccion = new System.Windows.Forms.Label();
+            this.txtNota1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtNota2 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtNota3 = new System.Windows.Forms.TextBox();
+            this.lblemail = new System.Windows.Forms.Label();
+            this.txtPromedio = new System.Windows.Forms.TextBox();
+            this.btncalcular = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lblClase = new System.Windows.Forms.Label();
             this.txtClase = new System.Windows.Forms.TextBox();
@@ -60,13 +60,13 @@
             this.lblPeriodo = new System.Windows.Forms.Label();
             this.txtPeriodo = new System.Windows.Forms.TextBox();
             this.btnPeriodo = new System.Windows.Forms.Button();
+            this.lblAnio = new System.Windows.Forms.Label();
+            this.txtAnio = new System.Windows.Forms.TextBox();
+            this.lblNombres = new System.Windows.Forms.Label();
+            this.txtNombres = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.lblApellidos = new System.Windows.Forms.Label();
             this.btnAlumno = new System.Windows.Forms.Button();
-            this.txtNombres = new System.Windows.Forms.TextBox();
-            this.lblNombres = new System.Windows.Forms.Label();
-            this.txtAnio = new System.Windows.Forms.TextBox();
-            this.lblAnio = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.toolStrip2.SuspendLayout();
             this.panelBarraTitulo.SuspendLayout();
@@ -252,44 +252,18 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(516, 448);
             this.tableLayoutPanel3.TabIndex = 3;
             // 
-            // txtNota1
+            // dgvCalificaciones
             // 
-            this.txtNota1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNota1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNota1.Location = new System.Drawing.Point(93, 52);
-            this.txtNota1.MaxLength = 5;
-            this.txtNota1.Multiline = true;
-            this.txtNota1.Name = "txtNota1";
-            this.txtNota1.Size = new System.Drawing.Size(341, 26);
-            this.txtNota1.TabIndex = 10;
-            this.txtNota1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNota1_KeyPress);
-            // 
-            // txtNota2
-            // 
-            this.txtNota2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNota2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNota2.Location = new System.Drawing.Point(93, 101);
-            this.txtNota2.MaxLength = 5;
-            this.txtNota2.Multiline = true;
-            this.txtNota2.Name = "txtNota2";
-            this.txtNota2.Size = new System.Drawing.Size(341, 26);
-            this.txtNota2.TabIndex = 11;
-            this.txtNota2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNota2_KeyPress);
-            // 
-            // txtNota3
-            // 
-            this.txtNota3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNota3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNota3.Location = new System.Drawing.Point(93, 150);
-            this.txtNota3.MaxLength = 5;
-            this.txtNota3.Multiline = true;
-            this.txtNota3.Name = "txtNota3";
-            this.txtNota3.Size = new System.Drawing.Size(341, 26);
-            this.txtNota3.TabIndex = 12;
-            this.txtNota3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNota3_KeyPress);
+            this.dgvCalificaciones.AllowUserToAddRows = false;
+            this.dgvCalificaciones.AllowUserToDeleteRows = false;
+            this.dgvCalificaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCalificaciones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvCalificaciones.Location = new System.Drawing.Point(93, 321);
+            this.dgvCalificaciones.Name = "dgvCalificaciones";
+            this.dgvCalificaciones.ReadOnly = true;
+            this.dgvCalificaciones.Size = new System.Drawing.Size(341, 124);
+            this.dgvCalificaciones.TabIndex = 32;
+            this.dgvCalificaciones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCalificaciones_CellClick);
             // 
             // lbldireccion
             // 
@@ -302,6 +276,19 @@
             this.lbldireccion.Text = "Nota 1";
             this.lbldireccion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // txtNota1
+            // 
+            this.txtNota1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNota1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNota1.Location = new System.Drawing.Point(93, 52);
+            this.txtNota1.MaxLength = 6;
+            this.txtNota1.Multiline = true;
+            this.txtNota1.Name = "txtNota1";
+            this.txtNota1.Size = new System.Drawing.Size(341, 26);
+            this.txtNota1.TabIndex = 10;
+            this.txtNota1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNota1_KeyPress);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -312,6 +299,19 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "Nota 2";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtNota2
+            // 
+            this.txtNota2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNota2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNota2.Location = new System.Drawing.Point(93, 101);
+            this.txtNota2.MaxLength = 6;
+            this.txtNota2.Multiline = true;
+            this.txtNota2.Name = "txtNota2";
+            this.txtNota2.Size = new System.Drawing.Size(341, 26);
+            this.txtNota2.TabIndex = 11;
+            this.txtNota2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNota2_KeyPress);
             // 
             // label4
             // 
@@ -324,6 +324,19 @@
             this.label4.Text = "Nota 3";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // txtNota3
+            // 
+            this.txtNota3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNota3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNota3.Location = new System.Drawing.Point(93, 150);
+            this.txtNota3.MaxLength = 6;
+            this.txtNota3.Multiline = true;
+            this.txtNota3.Name = "txtNota3";
+            this.txtNota3.Size = new System.Drawing.Size(341, 26);
+            this.txtNota3.TabIndex = 12;
+            this.txtNota3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNota3_KeyPress);
+            // 
             // lblemail
             // 
             this.lblemail.AutoSize = true;
@@ -334,6 +347,19 @@
             this.lblemail.TabIndex = 8;
             this.lblemail.Text = "Promedio";
             this.lblemail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtPromedio
+            // 
+            this.txtPromedio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPromedio.Enabled = false;
+            this.txtPromedio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPromedio.Location = new System.Drawing.Point(93, 199);
+            this.txtPromedio.MaxLength = 6;
+            this.txtPromedio.Multiline = true;
+            this.txtPromedio.Name = "txtPromedio";
+            this.txtPromedio.Size = new System.Drawing.Size(341, 26);
+            this.txtPromedio.TabIndex = 31;
             // 
             // btncalcular
             // 
@@ -349,32 +375,6 @@
             this.btncalcular.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btncalcular.UseVisualStyleBackColor = true;
             this.btncalcular.Click += new System.EventHandler(this.btncalcular_Click);
-            // 
-            // txtPromedio
-            // 
-            this.txtPromedio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPromedio.Enabled = false;
-            this.txtPromedio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPromedio.Location = new System.Drawing.Point(93, 199);
-            this.txtPromedio.MaxLength = 5;
-            this.txtPromedio.Multiline = true;
-            this.txtPromedio.Name = "txtPromedio";
-            this.txtPromedio.Size = new System.Drawing.Size(341, 26);
-            this.txtPromedio.TabIndex = 31;
-            // 
-            // dgvCalificaciones
-            // 
-            this.dgvCalificaciones.AllowUserToAddRows = false;
-            this.dgvCalificaciones.AllowUserToDeleteRows = false;
-            this.dgvCalificaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCalificaciones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvCalificaciones.Location = new System.Drawing.Point(93, 321);
-            this.dgvCalificaciones.Name = "dgvCalificaciones";
-            this.dgvCalificaciones.ReadOnly = true;
-            this.dgvCalificaciones.Size = new System.Drawing.Size(341, 124);
-            this.dgvCalificaciones.TabIndex = 32;
-            this.dgvCalificaciones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCalificaciones_CellClick);
             // 
             // tableLayoutPanel2
             // 
@@ -490,6 +490,54 @@
             this.btnPeriodo.UseVisualStyleBackColor = true;
             this.btnPeriodo.Click += new System.EventHandler(this.btnPeriodo_Click);
             // 
+            // lblAnio
+            // 
+            this.lblAnio.AutoSize = true;
+            this.lblAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnio.Location = new System.Drawing.Point(15, 168);
+            this.lblAnio.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
+            this.lblAnio.Name = "lblAnio";
+            this.lblAnio.Size = new System.Drawing.Size(41, 20);
+            this.lblAnio.TabIndex = 17;
+            this.lblAnio.Text = "Año";
+            this.lblAnio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtAnio
+            // 
+            this.txtAnio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAnio.Enabled = false;
+            this.txtAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnio.Location = new System.Drawing.Point(113, 171);
+            this.txtAnio.Multiline = true;
+            this.txtAnio.Name = "txtAnio";
+            this.txtAnio.Size = new System.Drawing.Size(350, 26);
+            this.txtAnio.TabIndex = 18;
+            // 
+            // lblNombres
+            // 
+            this.lblNombres.AutoSize = true;
+            this.lblNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombres.Location = new System.Drawing.Point(15, 224);
+            this.lblNombres.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
+            this.lblNombres.Name = "lblNombres";
+            this.lblNombres.Size = new System.Drawing.Size(80, 20);
+            this.lblNombres.TabIndex = 7;
+            this.lblNombres.Text = "Nombres";
+            this.lblNombres.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtNombres
+            // 
+            this.txtNombres.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNombres.Enabled = false;
+            this.txtNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombres.Location = new System.Drawing.Point(113, 227);
+            this.txtNombres.Multiline = true;
+            this.txtNombres.Name = "txtNombres";
+            this.txtNombres.Size = new System.Drawing.Size(350, 26);
+            this.txtNombres.TabIndex = 11;
+            // 
             // txtApellido
             // 
             this.txtApellido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -528,54 +576,6 @@
             this.btnAlumno.UseMnemonic = false;
             this.btnAlumno.UseVisualStyleBackColor = true;
             this.btnAlumno.Click += new System.EventHandler(this.btnAlumno_Click);
-            // 
-            // txtNombres
-            // 
-            this.txtNombres.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNombres.Enabled = false;
-            this.txtNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombres.Location = new System.Drawing.Point(113, 227);
-            this.txtNombres.Multiline = true;
-            this.txtNombres.Name = "txtNombres";
-            this.txtNombres.Size = new System.Drawing.Size(350, 26);
-            this.txtNombres.TabIndex = 11;
-            // 
-            // lblNombres
-            // 
-            this.lblNombres.AutoSize = true;
-            this.lblNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombres.Location = new System.Drawing.Point(15, 224);
-            this.lblNombres.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
-            this.lblNombres.Name = "lblNombres";
-            this.lblNombres.Size = new System.Drawing.Size(80, 20);
-            this.lblNombres.TabIndex = 7;
-            this.lblNombres.Text = "Nombres";
-            this.lblNombres.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtAnio
-            // 
-            this.txtAnio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAnio.Enabled = false;
-            this.txtAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAnio.Location = new System.Drawing.Point(113, 171);
-            this.txtAnio.Multiline = true;
-            this.txtAnio.Name = "txtAnio";
-            this.txtAnio.Size = new System.Drawing.Size(350, 26);
-            this.txtAnio.TabIndex = 18;
-            // 
-            // lblAnio
-            // 
-            this.lblAnio.AutoSize = true;
-            this.lblAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnio.Location = new System.Drawing.Point(15, 168);
-            this.lblAnio.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
-            this.lblAnio.Name = "lblAnio";
-            this.lblAnio.Size = new System.Drawing.Size(41, 20);
-            this.lblAnio.TabIndex = 17;
-            this.lblAnio.Text = "Año";
-            this.lblAnio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // errorProvider1
             // 

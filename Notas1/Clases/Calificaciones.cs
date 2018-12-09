@@ -19,9 +19,24 @@ namespace Notas1.Clases
         public decimal promedio { get; set; }
         public int codigoRegistro { get; set; }
 
+        // Propiedades para Obtener Información
+        public int alumnoId { get; set; }
+        public string alumnoNombres { get; set; }
+        public string alumnoApellidos { get; set; }
+        public int claseCodigo { get; set; }
+        public string claseNombre { get; set; }
+        public int periodoCodigo { get; set; }
+        public string periodoDescripcion { get; set; }
+        public string periodoAnio { get; set; }
+
         // Constructor
         public Calificaciones() { }
 
+        /// <summary>
+        /// Método para insertar una calificación
+        /// </summary>
+        /// <param name="laCalificacion"></param>
+        /// <returns>true si se realiza el método, false de lo contrario</returns>
         public static bool InsertarCalificacion(Calificaciones laCalificacion)
         {
             // Instanciamos la conexión
@@ -70,6 +85,11 @@ namespace Notas1.Clases
 
         }
 
+        /// <summary>
+        /// Método para actualizar una calificación
+        /// </summary>
+        /// <param name="laCalificacion"></param>
+        /// <returns></returns>
         public static bool ActualizarCalificacion(Calificaciones laCalificacion)
         {
             // Instanciamos la conexión
@@ -82,7 +102,20 @@ namespace Notas1.Clases
             cmd.CommandType = CommandType.StoredProcedure;
 
             // Parámetros del Stored Procedure
+            cmd.Parameters.Add(new SqlParameter("@nota1", SqlDbType.Decimal));
+            cmd.Parameters["@nota1"].Value = laCalificacion.nota1;
 
+            cmd.Parameters.Add(new SqlParameter("@nota2", SqlDbType.Decimal));
+            cmd.Parameters["@nota2"].Value = laCalificacion.nota2;
+
+            cmd.Parameters.Add(new SqlParameter("@nota3", SqlDbType.Decimal));
+            cmd.Parameters["@nota3"].Value = laCalificacion.nota3;
+
+            cmd.Parameters.Add(new SqlParameter("@promedio", SqlDbType.Decimal));
+            cmd.Parameters["@promedio"].Value = laCalificacion.promedio;
+
+            cmd.Parameters.Add(new SqlParameter("@codigoCalificacion", SqlDbType.Int));
+            cmd.Parameters["@codigoCalificacion"].Value = laCalificacion.codigo;
 
             try
             {
@@ -114,6 +147,11 @@ namespace Notas1.Clases
         /// <returns>Un DataView con toda la información</returns>
         public static DataView GetDataViewCalificaciones(int clase, int periodo)
         {
+            // Establecer en la cultura, una modificación en el separador de decimal
+            System.Globalization.CultureInfo customCulture = (System.Globalization.CultureInfo)System.Threading.Thread.CurrentThread.CurrentCulture.Clone();
+            customCulture.NumberFormat.NumberDecimalSeparator = ".";
+            System.Threading.Thread.CurrentThread.CurrentCulture = customCulture;
+
             // Instanciamos la conexión
             Conexion conexion = new Conexion("Notas");
 
@@ -134,7 +172,8 @@ namespace Notas1.Clases
                     INNER JOIN SCN.Calificaciones
                     ON SCN.Calificaciones.Registro_codigo = SCN.Registro.codigo
                     WHERE SCN.Registro.Clases_codigo = @clase
-                    AND SCN.Registro.Periodos_codigo = @periodo";
+                    AND SCN.Registro.Periodos_codigo = @periodo
+                    AND SCN.Registro.estadoCalificacion = 1";
 
             try
             {
@@ -169,6 +208,103 @@ namespace Notas1.Clases
             {
                 conexion.CerrarConexion();
             }
+        }
+
+        /// <summary>
+        /// Método para obtener información de una Calificación
+        /// por medio de su código
+        /// </summary>
+        /// <param name="codigo"></param>
+        /// <returns></returns>
+        public static Calificaciones ObtenerInformacion(int codigo)
+        {
+            // Establecer en la cultura, una modificación en el separador de decimal
+            System.Globalization.CultureInfo customCulture = (System.Globalization.CultureInfo)System.Threading.Thread.CurrentThread.CurrentCulture.Clone();
+            customCulture.NumberFormat.NumberDecimalSeparator = ".";
+            System.Threading.Thread.CurrentThread.CurrentCulture = customCulture;
+
+            // Instanciamos la clase Conexión
+            Conexion conexion = new Conexion("Notas");
+
+            // Creamos la variable que contendrá el Query
+            string sql;
+
+            // Instanciamos la Clase Registro
+            Calificaciones resultado = new Calificaciones();
+
+            // Query SQL
+            sql = @"SELECT		SCN.Calificaciones.codigo,
+                                SCN.Calificaciones.nota1,
+			                    SCN.Calificaciones.nota2,
+			                    SCN.Calificaciones.nota3,
+			                    SCN.Calificaciones.promedio,
+                                SCN.Registro.codigo,
+                                SCN.Alumnos.id,
+                                SCN.Alumnos.nombres,
+                                SCN.Alumnos.apellidos,
+                                SCN.Clases.codigo,
+                                SCN.Clases.nombre,
+                                SCN.Periodos.codigo,
+                                SCN.Periodos.descripcion,
+                                SCN.Periodos.anio
+                    FROM SCN.Periodos
+                    INNER JOIN SCN.Registro
+                    ON SCN.Periodos.codigo = SCN.Registro.Periodos_codigo
+                    INNER JOIN SCN.Clases
+                    ON SCN.Clases.codigo = SCN.Registro.Clases_codigo
+                    INNER JOIN SCN.Alumnos
+                    ON SCN.Alumnos.id = SCN.Registro.Alumnos_id
+                    INNER JOIN SCN.Calificaciones
+                    ON SCN.Calificaciones.Registro_codigo = SCN.Registro.codigo
+                    WHERE SCN.Registro.codigo = @codigo
+                    AND SCN.Registro.estadoCalificacion = 1";
+
+            // Enviamos el comando a ejecutar
+            SqlCommand cmd = conexion.EjecutarComando(sql);
+
+            // Crearemos la lectura
+            SqlDataReader rdr;
+
+            try
+            {
+                using (cmd)
+                {
+                    cmd.Parameters.Add("@codigo", SqlDbType.Int).Value = codigo;
+
+                    // Ejecutamos el quey vía un ExecuteReader
+                    rdr = cmd.ExecuteReader();
+                }
+
+                while (rdr.Read())
+                {
+                    resultado.codigo = Convert.ToInt16(rdr[0]);
+                    resultado.nota1 = rdr.GetDecimal(1);
+                    resultado.nota2 = rdr.GetDecimal(2);
+                    resultado.nota3 = rdr.GetDecimal(3);
+                    resultado.promedio = rdr.GetDecimal(4);
+                    resultado.codigoRegistro = Convert.ToInt16(rdr[5]);
+                    resultado.alumnoId = Convert.ToInt16(rdr[6]);
+                    resultado.alumnoNombres = rdr.GetString(7);
+                    resultado.alumnoApellidos = rdr.GetString(8);
+                    resultado.claseCodigo = Convert.ToInt16(rdr[9]);
+                    resultado.claseNombre = rdr.GetString(10);
+                    resultado.periodoCodigo = Convert.ToInt16(rdr[11]);
+                    resultado.periodoDescripcion = rdr.GetString(12);
+                    resultado.periodoAnio = rdr.GetString(13);
+                }
+
+                return resultado;
+            }
+            catch (Exception)
+            {
+
+                return resultado;
+            }
+            finally
+            {
+                conexion.CerrarConexion();
+            }
+
         }
 
 

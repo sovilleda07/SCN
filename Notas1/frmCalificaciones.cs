@@ -36,6 +36,12 @@ namespace Notas1
         public static int ClaseCodigo;
         public static int PeriodoCodigo;
 
+        // Propiedades para Actualizar
+        private int codigoCalificacion;
+
+        // Propiedad para saber si el boton calcular fue presionado
+        private bool BtnCalcularFuePresionado = false;
+
         public frmCalificaciones()
         {
             InitializeComponent();
@@ -57,6 +63,7 @@ namespace Notas1
             this.codigoPeriodo = 0;
             this.codigoClase = 0;
             this.codigoAlumno = 0;
+            this.codigoCalificacion = 0;
 
             txtClase.Text = "";
             txtPeriodo.Text = "";
@@ -67,6 +74,10 @@ namespace Notas1
             txtNota2.Text = "";
             txtNota3.Text = "";
             txtPromedio.Text = "";
+
+            btnAlumno.Enabled = true;
+            btnClase.Enabled = true;
+            btnPeriodo.Enabled = true;
 
             dgvCalificaciones.DataSource = null;
             toolStripGuardar.Enabled = true;
@@ -90,8 +101,6 @@ namespace Notas1
             txtClase.Text = frmBuscar_Clases.descripcionClase;
             this.codigoClase = frmBuscar_Clases.codigoClases;
             ClaseCodigo = this.codigoClase;
-
-
         }
 
         /// <summary>
@@ -137,13 +146,40 @@ namespace Notas1
             
         }
 
-        // ****************************************************************************************************************
+        /// <summary>
+        /// Evento para cargar los datos del alumno
+        /// Al ser seleccionado en el DataGridView
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dgvCalificaciones_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             // Instanciamos la Clase Calificaciones
             Calificaciones laCalificacion = new Calificaciones();
+
+            laCalificacion = Calificaciones.ObtenerInformacion(Convert.ToInt16(dgvCalificaciones.Rows[e.RowIndex].Cells["Código"].Value));
+
+            txtNombres.Text = laCalificacion.alumnoNombres;
+            txtApellido.Text = laCalificacion.alumnoApellidos;
+            txtClase.Text = laCalificacion.claseNombre;
+            txtPeriodo.Text = laCalificacion.periodoDescripcion;
+            txtAnio.Text = laCalificacion.periodoAnio;
+            txtNota1.Text = laCalificacion.nota1.ToString();
+            txtNota2.Text = laCalificacion.nota2.ToString();
+            txtNota3.Text = laCalificacion.nota3.ToString();
+            txtPromedio.Text = laCalificacion.promedio.ToString();
+                     
+            this.codigoAlumno = laCalificacion.alumnoId;
+            this.codigoClase = laCalificacion.claseCodigo;
+            this.codigoPeriodo= laCalificacion.periodoCodigo;
+            this.codigoRegistro = laCalificacion.codigoRegistro;
+            this.codigoCalificacion = laCalificacion.codigo;
+
+            btnAlumno.Enabled = false;
+            btnClase.Enabled = false;
+            btnPeriodo.Enabled = false;
+
         }
-        // ****************************************************************************************************************
 
 
         // -------------------------CRUD---------------------------
@@ -184,20 +220,63 @@ namespace Notas1
             }
         }
 
+        /// <summary>
+        /// Evento para Actualizar un registro
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void toolStripctualizar_Click(object sender, EventArgs e)
         {
             if (txtClase.Text == "" || txtNombres.Text == "" || txtApellido.Text == "" || txtPeriodo.Text == "" || txtNota1.Text == "" || txtNota2.Text == "" || txtNota3.Text == "" || txtPromedio.Text == "")
             {
-                MessageBox.Show("Debe ingresar los datos", "Error de Actualización", MessageBoxButtons.OK);
+                MessageBox.Show("Debe ingresar todos los datos", "Información");
             }
             else
             {
-                MessageBox.Show("Calificación Actualizada satisfactoriamente", "Control de Calificaciones", MessageBoxButtons.OK);
+                if (dgvCalificaciones.SelectedRows.Count == 1)
+                {
+                    // Instanciamos la Clase Calificaciones
+                    Calificaciones laCalificacion = new Calificaciones();
+
+                    // Nuestro objeto adquiere os valores del formulario
+                    laCalificacion.nota1 = this.textnota1;
+                    laCalificacion.nota2 = this.textnota2;
+                    laCalificacion.nota3 = this.textnota3;
+                    laCalificacion.promedio = this.promedio;
+                    laCalificacion.codigo = this.codigoCalificacion;
+
+                    // Validamos si se presionó el botón calcular
+                    if (BtnCalcularFuePresionado)
+                    {
+                        // Verificamos si se realizó el método
+                        if (Calificaciones.ActualizarCalificacion(laCalificacion))
+                        {
+                            MessageBox.Show("Calificación Actualizada", "Información");
+                            Limpiar();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Ha ocurrido un error, verifique los datos", "Informacion");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Presione el botón Calcular");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Debe Seleccionar una fila");
+                }
             }
         }
 
 
-
+        /// <summary>
+        /// Evento para buscar una calificación
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void toolStripBuscar_Click(object sender, EventArgs e)
         {
             if (txtClase.Text == "" || txtPeriodo.Text == "")
@@ -212,6 +291,11 @@ namespace Notas1
                     // Está en un método en la Clase Calificacoones
                     // Hacemos referencia él
                     dgvCalificaciones.DataSource = Calificaciones.GetDataViewCalificaciones(this.codigoClase, this.codigoPeriodo);
+                    
+                    //Probando esconder los códigos
+                    //dgvCalificaciones.Columns[7].Visible = false;
+                    //dgvCalificaciones.Columns[0].Visible = false;
+
                     toolStripGuardar.Enabled = false;
                     toolStripActualizar.Enabled = true;                
                 }
@@ -221,9 +305,6 @@ namespace Notas1
                 }
             }
         }
-
-
-
 
         /// <summary>
         /// Evento para limpiar el formulario
@@ -324,6 +405,8 @@ namespace Notas1
             System.Globalization.CultureInfo customCulture = (System.Globalization.CultureInfo)System.Threading.Thread.CurrentThread.CurrentCulture.Clone();
             customCulture.NumberFormat.NumberDecimalSeparator = ".";
             System.Threading.Thread.CurrentThread.CurrentCulture = customCulture;
+
+            BtnCalcularFuePresionado = true;
 
             if (txtNota1.Text == "" || txtNota2.Text == "" || txtNota3.Text == "")
             {

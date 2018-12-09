@@ -388,6 +388,7 @@
   <ItemGroup>
     <Content Include="SQL\SCN DB.sql" />
     <Content Include="SQL\sp_Alumnos.sql" />
+    <Content Include="SQL\sp_Calificaciones.sql" />
     <Content Include="SQL\sp_Carreras.sql" />
     <Content Include="SQL\sp_Clases.sql" />
     <Content Include="SQL\sp_Periodos.sql" />

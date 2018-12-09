@@ -198,3 +198,20 @@ INSERT INTO SCN.Usuarios (usuario, clave)
 VALUES ('admin', '1234')
 
 SELECT * FROM SCN.Usuarios
+
+
+ALTER TABLE SCN.Calificaciones
+	ALTER COLUMN nota1 decimal(5,2)
+GO
+
+ALTER TABLE SCN.Calificaciones
+	ALTER COLUMN nota2 decimal(5,2)
+GO
+
+ALTER TABLE SCN.Calificaciones
+	ALTER COLUMN nota3 decimal(5,2)
+GO
+
+ALTER TABLE SCN.Calificaciones
+	ALTER COLUMN promedio decimal(5,2)
+GO
