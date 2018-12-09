@@ -415,10 +415,65 @@ namespace Notas1.Clases
         ///// </summary>
         ///// <param name="carrera"></param>
         ///// <returns></returns>
-        //public static DataView GetDataViewAlumnoCalificación(int clase, int carrera)
-        //{
+        public static DataView GetDataViewAlumnoCalificación(int clase, int periodo)
+        {
+            // Instanciamos la conexión
+            Conexion conexion = new Conexion("Notas");
+            // Creamos la variable que contendrá el Query
+            string sql;
 
-        //}
+            sql = @"SELECT		SCN.Alumnos.id			as Id,
+                                SCN.Alumnos.nombres     as Nombres,
+                                SCN.Alumnos.apellidos   as Apellidos,
+                                SCN.Registro.codigo     as Registro
+                    FROM SCN.Registro
+                    INNER JOIN SCN.Alumnos
+                    ON SCN.Alumnos.id = SCN.Registro.Alumnos_id
+                    INNER JOIN SCN.Clases
+                    ON SCN.Clases.codigo = SCN.Registro.Clases_codigo
+                    INNER JOIN SCN.Periodos
+                    ON SCN.Periodos.codigo = SCN.Registro.Periodos_codigo
+                    WHERE SCN.Registro.Clases_codigo = @clase
+                    AND SCN.Registro.Periodos_codigo = @periodo
+                    AND SCN.Registro.estadoCalificacion = 0;";
+
+            try
+            {
+                SqlDataAdapter data = new SqlDataAdapter();
+
+                //Enviamos el comando a ejecutar
+                SqlCommand cmd = conexion.EjecutarComando(sql);
+
+                cmd.Parameters.Add("@clase", SqlDbType.Int).Value = clase;
+
+                cmd.Parameters.Add("@periodo", SqlDbType.Int).Value = periodo;
+
+                data.SelectCommand = cmd;
+
+                DataSet ds = new DataSet();
+                // Tabla con que vamos a llenar los datos
+                data.Fill(ds, "SCN.Alumnos");
+                DataTable dt = ds.Tables["SCN.Alumnos"];
+
+                DataView dv = new DataView(dt,
+                    "",
+                    "Id",
+                    DataViewRowState.Unchanged);
+                return dv;
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                conexion.CerrarConexion();
+            }
+
+
+
+        }
 
 
     }
