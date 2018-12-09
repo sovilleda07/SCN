@@ -26,5 +26,10 @@ namespace Notas1
         {
             this.Close();
         }
+
+        private void toolStripSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

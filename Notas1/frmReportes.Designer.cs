@@ -298,6 +298,7 @@
             this.toolStripSalir.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
             this.toolStripSalir.Size = new System.Drawing.Size(82, 36);
             this.toolStripSalir.Text = "Salir";
+            this.toolStripSalir.Click += new System.EventHandler(this.toolStripSalir_Click);
             // 
             // frmReportes
             // 
