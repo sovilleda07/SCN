@@ -26,43 +26,23 @@ namespace Notas1
         {
             if (cmbHabilitar.SelectedIndex == 0)    //Alumno
             {
-                txtAlumno.Enabled = true;
-                txtApellido.Enabled = true;
-
-                txtCarrera.Enabled = false;
-                txtClase.Enabled = false;
-                txtPeriodo.Enabled = false;
+                
             }
 
             if (cmbHabilitar.SelectedIndex == 1)
             {
-                txtAlumno.Enabled = false;
-                txtApellido.Enabled = false;
-                txtClase.Enabled = false;
-                txtPeriodo.Enabled = false;
-
-                txtCarrera.Enabled = true;
+                
 
             }
 
             if (cmbHabilitar.SelectedIndex == 2)
             {
-                txtClase.Enabled = true;
-
-                txtAlumno.Enabled = false;
-                txtApellido.Enabled = false;
-                txtCarrera.Enabled = false;
-                txtPeriodo.Enabled = false;
+                
             }
 
             if (cmbHabilitar.SelectedIndex == 3)
             {
-                txtPeriodo.Enabled = true;
-
-                txtAlumno.Enabled = false;
-                txtApellido.Enabled = false;
-                txtCarrera.Enabled = false;
-                txtClase.Enabled = false;
+                
 
             }
         }
@@ -75,6 +55,12 @@ namespace Notas1
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        // Evento para salir del formulario
+        private void toolStripSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
