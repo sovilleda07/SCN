@@ -43,7 +43,6 @@
             this.panelFormuarios = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.dgvCalificaciones = new System.Windows.Forms.DataGridView();
             this.lbldireccion = new System.Windows.Forms.Label();
             this.txtNota1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,6 +52,7 @@
             this.lblemail = new System.Windows.Forms.Label();
             this.txtPromedio = new System.Windows.Forms.TextBox();
             this.btncalcular = new System.Windows.Forms.Button();
+            this.dgvCalificaciones = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lblClase = new System.Windows.Forms.Label();
             this.txtClase = new System.Windows.Forms.TextBox();
@@ -135,7 +135,7 @@
             // toolStripBuscar
             // 
             this.toolStripBuscar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
-            this.toolStripBuscar.Image = global::Notas1.Properties.Resources.icons8_broom_32;
+            this.toolStripBuscar.Image = global::Notas1.Properties.Resources.icons8_search_32;
             this.toolStripBuscar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBuscar.Name = "toolStripBuscar";
@@ -251,19 +251,6 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(516, 448);
             this.tableLayoutPanel3.TabIndex = 3;
             // 
-            // dgvCalificaciones
-            // 
-            this.dgvCalificaciones.AllowUserToAddRows = false;
-            this.dgvCalificaciones.AllowUserToDeleteRows = false;
-            this.dgvCalificaciones.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvCalificaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCalificaciones.Location = new System.Drawing.Point(93, 323);
-            this.dgvCalificaciones.Name = "dgvCalificaciones";
-            this.dgvCalificaciones.ReadOnly = true;
-            this.dgvCalificaciones.Size = new System.Drawing.Size(341, 58);
-            this.dgvCalificaciones.TabIndex = 32;
-            this.dgvCalificaciones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCalificaciones_CellClick);
-            // 
             // lbldireccion
             // 
             this.lbldireccion.AutoSize = true;
@@ -374,6 +361,19 @@
             this.btncalcular.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btncalcular.UseVisualStyleBackColor = true;
             this.btncalcular.Click += new System.EventHandler(this.btncalcular_Click);
+            // 
+            // dgvCalificaciones
+            // 
+            this.dgvCalificaciones.AllowUserToAddRows = false;
+            this.dgvCalificaciones.AllowUserToDeleteRows = false;
+            this.dgvCalificaciones.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvCalificaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCalificaciones.Location = new System.Drawing.Point(93, 323);
+            this.dgvCalificaciones.Name = "dgvCalificaciones";
+            this.dgvCalificaciones.ReadOnly = true;
+            this.dgvCalificaciones.Size = new System.Drawing.Size(341, 58);
+            this.dgvCalificaciones.TabIndex = 32;
+            this.dgvCalificaciones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCalificaciones_CellClick);
             // 
             // tableLayoutPanel2
             // 
