@@ -31,36 +31,36 @@
             this.panelBarraTitulo = new System.Windows.Forms.Panel();
             this.lblcalificaciones = new System.Windows.Forms.Label();
             this.toolStripmatricula = new System.Windows.Forms.ToolStrip();
+            this.toolStripGuardar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripActualizar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripBuscar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLimpiar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSalir = new System.Windows.Forms.ToolStripButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.btnAlumno = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblcreditos = new System.Windows.Forms.Label();
+            this.txtAnio = new System.Windows.Forms.TextBox();
+            this.btnPeriodo = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtPeriodo = new System.Windows.Forms.TextBox();
-            this.txtAnio = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.btnClase = new System.Windows.Forms.Button();
+            this.lblcreditos = new System.Windows.Forms.Label();
             this.txtClase = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvRegistro = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnAlumno = new System.Windows.Forms.Button();
-            this.btnPeriodo = new System.Windows.Forms.Button();
-            this.btnClase = new System.Windows.Forms.Button();
-            this.toolStripGuardar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripActualizar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBuscar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripLimpiar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSalir = new System.Windows.Forms.ToolStripButton();
+            this.label4 = new System.Windows.Forms.Label();
             this.panelBarraTitulo.SuspendLayout();
             this.toolStripmatricula.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -114,25 +114,86 @@
             this.toolStripmatricula.TabIndex = 28;
             this.toolStripmatricula.Text = "toolStrip1";
             // 
+            // toolStripGuardar
+            // 
+            this.toolStripGuardar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
+            this.toolStripGuardar.Image = global::Notas1.Properties.Resources.icons8_save_as_30;
+            this.toolStripGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripGuardar.Name = "toolStripGuardar";
+            this.toolStripGuardar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
+            this.toolStripGuardar.Size = new System.Drawing.Size(114, 36);
+            this.toolStripGuardar.Text = "Guardar";
+            this.toolStripGuardar.Click += new System.EventHandler(this.toolStripGuardar_Click);
+            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 39);
+            // 
+            // toolStripActualizar
+            // 
+            this.toolStripActualizar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
+            this.toolStripActualizar.Image = global::Notas1.Properties.Resources.icons8_synchronize_24;
+            this.toolStripActualizar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripActualizar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripActualizar.Name = "toolStripActualizar";
+            this.toolStripActualizar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
+            this.toolStripActualizar.Size = new System.Drawing.Size(119, 36);
+            this.toolStripActualizar.Text = "Actualizar";
+            this.toolStripActualizar.Click += new System.EventHandler(this.toolStripActualizar_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 39);
             // 
+            // toolStripBuscar
+            // 
+            this.toolStripBuscar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
+            this.toolStripBuscar.Image = global::Notas1.Properties.Resources.icons8_search_32;
+            this.toolStripBuscar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBuscar.Name = "toolStripBuscar";
+            this.toolStripBuscar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
+            this.toolStripBuscar.Size = new System.Drawing.Size(105, 36);
+            this.toolStripBuscar.Text = "Buscar";
+            this.toolStripBuscar.Click += new System.EventHandler(this.toolStripBuscar_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
             // 
+            // toolStripLimpiar
+            // 
+            this.toolStripLimpiar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
+            this.toolStripLimpiar.Image = global::Notas1.Properties.Resources.icons8_broom_32;
+            this.toolStripLimpiar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripLimpiar.Name = "toolStripLimpiar";
+            this.toolStripLimpiar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
+            this.toolStripLimpiar.Size = new System.Drawing.Size(112, 36);
+            this.toolStripLimpiar.Text = "Limpiar";
+            this.toolStripLimpiar.Click += new System.EventHandler(this.toolStripLimpiar_Click);
+            // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 39);
+            // 
+            // toolStripSalir
+            // 
+            this.toolStripSalir.AccessibleRole = System.Windows.Forms.AccessibleRole.Clock;
+            this.toolStripSalir.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
+            this.toolStripSalir.Image = global::Notas1.Properties.Resources.icons8_delete_24;
+            this.toolStripSalir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSalir.Name = "toolStripSalir";
+            this.toolStripSalir.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
+            this.toolStripSalir.Size = new System.Drawing.Size(82, 36);
+            this.toolStripSalir.Text = "Salir";
+            this.toolStripSalir.Click += new System.EventHandler(this.toolStripSalir_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -180,27 +241,13 @@
             this.tableLayoutPanel3.Controls.Add(this.label5, 0, 3);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(400, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 6;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel3.RowCount = 5;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(391, 153);
             this.tableLayoutPanel3.TabIndex = 4;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNombre.Enabled = false;
-            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(103, 53);
-            this.txtNombre.Multiline = true;
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(235, 19);
-            this.txtNombre.TabIndex = 11;
             // 
             // txtApellido
             // 
@@ -214,6 +261,57 @@
             this.txtApellido.Size = new System.Drawing.Size(235, 19);
             this.txtApellido.TabIndex = 29;
             // 
+            // txtNombre
+            // 
+            this.txtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNombre.Enabled = false;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(103, 53);
+            this.txtNombre.Multiline = true;
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(235, 19);
+            this.txtNombre.TabIndex = 11;
+            // 
+            // btnAlumno
+            // 
+            this.btnAlumno.Image = global::Notas1.Properties.Resources.search_icon24;
+            this.btnAlumno.Location = new System.Drawing.Point(344, 53);
+            this.btnAlumno.MaximumSize = new System.Drawing.Size(38, 32);
+            this.btnAlumno.MinimumSize = new System.Drawing.Size(38, 32);
+            this.btnAlumno.Name = "btnAlumno";
+            this.btnAlumno.Size = new System.Drawing.Size(38, 32);
+            this.btnAlumno.TabIndex = 28;
+            this.btnAlumno.TabStop = false;
+            this.btnAlumno.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnAlumno.UseMnemonic = false;
+            this.btnAlumno.UseVisualStyleBackColor = true;
+            this.btnAlumno.Click += new System.EventHandler(this.btnAlumno_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(15, 50);
+            this.label2.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 20);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Nombre";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(15, 75);
+            this.label5.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 20);
+            this.label5.TabIndex = 31;
+            this.label5.Text = "Apellido";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -224,19 +322,17 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel4.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.label4, 0, 4);
-            this.tableLayoutPanel4.Controls.Add(this.txtAnio, 1, 4);
-            this.tableLayoutPanel4.Controls.Add(this.btnPeriodo, 2, 4);
-            this.tableLayoutPanel4.Controls.Add(this.label3, 0, 3);
-            this.tableLayoutPanel4.Controls.Add(this.txtPeriodo, 1, 3);
-            this.tableLayoutPanel4.Controls.Add(this.btnClase, 2, 3);
-            this.tableLayoutPanel4.Controls.Add(this.lblcreditos, 0, 2);
-            this.tableLayoutPanel4.Controls.Add(this.txtClase, 1, 2);
+            this.tableLayoutPanel4.Controls.Add(this.lblcreditos, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.label3, 0, 2);
+            this.tableLayoutPanel4.Controls.Add(this.txtClase, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.txtPeriodo, 1, 2);
+            this.tableLayoutPanel4.Controls.Add(this.label4, 0, 3);
+            this.tableLayoutPanel4.Controls.Add(this.txtAnio, 1, 3);
+            this.tableLayoutPanel4.Controls.Add(this.btnClase, 2, 2);
+            this.tableLayoutPanel4.Controls.Add(this.btnPeriodo, 2, 3);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 6;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.RowCount = 4;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
@@ -256,21 +352,38 @@
             this.label1.Text = "CLASES";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblcreditos
+            // txtAnio
             // 
-            this.lblcreditos.AutoSize = true;
-            this.lblcreditos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcreditos.Location = new System.Drawing.Point(3, 50);
-            this.lblcreditos.Name = "lblcreditos";
-            this.lblcreditos.Size = new System.Drawing.Size(54, 20);
-            this.lblcreditos.TabIndex = 31;
-            this.lblcreditos.Text = "Clase";
+            this.txtAnio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAnio.Enabled = false;
+            this.txtAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnio.Location = new System.Drawing.Point(103, 117);
+            this.txtAnio.Multiline = true;
+            this.txtAnio.Name = "txtAnio";
+            this.txtAnio.Size = new System.Drawing.Size(235, 19);
+            this.txtAnio.TabIndex = 33;
+            // 
+            // btnPeriodo
+            // 
+            this.btnPeriodo.Image = global::Notas1.Properties.Resources.search_icon24;
+            this.btnPeriodo.Location = new System.Drawing.Point(344, 117);
+            this.btnPeriodo.MaximumSize = new System.Drawing.Size(38, 32);
+            this.btnPeriodo.MinimumSize = new System.Drawing.Size(38, 32);
+            this.btnPeriodo.Name = "btnPeriodo";
+            this.btnPeriodo.Size = new System.Drawing.Size(38, 32);
+            this.btnPeriodo.TabIndex = 29;
+            this.btnPeriodo.TabStop = false;
+            this.btnPeriodo.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnPeriodo.UseMnemonic = false;
+            this.btnPeriodo.UseVisualStyleBackColor = true;
+            this.btnPeriodo.Click += new System.EventHandler(this.button2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 75);
+            this.label3.Location = new System.Drawing.Point(3, 76);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 20);
             this.label3.TabIndex = 32;
@@ -282,34 +395,36 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPeriodo.Enabled = false;
             this.txtPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPeriodo.Location = new System.Drawing.Point(103, 78);
+            this.txtPeriodo.Location = new System.Drawing.Point(103, 79);
             this.txtPeriodo.Multiline = true;
             this.txtPeriodo.Name = "txtPeriodo";
             this.txtPeriodo.Size = new System.Drawing.Size(235, 19);
             this.txtPeriodo.TabIndex = 12;
             // 
-            // txtAnio
+            // btnClase
             // 
-            this.txtAnio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAnio.Enabled = false;
-            this.txtAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAnio.Location = new System.Drawing.Point(103, 103);
-            this.txtAnio.Multiline = true;
-            this.txtAnio.Name = "txtAnio";
-            this.txtAnio.Size = new System.Drawing.Size(235, 19);
-            this.txtAnio.TabIndex = 33;
+            this.btnClase.Image = global::Notas1.Properties.Resources.search_icon24;
+            this.btnClase.Location = new System.Drawing.Point(344, 79);
+            this.btnClase.MaximumSize = new System.Drawing.Size(38, 32);
+            this.btnClase.MinimumSize = new System.Drawing.Size(38, 32);
+            this.btnClase.Name = "btnClase";
+            this.btnClase.Size = new System.Drawing.Size(38, 32);
+            this.btnClase.TabIndex = 36;
+            this.btnClase.TabStop = false;
+            this.btnClase.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnClase.UseMnemonic = false;
+            this.btnClase.UseVisualStyleBackColor = true;
+            this.btnClase.Click += new System.EventHandler(this.btnClase_Click);
             // 
-            // label4
+            // lblcreditos
             // 
-            this.label4.AutoSize = true;
-            this.label4.Enabled = false;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 100);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 20);
-            this.label4.TabIndex = 34;
-            this.label4.Text = "Año";
+            this.lblcreditos.AutoSize = true;
+            this.lblcreditos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcreditos.Location = new System.Drawing.Point(3, 38);
+            this.lblcreditos.Name = "lblcreditos";
+            this.lblcreditos.Size = new System.Drawing.Size(54, 20);
+            this.lblcreditos.TabIndex = 31;
+            this.lblcreditos.Text = "Clase";
             // 
             // txtClase
             // 
@@ -317,7 +432,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtClase.Enabled = false;
             this.txtClase.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClase.Location = new System.Drawing.Point(103, 53);
+            this.txtClase.Location = new System.Drawing.Point(103, 41);
             this.txtClase.Multiline = true;
             this.txtClase.Name = "txtClase";
             this.txtClase.Size = new System.Drawing.Size(235, 19);
@@ -361,135 +476,15 @@
             this.dgvRegistro.TabIndex = 1;
             this.dgvRegistro.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRegistro_CellClick);
             // 
-            // label2
+            // label4
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(15, 50);
-            this.label2.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 20);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Nombre";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(15, 75);
-            this.label5.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 20);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "Apellido";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // btnAlumno
-            // 
-            this.btnAlumno.Image = global::Notas1.Properties.Resources.search_icon24;
-            this.btnAlumno.Location = new System.Drawing.Point(344, 53);
-            this.btnAlumno.MaximumSize = new System.Drawing.Size(38, 32);
-            this.btnAlumno.MinimumSize = new System.Drawing.Size(38, 32);
-            this.btnAlumno.Name = "btnAlumno";
-            this.btnAlumno.Size = new System.Drawing.Size(38, 32);
-            this.btnAlumno.TabIndex = 28;
-            this.btnAlumno.TabStop = false;
-            this.btnAlumno.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnAlumno.UseMnemonic = false;
-            this.btnAlumno.UseVisualStyleBackColor = true;
-            this.btnAlumno.Click += new System.EventHandler(this.btnAlumno_Click);
-            // 
-            // btnPeriodo
-            // 
-            this.btnPeriodo.Image = global::Notas1.Properties.Resources.search_icon24;
-            this.btnPeriodo.Location = new System.Drawing.Point(344, 103);
-            this.btnPeriodo.MaximumSize = new System.Drawing.Size(38, 32);
-            this.btnPeriodo.MinimumSize = new System.Drawing.Size(38, 32);
-            this.btnPeriodo.Name = "btnPeriodo";
-            this.btnPeriodo.Size = new System.Drawing.Size(38, 32);
-            this.btnPeriodo.TabIndex = 29;
-            this.btnPeriodo.TabStop = false;
-            this.btnPeriodo.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnPeriodo.UseMnemonic = false;
-            this.btnPeriodo.UseVisualStyleBackColor = true;
-            this.btnPeriodo.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btnClase
-            // 
-            this.btnClase.Image = global::Notas1.Properties.Resources.search_icon24;
-            this.btnClase.Location = new System.Drawing.Point(344, 78);
-            this.btnClase.MaximumSize = new System.Drawing.Size(38, 32);
-            this.btnClase.MinimumSize = new System.Drawing.Size(38, 32);
-            this.btnClase.Name = "btnClase";
-            this.btnClase.Size = new System.Drawing.Size(38, 32);
-            this.btnClase.TabIndex = 36;
-            this.btnClase.TabStop = false;
-            this.btnClase.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnClase.UseMnemonic = false;
-            this.btnClase.UseVisualStyleBackColor = true;
-            this.btnClase.Click += new System.EventHandler(this.btnClase_Click);
-            // 
-            // toolStripGuardar
-            // 
-            this.toolStripGuardar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
-            this.toolStripGuardar.Image = global::Notas1.Properties.Resources.icons8_save_as_30;
-            this.toolStripGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripGuardar.Name = "toolStripGuardar";
-            this.toolStripGuardar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
-            this.toolStripGuardar.Size = new System.Drawing.Size(114, 36);
-            this.toolStripGuardar.Text = "Guardar";
-            this.toolStripGuardar.Click += new System.EventHandler(this.toolStripGuardar_Click);
-            // 
-            // toolStripActualizar
-            // 
-            this.toolStripActualizar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
-            this.toolStripActualizar.Image = global::Notas1.Properties.Resources.icons8_synchronize_24;
-            this.toolStripActualizar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripActualizar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripActualizar.Name = "toolStripActualizar";
-            this.toolStripActualizar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
-            this.toolStripActualizar.Size = new System.Drawing.Size(119, 36);
-            this.toolStripActualizar.Text = "Actualizar";
-            this.toolStripActualizar.Click += new System.EventHandler(this.toolStripActualizar_Click);
-            // 
-            // toolStripBuscar
-            // 
-            this.toolStripBuscar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
-            this.toolStripBuscar.Image = global::Notas1.Properties.Resources.icons8_search_32;
-            this.toolStripBuscar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBuscar.Name = "toolStripBuscar";
-            this.toolStripBuscar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
-            this.toolStripBuscar.Size = new System.Drawing.Size(105, 36);
-            this.toolStripBuscar.Text = "Buscar";
-            this.toolStripBuscar.Click += new System.EventHandler(this.toolStripBuscar_Click);
-            // 
-            // toolStripLimpiar
-            // 
-            this.toolStripLimpiar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
-            this.toolStripLimpiar.Image = global::Notas1.Properties.Resources.icons8_broom_32;
-            this.toolStripLimpiar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripLimpiar.Name = "toolStripLimpiar";
-            this.toolStripLimpiar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
-            this.toolStripLimpiar.Size = new System.Drawing.Size(112, 36);
-            this.toolStripLimpiar.Text = "Limpiar";
-            this.toolStripLimpiar.Click += new System.EventHandler(this.toolStripLimpiar_Click);
-            // 
-            // toolStripSalir
-            // 
-            this.toolStripSalir.AccessibleRole = System.Windows.Forms.AccessibleRole.Clock;
-            this.toolStripSalir.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
-            this.toolStripSalir.Image = global::Notas1.Properties.Resources.icons8_delete_24;
-            this.toolStripSalir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSalir.Name = "toolStripSalir";
-            this.toolStripSalir.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
-            this.toolStripSalir.Size = new System.Drawing.Size(82, 36);
-            this.toolStripSalir.Text = "Salir";
-            this.toolStripSalir.Click += new System.EventHandler(this.toolStripSalir_Click);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(3, 114);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 20);
+            this.label4.TabIndex = 37;
+            this.label4.Text = "Año";
             // 
             // frmRegistro
             // 
@@ -544,7 +539,6 @@
         private System.Windows.Forms.TextBox txtPeriodo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtAnio;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtClase;
         private System.Windows.Forms.Button btnClase;
@@ -554,5 +548,6 @@
         private System.Windows.Forms.ToolStripButton toolStripBuscar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }
