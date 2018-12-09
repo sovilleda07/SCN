@@ -38,7 +38,7 @@ namespace Notas1.Clases
         {
             try
             {
-                conn = new SqlConnection(@"server = (local)\SAMPSON;
+                conn = new SqlConnection(@"server = (local);
                                         integrated security = true; database = " + baseDatos + ";");
 
                 // Establecer conexión
