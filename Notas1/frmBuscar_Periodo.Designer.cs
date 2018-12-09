@@ -66,10 +66,11 @@
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(225)))), ((int)(((byte)(229)))));
-            this.btnCancelar.Location = new System.Drawing.Point(255, 296);
+            this.btnCancelar.Image = global::Notas1.Properties.Resources.icons8_delete_24;
+            this.btnCancelar.Location = new System.Drawing.Point(254, 297);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(50, 2, 2, 2);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(78, 34);
+            this.btnCancelar.Size = new System.Drawing.Size(86, 41);
             this.btnCancelar.TabIndex = 48;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -81,10 +82,12 @@
             this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(225)))), ((int)(((byte)(229)))));
-            this.btnAgregar.Location = new System.Drawing.Point(74, 296);
+            this.btnAgregar.Image = global::Notas1.Properties.Resources.icons8_checkmark_32;
+            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregar.Location = new System.Drawing.Point(75, 296);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(50, 2, 2, 2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(78, 34);
+            this.btnAgregar.Size = new System.Drawing.Size(86, 42);
             this.btnAgregar.TabIndex = 47;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

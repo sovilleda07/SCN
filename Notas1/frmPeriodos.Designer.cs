@@ -45,8 +45,8 @@
             this.lblcodigoperiodo = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.lblanio = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtAnio = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.nudPeriodo = new System.Windows.Forms.NumericUpDown();
             this.dgvPeriodos = new System.Windows.Forms.DataGridView();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -186,23 +186,23 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Controls.Add(this.lblcodigoperiodo, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txtDescripcion, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lblanio, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.txtAnio, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.nudPeriodo, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.dgvPeriodos, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.lblcodigoperiodo, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtDescripcion, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lblanio, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txtAnio, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.nudPeriodo, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.dgvPeriodos, 1, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 80);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.08459F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.667674F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.84592F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.01208F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.48036F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.11782F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 331);
             this.tableLayoutPanel1.TabIndex = 27;
             // 
@@ -210,7 +210,7 @@
             // 
             this.lblcodigoperiodo.AutoSize = true;
             this.lblcodigoperiodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcodigoperiodo.Location = new System.Drawing.Point(20, 70);
+            this.lblcodigoperiodo.Location = new System.Drawing.Point(20, 41);
             this.lblcodigoperiodo.Margin = new System.Windows.Forms.Padding(20, 0, 2, 0);
             this.lblcodigoperiodo.Name = "lblcodigoperiodo";
             this.lblcodigoperiodo.Size = new System.Drawing.Size(103, 20);
@@ -219,13 +219,15 @@
             // 
             // txtDescripcion
             // 
+            this.txtDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDescripcion.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(153, 73);
-            this.txtDescripcion.MaximumSize = new System.Drawing.Size(500, 100);
+            this.txtDescripcion.Location = new System.Drawing.Point(153, 44);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(3, 3, 30, 3);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(500, 41);
+            this.txtDescripcion.Size = new System.Drawing.Size(617, 35);
             this.txtDescripcion.TabIndex = 1;
             this.txtDescripcion.Tag = "";
             // 
@@ -233,23 +235,12 @@
             // 
             this.lblanio.AutoSize = true;
             this.lblanio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblanio.Location = new System.Drawing.Point(20, 138);
+            this.lblanio.Location = new System.Drawing.Point(20, 82);
             this.lblanio.Margin = new System.Windows.Forms.Padding(20, 0, 2, 0);
             this.lblanio.Name = "lblanio";
             this.lblanio.Size = new System.Drawing.Size(41, 20);
             this.lblanio.TabIndex = 8;
             this.lblanio.Text = "Año";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(20, 190);
-            this.label5.Margin = new System.Windows.Forms.Padding(20, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 20);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Periodo";
             // 
             // txtAnio
             // 
@@ -257,20 +248,31 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAnio.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAnio.Location = new System.Drawing.Point(153, 141);
-            this.txtAnio.MaximumSize = new System.Drawing.Size(500, 26);
+            this.txtAnio.Location = new System.Drawing.Point(153, 85);
+            this.txtAnio.Margin = new System.Windows.Forms.Padding(3, 3, 30, 3);
             this.txtAnio.Multiline = true;
             this.txtAnio.Name = "txtAnio";
-            this.txtAnio.Size = new System.Drawing.Size(500, 26);
+            this.txtAnio.Size = new System.Drawing.Size(617, 26);
             this.txtAnio.TabIndex = 2;
             this.txtAnio.Tag = "";
             this.txtAnio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAnio_KeyPress);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(20, 123);
+            this.label5.Margin = new System.Windows.Forms.Padding(20, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(70, 20);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Periodo";
             // 
             // nudPeriodo
             // 
             this.nudPeriodo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nudPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudPeriodo.Location = new System.Drawing.Point(153, 193);
+            this.nudPeriodo.Location = new System.Drawing.Point(153, 126);
             this.nudPeriodo.Maximum = new decimal(new int[] {
             3,
             0,
@@ -294,11 +296,13 @@
             // 
             this.dgvPeriodos.AllowUserToAddRows = false;
             this.dgvPeriodos.AllowUserToDeleteRows = false;
+            this.dgvPeriodos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPeriodos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPeriodos.Location = new System.Drawing.Point(153, 230);
+            this.dgvPeriodos.Location = new System.Drawing.Point(153, 177);
+            this.dgvPeriodos.Margin = new System.Windows.Forms.Padding(3, 3, 30, 3);
             this.dgvPeriodos.Name = "dgvPeriodos";
             this.dgvPeriodos.ReadOnly = true;
-            this.dgvPeriodos.Size = new System.Drawing.Size(544, 98);
+            this.dgvPeriodos.Size = new System.Drawing.Size(617, 98);
             this.dgvPeriodos.TabIndex = 27;
             this.dgvPeriodos.TabStop = false;
             this.dgvPeriodos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPeriodos_CellClick);

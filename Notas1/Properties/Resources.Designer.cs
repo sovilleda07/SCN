@@ -323,6 +323,16 @@ namespace Notas1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_search_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-search-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_synchronize_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-synchronize-24", resourceCulture);
@@ -356,6 +366,16 @@ namespace Notas1.Properties {
         internal static System.Drawing.Bitmap icons8_training_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-training-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_view_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-view-50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

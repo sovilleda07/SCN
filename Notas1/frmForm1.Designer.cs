@@ -32,37 +32,37 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuFondo));
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panelFormuarios = new System.Windows.Forms.Panel();
+            this.btnInfo = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panelBarraTitulo = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnInfo = new System.Windows.Forms.Button();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.btnAlumnos = new System.Windows.Forms.Button();
             this.btnPeriodos = new System.Windows.Forms.Button();
             this.btnMatricula = new System.Windows.Forms.Button();
-            this.btnCarreras = new System.Windows.Forms.Button();
             this.btnClase = new System.Windows.Forms.Button();
             this.btnCalificaciones = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
+            this.panelBarraTitulo = new System.Windows.Forms.Panel();
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnCarreras = new System.Windows.Forms.Button();
             this.panelContenedor.SuspendLayout();
             this.panelFormuarios.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.panelMenu.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelBarraTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
@@ -94,6 +94,20 @@
             this.panelFormuarios.Size = new System.Drawing.Size(841, 451);
             this.panelFormuarios.TabIndex = 2;
             this.panelFormuarios.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFormuarios_Paint);
+            // 
+            // btnInfo
+            // 
+            this.btnInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(81)))), ((int)(((byte)(9)))));
+            this.btnInfo.BackgroundImage = global::Notas1.Properties.Resources.icons8_about_24;
+            this.btnInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnInfo.FlatAppearance.BorderSize = 0;
+            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfo.Location = new System.Drawing.Point(1, 2);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(38, 41);
+            this.btnInfo.TabIndex = 30;
+            this.btnInfo.UseVisualStyleBackColor = false;
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
             // 
             // panel1
             // 
@@ -156,6 +170,19 @@
             this.label2.Text = "       Bienvenida Ingeniera";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxLogo.Image = global::Notas1.Properties.Resources.uth_png_1;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(236, 72);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(391, 350);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLogo.TabIndex = 0;
+            this.pictureBoxLogo.TabStop = false;
+            // 
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(161)))), ((int)(((byte)(94)))));
@@ -170,14 +197,14 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.tableLayoutPanel1.Controls.Add(this.btnAlumnos, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnPeriodos, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.btnMatricula, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.btnCarreras, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnClase, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.btnCalificaciones, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.button8, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.btnUsuarios, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.btnClase, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.btnPeriodos, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btnAlumnos, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnCarreras, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -190,54 +217,10 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 451);
             this.tableLayoutPanel1.TabIndex = 1;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
-            // 
-            // panelBarraTitulo
-            // 
-            this.panelBarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(24)))));
-            this.panelBarraTitulo.Controls.Add(this.btnRestaurar);
-            this.panelBarraTitulo.Controls.Add(this.btnMinimizar);
-            this.panelBarraTitulo.Controls.Add(this.btnMaximizar);
-            this.panelBarraTitulo.Controls.Add(this.btnCerrar);
-            this.panelBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBarraTitulo.Location = new System.Drawing.Point(0, 0);
-            this.panelBarraTitulo.Name = "panelBarraTitulo";
-            this.panelBarraTitulo.Size = new System.Drawing.Size(1040, 40);
-            this.panelBarraTitulo.TabIndex = 0;
-            this.panelBarraTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelBarraTitulo_MouseMove);
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // btnInfo
-            // 
-            this.btnInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(81)))), ((int)(((byte)(9)))));
-            this.btnInfo.BackgroundImage = global::Notas1.Properties.Resources.icons8_about_24;
-            this.btnInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnInfo.FlatAppearance.BorderSize = 0;
-            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInfo.Location = new System.Drawing.Point(1, 2);
-            this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Size = new System.Drawing.Size(38, 41);
-            this.btnInfo.TabIndex = 30;
-            this.btnInfo.UseVisualStyleBackColor = false;
-            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
-            // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxLogo.Image = global::Notas1.Properties.Resources.uth_png_1;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(236, 72);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(391, 350);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxLogo.TabIndex = 0;
-            this.pictureBoxLogo.TabStop = false;
             // 
             // btnAlumnos
             // 
@@ -249,7 +232,7 @@
             this.btnAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlumnos.Image = ((System.Drawing.Image)(resources.GetObject("btnAlumnos.Image")));
             this.btnAlumnos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlumnos.Location = new System.Drawing.Point(3, 3);
+            this.btnAlumnos.Location = new System.Drawing.Point(3, 59);
             this.btnAlumnos.Name = "btnAlumnos";
             this.btnAlumnos.Size = new System.Drawing.Size(194, 50);
             this.btnAlumnos.TabIndex = 0;
@@ -268,7 +251,7 @@
             this.btnPeriodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPeriodos.Image = global::Notas1.Properties.Resources.icons8_schedule_50;
             this.btnPeriodos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPeriodos.Location = new System.Drawing.Point(3, 171);
+            this.btnPeriodos.Location = new System.Drawing.Point(3, 115);
             this.btnPeriodos.Name = "btnPeriodos";
             this.btnPeriodos.Size = new System.Drawing.Size(194, 50);
             this.btnPeriodos.TabIndex = 3;
@@ -296,25 +279,6 @@
             this.btnMatricula.UseVisualStyleBackColor = true;
             this.btnMatricula.Click += new System.EventHandler(this.btnMatricula_Click);
             // 
-            // btnCarreras
-            // 
-            this.btnCarreras.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCarreras.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCarreras.FlatAppearance.BorderSize = 0;
-            this.btnCarreras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(81)))), ((int)(((byte)(9)))));
-            this.btnCarreras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCarreras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCarreras.Image = global::Notas1.Properties.Resources.icons8_maintenance_50;
-            this.btnCarreras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCarreras.Location = new System.Drawing.Point(3, 59);
-            this.btnCarreras.Name = "btnCarreras";
-            this.btnCarreras.Size = new System.Drawing.Size(194, 50);
-            this.btnCarreras.TabIndex = 4;
-            this.btnCarreras.Text = "                  CARRERAS";
-            this.btnCarreras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCarreras.UseVisualStyleBackColor = true;
-            this.btnCarreras.Click += new System.EventHandler(this.btnCarreras_Click);
-            // 
             // btnClase
             // 
             this.btnClase.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -325,7 +289,7 @@
             this.btnClase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClase.Image = global::Notas1.Properties.Resources.icons8_training_50;
             this.btnClase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClase.Location = new System.Drawing.Point(3, 115);
+            this.btnClase.Location = new System.Drawing.Point(3, 171);
             this.btnClase.Name = "btnClase";
             this.btnClase.Size = new System.Drawing.Size(194, 50);
             this.btnClase.TabIndex = 5;
@@ -391,6 +355,20 @@
             this.btnUsuarios.UseVisualStyleBackColor = true;
             this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
+            // panelBarraTitulo
+            // 
+            this.panelBarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(24)))));
+            this.panelBarraTitulo.Controls.Add(this.btnRestaurar);
+            this.panelBarraTitulo.Controls.Add(this.btnMinimizar);
+            this.panelBarraTitulo.Controls.Add(this.btnMaximizar);
+            this.panelBarraTitulo.Controls.Add(this.btnCerrar);
+            this.panelBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelBarraTitulo.Location = new System.Drawing.Point(0, 0);
+            this.panelBarraTitulo.Name = "panelBarraTitulo";
+            this.panelBarraTitulo.Size = new System.Drawing.Size(1040, 40);
+            this.panelBarraTitulo.TabIndex = 0;
+            this.panelBarraTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelBarraTitulo_MouseMove);
+            // 
             // btnRestaurar
             // 
             this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -444,6 +422,29 @@
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // btnCarreras
+            // 
+            this.btnCarreras.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCarreras.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCarreras.FlatAppearance.BorderSize = 0;
+            this.btnCarreras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(81)))), ((int)(((byte)(9)))));
+            this.btnCarreras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCarreras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCarreras.Image = global::Notas1.Properties.Resources.icons8_maintenance_50;
+            this.btnCarreras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCarreras.Location = new System.Drawing.Point(3, 3);
+            this.btnCarreras.Name = "btnCarreras";
+            this.btnCarreras.Size = new System.Drawing.Size(194, 50);
+            this.btnCarreras.TabIndex = 4;
+            this.btnCarreras.Text = "                  CARRERAS";
+            this.btnCarreras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCarreras.UseVisualStyleBackColor = true;
+            this.btnCarreras.Click += new System.EventHandler(this.btnCarreras_Click);
+            // 
             // MenuFondo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -462,10 +463,10 @@
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.panelMenu.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panelBarraTitulo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
@@ -489,7 +490,6 @@
         private System.Windows.Forms.Button btnMatricula;
         private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Button btnPeriodos;
-        private System.Windows.Forms.Button btnCarreras;
         private System.Windows.Forms.Button btnClase;
         private System.Windows.Forms.Button btnCalificaciones;
         private System.Windows.Forms.Button button8;
@@ -501,6 +501,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button btnInfo;
+        private System.Windows.Forms.Button btnCarreras;
     }
 }
 

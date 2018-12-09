@@ -48,10 +48,11 @@
             this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(225)))), ((int)(((byte)(229)))));
+            this.btnAgregar.Image = global::Notas1.Properties.Resources.icons8_checkmark_32;
             this.btnAgregar.Location = new System.Drawing.Point(78, 297);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(50, 2, 2, 2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(78, 34);
+            this.btnAgregar.Size = new System.Drawing.Size(94, 48);
             this.btnAgregar.TabIndex = 42;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -63,10 +64,12 @@
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(225)))), ((int)(((byte)(229)))));
-            this.btnCancelar.Location = new System.Drawing.Point(259, 297);
+            this.btnCancelar.Image = global::Notas1.Properties.Resources.icons8_delete_24;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(257, 297);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(50, 2, 2, 2);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(78, 34);
+            this.btnCancelar.Size = new System.Drawing.Size(94, 48);
             this.btnCancelar.TabIndex = 43;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -86,7 +89,7 @@
             this.lblcalificaciones.Text = "BUSCAR CARRERAS";
             this.lblcalificaciones.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Buscar_Carrera
+            // frmBuscar_Carrera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -97,7 +100,7 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Buscar_Carrera";
+            this.Name = "frmBuscar_Carrera";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buscar_Carrera";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

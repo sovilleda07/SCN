@@ -152,9 +152,9 @@ namespace Notas1
             this.nombreViejo = elRegistro.alumnoNombre;
             this.apellidoViejo = elRegistro.alumnoApellido;
 
-            MessageBox.Show("cODrEGISTRO", this.codigoRegistro.ToString());
-            MessageBox.Show("Alumno", this.codigoAlumnoViejo.ToString());
-            MessageBox.Show("AlumnoNuevo", this.codigoAlumno.ToString());
+            //MessageBox.Show("cODrEGISTRO", this.codigoRegistro.ToString());
+            //MessageBox.Show("Alumno", this.codigoAlumnoViejo.ToString());
+            //MessageBox.Show("AlumnoNuevo", this.codigoAlumno.ToString());
 
         }
 
@@ -294,6 +294,9 @@ namespace Notas1
             this.Close();
         }
 
-        
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

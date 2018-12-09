@@ -53,10 +53,11 @@
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(225)))), ((int)(((byte)(229)))));
-            this.btnCancelar.Location = new System.Drawing.Point(259, 310);
+            this.btnCancelar.Image = global::Notas1.Properties.Resources.icons8_delete_24;
+            this.btnCancelar.Location = new System.Drawing.Point(243, 310);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(50, 2, 2, 2);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(78, 34);
+            this.btnCancelar.Size = new System.Drawing.Size(87, 45);
             this.btnCancelar.TabIndex = 47;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -68,10 +69,11 @@
             this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(225)))), ((int)(((byte)(229)))));
+            this.btnAgregar.Image = global::Notas1.Properties.Resources.icons8_checkmark_32;
             this.btnAgregar.Location = new System.Drawing.Point(78, 310);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(50, 2, 2, 2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(78, 34);
+            this.btnAgregar.Size = new System.Drawing.Size(87, 45);
             this.btnAgregar.TabIndex = 46;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -95,7 +97,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(250)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(422, 356);
+            this.ClientSize = new System.Drawing.Size(422, 368);
             this.Controls.Add(this.lblcalificaciones);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAgregar);
