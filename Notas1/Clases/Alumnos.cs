@@ -475,6 +475,59 @@ namespace Notas1.Clases
 
         }
 
+        /// <summary>
+        /// Método para cargar los datos al DataGridView inhabilitados
+        /// </summary>
+        /// <returns></returns>
+        public static DataView GetDataViewInhabilitados()
+        {
+            // Instanciamos la conexión
+            Conexion conexion = new Conexion("Notas");
+            // Creamos la variable que contendrá el Query
+            string sql;
+
+            sql = @"SELECT     SCN.Alumnos.id                       as Código,
+                               SCN.Alumnos.nombres                  as Nombres,
+                               SCN.Alumnos.apellidos                as Apellidos,
+                               SCN.Alumnos.telefono                 as Teléfono,
+                               SCN.Alumnos.correoElectronico        as Correo,
+                               SCN.Alumnos.observaciones            as Observaciones,
+                               SCN.Carreras.descripcion             as Carrera
+                    FROM SCN.Carreras
+                    INNER JOIN SCN.Alumnos
+                    ON SCN.Carreras.codigo = SCN.Alumnos.Carreras_codigo
+                    WHERE SCN.Alumnos.habilitado = 0";
+
+            try
+            {
+                SqlDataAdapter data = new SqlDataAdapter();
+
+                //Enviamos el comando a ejecutar
+                SqlCommand cmd = conexion.EjecutarComando(sql);
+                data.SelectCommand = cmd;
+
+                DataSet ds = new DataSet();
+                // Tabla con que vamos a llenar los datos
+                data.Fill(ds, "SCN.Alumnos");
+                DataTable dt = ds.Tables["SCN.Alumnos"];
+
+                DataView dv = new DataView(dt,
+                    "",
+                    "Código",
+                    DataViewRowState.Unchanged);
+                return dv;
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                conexion.CerrarConexion();
+            }
+        }
+
 
     }
 }

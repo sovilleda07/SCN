@@ -161,14 +161,14 @@ namespace Notas1.Clases
             Conexion conexion = new Conexion("Notas");
 
             // enviamos el comando a ejecutar
-            SqlCommand cmd = conexion.EjecutarComando("sp_HablitarCarrera");
+            SqlCommand cmd = conexion.EjecutarComando("sp_HabilitarCarrera");
 
             // Establecer el comando como un Stored Procedure
             cmd.CommandType = CommandType.StoredProcedure;
 
             // Parámetros del Stored Procedure
-            cmd.Parameters.Add(new SqlParameter("@descripcion", SqlDbType.NVarChar, 45));
-            cmd.Parameters["@descripcion"].Value = laCarrera.descripcion;
+            cmd.Parameters.Add(new SqlParameter("@codigo", SqlDbType.Int));
+            cmd.Parameters["@codigo"].Value = laCarrera.codigo;
 
             try
             {
@@ -297,6 +297,53 @@ namespace Notas1.Clases
             }
 
 
+        }
+
+        /// <summary>
+        /// Método para cargar los datos al DataGridView
+        /// </summary>
+        /// <returns></returns>
+        public static DataView GetDataViewInhabilitados()
+        {
+            // Instanciamos la conexión
+            Conexion conexion = new Conexion("Notas");
+            // Creamos la variable que contendrá el Query
+            string sql;
+
+            // Creamos el query
+            sql = @"SELECT      SCN.Carreras.codigo         as Código,
+                                SCN.Carreras.descripcion   as Descripción
+                    FROM SCN.Carreras
+                    WHERE SCN.Carreras.habilitado = 0";
+
+            try
+            {
+                SqlDataAdapter data = new SqlDataAdapter();
+
+                //Enviamos el comando a ejecutar
+                SqlCommand cmd = conexion.EjecutarComando(sql);
+                data.SelectCommand = cmd;
+
+                DataSet ds = new DataSet();
+                // Tabla con que vamos a llenar los datos
+                data.Fill(ds, "SCN.Carreras");
+                DataTable dt = ds.Tables["SCN.Carreras"];
+
+                DataView dv = new DataView(dt,
+                    "",
+                    "Código",
+                    DataViewRowState.Unchanged);
+                return dv;
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                conexion.CerrarConexion();
+            }
         }
 
 

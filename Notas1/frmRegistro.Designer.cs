@@ -329,8 +329,8 @@
             this.tableLayoutPanel4.Controls.Add(this.txtPeriodo, 1, 2);
             this.tableLayoutPanel4.Controls.Add(this.label4, 0, 3);
             this.tableLayoutPanel4.Controls.Add(this.txtAnio, 1, 3);
-            this.tableLayoutPanel4.Controls.Add(this.btnClase, 2, 2);
-            this.tableLayoutPanel4.Controls.Add(this.btnPeriodo, 2, 3);
+            this.tableLayoutPanel4.Controls.Add(this.btnClase, 2, 1);
+            this.tableLayoutPanel4.Controls.Add(this.btnPeriodo, 2, 2);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 4;
@@ -382,7 +382,7 @@
             this.txtClase.Location = new System.Drawing.Point(103, 41);
             this.txtClase.Multiline = true;
             this.txtClase.Name = "txtClase";
-            this.txtClase.Size = new System.Drawing.Size(235, 19);
+            this.txtClase.Size = new System.Drawing.Size(235, 25);
             this.txtClase.TabIndex = 35;
             // 
             // txtPeriodo
@@ -394,7 +394,7 @@
             this.txtPeriodo.Location = new System.Drawing.Point(103, 79);
             this.txtPeriodo.Multiline = true;
             this.txtPeriodo.Name = "txtPeriodo";
-            this.txtPeriodo.Size = new System.Drawing.Size(235, 19);
+            this.txtPeriodo.Size = new System.Drawing.Size(235, 25);
             this.txtPeriodo.TabIndex = 12;
             // 
             // label4
@@ -416,13 +416,13 @@
             this.txtAnio.Location = new System.Drawing.Point(103, 117);
             this.txtAnio.Multiline = true;
             this.txtAnio.Name = "txtAnio";
-            this.txtAnio.Size = new System.Drawing.Size(235, 19);
+            this.txtAnio.Size = new System.Drawing.Size(235, 25);
             this.txtAnio.TabIndex = 33;
             // 
             // btnClase
             // 
             this.btnClase.Image = global::Notas1.Properties.Resources.search_icon24;
-            this.btnClase.Location = new System.Drawing.Point(344, 79);
+            this.btnClase.Location = new System.Drawing.Point(344, 41);
             this.btnClase.MaximumSize = new System.Drawing.Size(38, 32);
             this.btnClase.MinimumSize = new System.Drawing.Size(38, 32);
             this.btnClase.Name = "btnClase";
@@ -437,7 +437,7 @@
             // btnPeriodo
             // 
             this.btnPeriodo.Image = global::Notas1.Properties.Resources.search_icon24;
-            this.btnPeriodo.Location = new System.Drawing.Point(344, 117);
+            this.btnPeriodo.Location = new System.Drawing.Point(344, 79);
             this.btnPeriodo.MaximumSize = new System.Drawing.Size(38, 32);
             this.btnPeriodo.MinimumSize = new System.Drawing.Size(38, 32);
             this.btnPeriodo.Name = "btnPeriodo";

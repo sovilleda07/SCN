@@ -68,21 +68,21 @@ END
 GO
 
 CREATE PROCEDURE sp_HabilitarCarrera(
-	@descripcion NVARCHAR(45)
+	@codigo INT
 )
 AS
 BEGIN
 	DECLARE @existe INT;
 	SET @existe = 0;
-	SELECT @existe = COUNT(SCN.Carreras.descripcion) FROM SCN.Carreras WHERE descripcion=@descripcion AND habilitado = 1
+	SELECT @existe = COUNT(SCN.Carreras.codigo) FROM SCN.Carreras WHERE codigo = @codigo AND habilitado = 1
 	IF (@existe > 0)
 		BEGIN
-			RAISERROR(N'La Carrera "%s" ya está habilitada', 16, 1, @descripcion);
+			RAISERROR(N'La Carrera ya está habilitada', 16, 1);
 			RETURN 0
 		END
 	ELSE
 		BEGIN
-		UPDATE SCN.Carreras SET habilitado = 1 WHERE descripcion = @descripcion
+		UPDATE SCN.Carreras SET habilitado = 1 WHERE codigo = @codigo;
 		END
 
 END

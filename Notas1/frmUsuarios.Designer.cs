@@ -33,24 +33,24 @@
             this.label5 = new System.Windows.Forms.Label();
             this.lblcalificaciones = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.dgvHabilitar = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.cmbHabilitar = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripBuscar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripHabilitar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSalir = new System.Windows.Forms.ToolStripButton();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.toolStripBuscar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripHabilitar = new System.Windows.Forms.ToolStripButton();
             this.panelBarraTitulo.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHabilitar)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBarraTitulo
@@ -119,6 +119,33 @@
             this.tableLayoutPanel1.TabIndex = 29;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 362F));
+            this.tableLayoutPanel3.Controls.Add(this.dgvHabilitar, 0, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(370, 3);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90.13453F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.865471F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(362, 223);
+            this.tableLayoutPanel3.TabIndex = 4;
+            // 
+            // dgvHabilitar
+            // 
+            this.dgvHabilitar.AllowUserToAddRows = false;
+            this.dgvHabilitar.AllowUserToDeleteRows = false;
+            this.dgvHabilitar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHabilitar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvHabilitar.Location = new System.Drawing.Point(3, 3);
+            this.dgvHabilitar.Name = "dgvHabilitar";
+            this.dgvHabilitar.ReadOnly = true;
+            this.dgvHabilitar.Size = new System.Drawing.Size(356, 194);
+            this.dgvHabilitar.TabIndex = 0;
+            this.dgvHabilitar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHabilitar_CellClick);
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
@@ -183,10 +210,34 @@
             this.toolStrip1.TabIndex = 30;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // toolStripBuscar
+            // 
+            this.toolStripBuscar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
+            this.toolStripBuscar.Image = global::Notas1.Properties.Resources.icons8_search_32;
+            this.toolStripBuscar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBuscar.Name = "toolStripBuscar";
+            this.toolStripBuscar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
+            this.toolStripBuscar.Size = new System.Drawing.Size(105, 36);
+            this.toolStripBuscar.Text = "Buscar";
+            this.toolStripBuscar.Click += new System.EventHandler(this.toolStripBuscar_Click);
+            // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 39);
+            // 
+            // toolStripHabilitar
+            // 
+            this.toolStripHabilitar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
+            this.toolStripHabilitar.Image = global::Notas1.Properties.Resources.icons8_denied_32;
+            this.toolStripHabilitar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripHabilitar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripHabilitar.Name = "toolStripHabilitar";
+            this.toolStripHabilitar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
+            this.toolStripHabilitar.Size = new System.Drawing.Size(118, 36);
+            this.toolStripHabilitar.Text = "Habilitar";
+            this.toolStripHabilitar.Click += new System.EventHandler(this.toolStripHabilitar_Click);
             // 
             // toolStripSeparator4
             // 
@@ -205,54 +256,6 @@
             this.toolStripSalir.Text = "Salir";
             this.toolStripSalir.Click += new System.EventHandler(this.toolStripSalir_Click);
             // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 133F));
-            this.tableLayoutPanel3.Controls.Add(this.dataGridView1, 0, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(370, 3);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90.13453F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.865471F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(362, 223);
-            this.tableLayoutPanel3.TabIndex = 4;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(356, 194);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // toolStripBuscar
-            // 
-            this.toolStripBuscar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
-            this.toolStripBuscar.Image = global::Notas1.Properties.Resources.icons8_broom_32;
-            this.toolStripBuscar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBuscar.Name = "toolStripBuscar";
-            this.toolStripBuscar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
-            this.toolStripBuscar.Size = new System.Drawing.Size(105, 36);
-            this.toolStripBuscar.Text = "Buscar";
-            // 
-            // toolStripHabilitar
-            // 
-            this.toolStripHabilitar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
-            this.toolStripHabilitar.Image = global::Notas1.Properties.Resources.icons8_denied_32;
-            this.toolStripHabilitar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripHabilitar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripHabilitar.Name = "toolStripHabilitar";
-            this.toolStripHabilitar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
-            this.toolStripHabilitar.Size = new System.Drawing.Size(129, 36);
-            this.toolStripHabilitar.Text = "Inhabilitar";
-            // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,12 +270,12 @@
             this.panelBarraTitulo.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHabilitar)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,7 +295,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvHabilitar;
         private System.Windows.Forms.ToolStripButton toolStripBuscar;
         private System.Windows.Forms.ToolStripButton toolStripHabilitar;
     }

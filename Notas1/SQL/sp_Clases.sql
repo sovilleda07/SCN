@@ -83,21 +83,21 @@ END
 GO
 
 CREATE PROCEDURE sp_HabilitarClase(
-	@nombre NVARCHAR(45)
+	@codigo INT
 )
 AS
 BEGIN
 	DECLARE @existe INT;
 	SET @existe = 0;
-	SELECT @existe = COUNT(SCN.Clases.nombre) FROM SCN.Clases WHERE nombre = @nombre AND habilitado = 1;
+	SELECT @existe = COUNT(SCN.Clases.codigo) FROM SCN.Clases WHERE codigo = @codigo AND habilitado = 1;
 	IF (@existe > 0)
 		BEGIN
-			RAISERROR(N'La Clase "%s" ya está Habilitada', 16, 1, @nombre);
+			RAISERROR(N'La Clase ya está Habilitada', 16, 1);
 			RETURN 0
 		END
 	ELSE
 		BEGIN
-		UPDATE SCN.Clases SET habilitado = 1 WHERE nombre = @nombre;
+		UPDATE SCN.Clases SET habilitado = 1 WHERE codigo = @codigo;
 		END
 
 END

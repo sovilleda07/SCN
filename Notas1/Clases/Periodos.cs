@@ -316,5 +316,54 @@ namespace Notas1.Clases
             }
         }
 
+        /// <summary>
+        /// Método para cargar los datos del DataGridView
+        /// </summary>
+        /// <returns></returns>
+        public static DataView GetDataViewInhabilado()
+        {
+            // Instanciamos la conexión
+            Conexion conexion = new Conexion("Notas");
+
+            // Creamos la variable que contendrá el Query
+            string sql;
+
+            sql = @"SELECT      SCN.Periodos.codigo         as  Código,
+                                SCN.Periodos.descripcion    as  Descripción,
+                                SCN.Periodos.anio           as  Año,
+                                SCN.Periodos.periodo        as  Periodo
+                    FROM SCN.Periodos
+                    WHERE SCN.Periodos.habilitado = 0";
+
+            try
+            {
+                SqlDataAdapter data = new SqlDataAdapter();
+
+                // Enviamos el comando a ejecutar
+                SqlCommand cmd = conexion.EjecutarComando(sql);
+                data.SelectCommand = cmd;
+
+                DataSet ds = new DataSet();
+                // Tabla con que vamos a llenar los datos
+                data.Fill(ds, "SCN.Periodos");
+                DataTable dt = ds.Tables["SCN.Periodos"];
+
+                DataView dv = new DataView(dt,
+                    "",
+                    "Código",
+                    DataViewRowState.Unchanged);
+                return dv;
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                conexion.CerrarConexion();
+            }
+        }
+
     }
 }
