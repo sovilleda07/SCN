@@ -291,10 +291,10 @@ namespace Notas1
                     // Está en un método en la Clase Calificacoones
                     // Hacemos referencia él
                     dgvCalificaciones.DataSource = Calificaciones.GetDataViewCalificaciones(this.codigoClase, this.codigoPeriodo);
-                    
+
                     //Probando esconder los códigos
-                    //dgvCalificaciones.Columns[7].Visible = false;
-                    //dgvCalificaciones.Columns[0].Visible = false;
+                    dgvCalificaciones.Columns[7].Visible = false;
+                    dgvCalificaciones.Columns[0].Visible = false;
 
                     toolStripGuardar.Enabled = false;
                     toolStripActualizar.Enabled = true;                

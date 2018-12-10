@@ -33,17 +33,17 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.txtClase = new System.Windows.Forms.TextBox();
-            this.txtPeriodo = new System.Windows.Forms.TextBox();
             this.txtAnio = new System.Windows.Forms.TextBox();
-            this.lblClase = new System.Windows.Forms.Label();
-            this.lblPeriodo = new System.Windows.Forms.Label();
+            this.btnPeriodo = new System.Windows.Forms.Button();
             this.lblAnio = new System.Windows.Forms.Label();
+            this.txtPeriodo = new System.Windows.Forms.TextBox();
+            this.lblPeriodo = new System.Windows.Forms.Label();
+            this.btnClase = new System.Windows.Forms.Button();
+            this.txtClase = new System.Windows.Forms.TextBox();
+            this.lblClase = new System.Windows.Forms.Label();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripGenerar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSalir = new System.Windows.Forms.ToolStripButton();
-            this.btnPeriodo = new System.Windows.Forms.Button();
-            this.btnClase = new System.Windows.Forms.Button();
             this.panelBarraTitulo.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -108,13 +108,13 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 328F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 269F));
             this.tableLayoutPanel4.Controls.Add(this.txtAnio, 1, 3);
-            this.tableLayoutPanel4.Controls.Add(this.btnPeriodo, 2, 3);
             this.tableLayoutPanel4.Controls.Add(this.lblAnio, 0, 3);
             this.tableLayoutPanel4.Controls.Add(this.txtPeriodo, 1, 2);
             this.tableLayoutPanel4.Controls.Add(this.lblPeriodo, 0, 2);
             this.tableLayoutPanel4.Controls.Add(this.btnClase, 2, 1);
             this.tableLayoutPanel4.Controls.Add(this.txtClase, 1, 1);
             this.tableLayoutPanel4.Controls.Add(this.lblClase, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.btnPeriodo, 2, 2);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -127,19 +127,83 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(788, 318);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
-            // toolStrip1
+            // txtAnio
             // 
-            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(225)))), ((int)(((byte)(229)))));
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripGenerar,
-            this.toolStripSalir});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 411);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 39);
-            this.toolStrip1.TabIndex = 30;
-            this.toolStrip1.Text = "toolStrip1";
+            this.txtAnio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAnio.Enabled = false;
+            this.txtAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnio.Location = new System.Drawing.Point(194, 211);
+            this.txtAnio.Multiline = true;
+            this.txtAnio.Name = "txtAnio";
+            this.txtAnio.Size = new System.Drawing.Size(322, 26);
+            this.txtAnio.TabIndex = 36;
+            // 
+            // btnPeriodo
+            // 
+            this.btnPeriodo.Image = global::Notas1.Properties.Resources.search_icon24;
+            this.btnPeriodo.Location = new System.Drawing.Point(522, 136);
+            this.btnPeriodo.MaximumSize = new System.Drawing.Size(38, 32);
+            this.btnPeriodo.MinimumSize = new System.Drawing.Size(38, 32);
+            this.btnPeriodo.Name = "btnPeriodo";
+            this.btnPeriodo.Size = new System.Drawing.Size(38, 32);
+            this.btnPeriodo.TabIndex = 35;
+            this.btnPeriodo.TabStop = false;
+            this.btnPeriodo.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnPeriodo.UseMnemonic = false;
+            this.btnPeriodo.UseVisualStyleBackColor = true;
+            this.btnPeriodo.Click += new System.EventHandler(this.btnPeriodo_Click);
+            // 
+            // lblAnio
+            // 
+            this.lblAnio.AutoSize = true;
+            this.lblAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnio.Location = new System.Drawing.Point(15, 208);
+            this.lblAnio.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
+            this.lblAnio.Name = "lblAnio";
+            this.lblAnio.Size = new System.Drawing.Size(41, 20);
+            this.lblAnio.TabIndex = 39;
+            this.lblAnio.Text = "Año";
+            this.lblAnio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtPeriodo
+            // 
+            this.txtPeriodo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPeriodo.Enabled = false;
+            this.txtPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPeriodo.Location = new System.Drawing.Point(194, 136);
+            this.txtPeriodo.Multiline = true;
+            this.txtPeriodo.Name = "txtPeriodo";
+            this.txtPeriodo.Size = new System.Drawing.Size(322, 26);
+            this.txtPeriodo.TabIndex = 34;
+            // 
+            // lblPeriodo
+            // 
+            this.lblPeriodo.AutoSize = true;
+            this.lblPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPeriodo.Location = new System.Drawing.Point(15, 133);
+            this.lblPeriodo.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
+            this.lblPeriodo.Name = "lblPeriodo";
+            this.lblPeriodo.Size = new System.Drawing.Size(70, 20);
+            this.lblPeriodo.TabIndex = 38;
+            this.lblPeriodo.Text = "Periodo";
+            this.lblPeriodo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btnClase
+            // 
+            this.btnClase.Image = global::Notas1.Properties.Resources.search_icon24;
+            this.btnClase.Location = new System.Drawing.Point(522, 66);
+            this.btnClase.MaximumSize = new System.Drawing.Size(38, 32);
+            this.btnClase.MinimumSize = new System.Drawing.Size(38, 32);
+            this.btnClase.Name = "btnClase";
+            this.btnClase.Size = new System.Drawing.Size(38, 32);
+            this.btnClase.TabIndex = 33;
+            this.btnClase.TabStop = false;
+            this.btnClase.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnClase.UseMnemonic = false;
+            this.btnClase.UseVisualStyleBackColor = true;
+            this.btnClase.Click += new System.EventHandler(this.btnClase_Click);
             // 
             // txtClase
             // 
@@ -155,30 +219,6 @@
             this.txtClase.TabIndex = 32;
             this.txtClase.Tag = "";
             // 
-            // txtPeriodo
-            // 
-            this.txtPeriodo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPeriodo.Enabled = false;
-            this.txtPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPeriodo.Location = new System.Drawing.Point(194, 136);
-            this.txtPeriodo.Multiline = true;
-            this.txtPeriodo.Name = "txtPeriodo";
-            this.txtPeriodo.Size = new System.Drawing.Size(322, 26);
-            this.txtPeriodo.TabIndex = 34;
-            // 
-            // txtAnio
-            // 
-            this.txtAnio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAnio.Enabled = false;
-            this.txtAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAnio.Location = new System.Drawing.Point(194, 211);
-            this.txtAnio.Multiline = true;
-            this.txtAnio.Name = "txtAnio";
-            this.txtAnio.Size = new System.Drawing.Size(322, 26);
-            this.txtAnio.TabIndex = 36;
-            // 
             // lblClase
             // 
             this.lblClase.AutoSize = true;
@@ -191,29 +231,19 @@
             this.lblClase.Text = "Clase";
             this.lblClase.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblPeriodo
+            // toolStrip1
             // 
-            this.lblPeriodo.AutoSize = true;
-            this.lblPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPeriodo.Location = new System.Drawing.Point(15, 133);
-            this.lblPeriodo.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
-            this.lblPeriodo.Name = "lblPeriodo";
-            this.lblPeriodo.Size = new System.Drawing.Size(70, 20);
-            this.lblPeriodo.TabIndex = 38;
-            this.lblPeriodo.Text = "Periodo";
-            this.lblPeriodo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblAnio
-            // 
-            this.lblAnio.AutoSize = true;
-            this.lblAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnio.Location = new System.Drawing.Point(15, 208);
-            this.lblAnio.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
-            this.lblAnio.Name = "lblAnio";
-            this.lblAnio.Size = new System.Drawing.Size(41, 20);
-            this.lblAnio.TabIndex = 39;
-            this.lblAnio.Text = "Año";
-            this.lblAnio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(225)))), ((int)(((byte)(229)))));
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripGenerar,
+            this.toolStripSalir});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 411);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(800, 39);
+            this.toolStrip1.TabIndex = 30;
+            this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripGenerar
             // 
@@ -238,36 +268,6 @@
             this.toolStripSalir.Size = new System.Drawing.Size(82, 36);
             this.toolStripSalir.Text = "Salir";
             this.toolStripSalir.Click += new System.EventHandler(this.toolStripSalir_Click);
-            // 
-            // btnPeriodo
-            // 
-            this.btnPeriodo.Image = global::Notas1.Properties.Resources.search_icon24;
-            this.btnPeriodo.Location = new System.Drawing.Point(522, 211);
-            this.btnPeriodo.MaximumSize = new System.Drawing.Size(38, 32);
-            this.btnPeriodo.MinimumSize = new System.Drawing.Size(38, 32);
-            this.btnPeriodo.Name = "btnPeriodo";
-            this.btnPeriodo.Size = new System.Drawing.Size(38, 32);
-            this.btnPeriodo.TabIndex = 35;
-            this.btnPeriodo.TabStop = false;
-            this.btnPeriodo.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnPeriodo.UseMnemonic = false;
-            this.btnPeriodo.UseVisualStyleBackColor = true;
-            this.btnPeriodo.Click += new System.EventHandler(this.btnPeriodo_Click);
-            // 
-            // btnClase
-            // 
-            this.btnClase.Image = global::Notas1.Properties.Resources.search_icon24;
-            this.btnClase.Location = new System.Drawing.Point(522, 66);
-            this.btnClase.MaximumSize = new System.Drawing.Size(38, 32);
-            this.btnClase.MinimumSize = new System.Drawing.Size(38, 32);
-            this.btnClase.Name = "btnClase";
-            this.btnClase.Size = new System.Drawing.Size(38, 32);
-            this.btnClase.TabIndex = 33;
-            this.btnClase.TabStop = false;
-            this.btnClase.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnClase.UseMnemonic = false;
-            this.btnClase.UseVisualStyleBackColor = true;
-            this.btnClase.Click += new System.EventHandler(this.btnClase_Click);
             // 
             // frmReportes
             // 

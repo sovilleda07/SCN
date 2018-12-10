@@ -97,6 +97,8 @@ namespace Notas1
                 // El origen de los datos del DataGridView
                 // Está en un método en la clase Alumnos, hacemos referencia a él
                 dgvAlumnos.DataSource = Alumnos.GetDataView();
+                dgvAlumnos.Columns[0].Visible = false;
+                dgvAlumnos.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
             catch (Exception ex)
             {

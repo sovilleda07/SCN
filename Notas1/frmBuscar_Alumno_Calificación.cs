@@ -50,6 +50,7 @@ namespace Notas1
             try
             {
                 dgvAlumnos.DataSource = Alumnos.GetDataViewAlumnoCalificación(codigoClase, codigoPeriodo);
+                dgvAlumnos.Columns[0].Visible = false;
             }
             catch (Exception ex)
             {

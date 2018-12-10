@@ -183,9 +183,10 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Controls.Add(this.lblcodigoperiodo, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtDescripcion, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblanio, 0, 2);
@@ -219,15 +220,13 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDescripcion.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcion.Location = new System.Drawing.Point(153, 44);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(3, 3, 30, 3);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(617, 35);
+            this.txtDescripcion.Size = new System.Drawing.Size(307, 35);
             this.txtDescripcion.TabIndex = 1;
             this.txtDescripcion.Tag = "";
             // 
@@ -244,15 +243,14 @@
             // 
             // txtAnio
             // 
-            this.txtAnio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAnio.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAnio.Location = new System.Drawing.Point(153, 85);
             this.txtAnio.Margin = new System.Windows.Forms.Padding(3, 3, 30, 3);
+            this.txtAnio.MaxLength = 4;
             this.txtAnio.Multiline = true;
             this.txtAnio.Name = "txtAnio";
-            this.txtAnio.Size = new System.Drawing.Size(617, 26);
+            this.txtAnio.Size = new System.Drawing.Size(307, 35);
             this.txtAnio.TabIndex = 2;
             this.txtAnio.Tag = "";
             this.txtAnio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAnio_KeyPress);
@@ -296,13 +294,13 @@
             // 
             this.dgvPeriodos.AllowUserToAddRows = false;
             this.dgvPeriodos.AllowUserToDeleteRows = false;
-            this.dgvPeriodos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvPeriodos.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dgvPeriodos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPeriodos.Location = new System.Drawing.Point(153, 177);
             this.dgvPeriodos.Margin = new System.Windows.Forms.Padding(3, 3, 30, 3);
             this.dgvPeriodos.Name = "dgvPeriodos";
             this.dgvPeriodos.ReadOnly = true;
-            this.dgvPeriodos.Size = new System.Drawing.Size(617, 98);
+            this.dgvPeriodos.Size = new System.Drawing.Size(424, 98);
             this.dgvPeriodos.TabIndex = 27;
             this.dgvPeriodos.TabStop = false;
             this.dgvPeriodos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPeriodos_CellClick);

@@ -43,7 +43,9 @@ namespace Notas1
             try
             {
                 dgvClases.DataSource = Clases.Clases.GetDataView();
-                dgvClases.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dgvClases.Columns[0].Visible = false;
+                //dgvClases.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dgvClases.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
             catch (Exception ex)
             {

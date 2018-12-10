@@ -65,6 +65,8 @@ namespace Notas1
             try
             {
                 dgvPeriodos.DataSource = Periodos.GetDataView();
+                dgvPeriodos.Columns[0].Visible = false;
+                dgvPeriodos.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
             catch(Exception ex)
             {
@@ -251,7 +253,7 @@ namespace Notas1
             {
                 e.Handled = true;
                 errorProvider1.Clear();
-                errorProvider1.SetError(txtAnio, "Ingrese solo letras");
+                errorProvider1.SetError(txtAnio, "Ingrese solo números");
             }
         }
 

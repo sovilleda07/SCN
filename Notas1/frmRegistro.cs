@@ -264,7 +264,12 @@ namespace Notas1
                     // hacemos referencia a él.
                     dgvRegistro.DataSource = Registro.GetDataViewRegistro(this.codigoClase, this.codigoPeriodo);
                     toolStripGuardar.Enabled = false;
-                    toolStripActualizar.Enabled = true; 
+                    toolStripActualizar.Enabled = true;
+                    dgvRegistro.Columns[0].Visible = false;
+                    dgvRegistro.Columns[6].Visible = false;
+                    dgvRegistro.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    dgvRegistro.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    dgvRegistro.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 }
                 catch (Exception ex)
                 {

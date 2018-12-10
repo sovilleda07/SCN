@@ -43,6 +43,7 @@ namespace Notas1
             try
             {
                 dgvPeriodos.DataSource = Periodos.GetDataView();
+                dgvPeriodos.Columns[0].Visible = false;
             }
             catch (Exception ex)
             {

@@ -48,6 +48,7 @@ namespace Notas1
             try
             {
                 dgvAlumnos.DataSource = Alumnos.GetDataViewAlumnoCarrera(descripcionCarrera);
+                dgvAlumnos.Columns[0].Visible = false;
                 //dgvAlumnos.Columns[2].AutoSizeMode= DataGridViewAutoSizeColumnMode.Fill ;
             }
             catch (Exception ex)
