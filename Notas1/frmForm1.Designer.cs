@@ -41,20 +41,20 @@
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnAlumnos = new System.Windows.Forms.Button();
-            this.btnPeriodos = new System.Windows.Forms.Button();
             this.btnMatricula = new System.Windows.Forms.Button();
-            this.btnClase = new System.Windows.Forms.Button();
             this.btnCalificaciones = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
+            this.btnClase = new System.Windows.Forms.Button();
+            this.btnPeriodos = new System.Windows.Forms.Button();
+            this.btnAlumnos = new System.Windows.Forms.Button();
+            this.btnCarreras = new System.Windows.Forms.Button();
             this.panelBarraTitulo = new System.Windows.Forms.Panel();
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnCarreras = new System.Windows.Forms.Button();
             this.panelContenedor.SuspendLayout();
             this.panelFormuarios.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -201,10 +201,10 @@
             this.tableLayoutPanel1.Controls.Add(this.btnCalificaciones, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.button8, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.btnUsuarios, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.btnClase, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.btnPeriodos, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.btnAlumnos, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnCarreras, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnClase, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnPeriodos, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.btnAlumnos, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -221,44 +221,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 451);
             this.tableLayoutPanel1.TabIndex = 1;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
-            // 
-            // btnAlumnos
-            // 
-            this.btnAlumnos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAlumnos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAlumnos.FlatAppearance.BorderSize = 0;
-            this.btnAlumnos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(81)))), ((int)(((byte)(9)))));
-            this.btnAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlumnos.Image = ((System.Drawing.Image)(resources.GetObject("btnAlumnos.Image")));
-            this.btnAlumnos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlumnos.Location = new System.Drawing.Point(3, 59);
-            this.btnAlumnos.Name = "btnAlumnos";
-            this.btnAlumnos.Size = new System.Drawing.Size(194, 50);
-            this.btnAlumnos.TabIndex = 0;
-            this.btnAlumnos.Text = "                   ALUMNOS";
-            this.btnAlumnos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlumnos.UseVisualStyleBackColor = true;
-            this.btnAlumnos.Click += new System.EventHandler(this.btnAlumnos_Click);
-            // 
-            // btnPeriodos
-            // 
-            this.btnPeriodos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPeriodos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnPeriodos.FlatAppearance.BorderSize = 0;
-            this.btnPeriodos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(81)))), ((int)(((byte)(9)))));
-            this.btnPeriodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPeriodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPeriodos.Image = global::Notas1.Properties.Resources.icons8_schedule_50;
-            this.btnPeriodos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPeriodos.Location = new System.Drawing.Point(3, 115);
-            this.btnPeriodos.Name = "btnPeriodos";
-            this.btnPeriodos.Size = new System.Drawing.Size(194, 50);
-            this.btnPeriodos.TabIndex = 3;
-            this.btnPeriodos.Text = "                  PERIODOS";
-            this.btnPeriodos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPeriodos.UseVisualStyleBackColor = true;
-            this.btnPeriodos.Click += new System.EventHandler(this.btnPeriodos_Click);
             // 
             // btnMatricula
             // 
@@ -278,25 +240,6 @@
             this.btnMatricula.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMatricula.UseVisualStyleBackColor = true;
             this.btnMatricula.Click += new System.EventHandler(this.btnMatricula_Click);
-            // 
-            // btnClase
-            // 
-            this.btnClase.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClase.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnClase.FlatAppearance.BorderSize = 0;
-            this.btnClase.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(81)))), ((int)(((byte)(9)))));
-            this.btnClase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClase.Image = global::Notas1.Properties.Resources.icons8_training_50;
-            this.btnClase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClase.Location = new System.Drawing.Point(3, 171);
-            this.btnClase.Name = "btnClase";
-            this.btnClase.Size = new System.Drawing.Size(194, 50);
-            this.btnClase.TabIndex = 5;
-            this.btnClase.Text = "                  CLASES";
-            this.btnClase.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClase.UseVisualStyleBackColor = true;
-            this.btnClase.Click += new System.EventHandler(this.btnClase_Click);
             // 
             // btnCalificaciones
             // 
@@ -354,6 +297,82 @@
             this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsuarios.UseVisualStyleBackColor = true;
             this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
+            // 
+            // btnClase
+            // 
+            this.btnClase.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClase.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnClase.FlatAppearance.BorderSize = 0;
+            this.btnClase.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(81)))), ((int)(((byte)(9)))));
+            this.btnClase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClase.Image = global::Notas1.Properties.Resources.icons8_training_50;
+            this.btnClase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClase.Location = new System.Drawing.Point(3, 59);
+            this.btnClase.Name = "btnClase";
+            this.btnClase.Size = new System.Drawing.Size(194, 50);
+            this.btnClase.TabIndex = 5;
+            this.btnClase.Text = "                  CLASES";
+            this.btnClase.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClase.UseVisualStyleBackColor = true;
+            this.btnClase.Click += new System.EventHandler(this.btnClase_Click);
+            // 
+            // btnPeriodos
+            // 
+            this.btnPeriodos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPeriodos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPeriodos.FlatAppearance.BorderSize = 0;
+            this.btnPeriodos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(81)))), ((int)(((byte)(9)))));
+            this.btnPeriodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPeriodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPeriodos.Image = global::Notas1.Properties.Resources.icons8_schedule_50;
+            this.btnPeriodos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPeriodos.Location = new System.Drawing.Point(3, 171);
+            this.btnPeriodos.Name = "btnPeriodos";
+            this.btnPeriodos.Size = new System.Drawing.Size(194, 50);
+            this.btnPeriodos.TabIndex = 3;
+            this.btnPeriodos.Text = "                  PERIODOS";
+            this.btnPeriodos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPeriodos.UseVisualStyleBackColor = true;
+            this.btnPeriodos.Click += new System.EventHandler(this.btnPeriodos_Click);
+            // 
+            // btnAlumnos
+            // 
+            this.btnAlumnos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlumnos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAlumnos.FlatAppearance.BorderSize = 0;
+            this.btnAlumnos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(81)))), ((int)(((byte)(9)))));
+            this.btnAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlumnos.Image = ((System.Drawing.Image)(resources.GetObject("btnAlumnos.Image")));
+            this.btnAlumnos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAlumnos.Location = new System.Drawing.Point(3, 115);
+            this.btnAlumnos.Name = "btnAlumnos";
+            this.btnAlumnos.Size = new System.Drawing.Size(194, 50);
+            this.btnAlumnos.TabIndex = 0;
+            this.btnAlumnos.Text = "                   ALUMNOS";
+            this.btnAlumnos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAlumnos.UseVisualStyleBackColor = true;
+            this.btnAlumnos.Click += new System.EventHandler(this.btnAlumnos_Click);
+            // 
+            // btnCarreras
+            // 
+            this.btnCarreras.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCarreras.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCarreras.FlatAppearance.BorderSize = 0;
+            this.btnCarreras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(81)))), ((int)(((byte)(9)))));
+            this.btnCarreras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCarreras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCarreras.Image = global::Notas1.Properties.Resources.icons8_maintenance_50;
+            this.btnCarreras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCarreras.Location = new System.Drawing.Point(3, 3);
+            this.btnCarreras.Name = "btnCarreras";
+            this.btnCarreras.Size = new System.Drawing.Size(194, 50);
+            this.btnCarreras.TabIndex = 4;
+            this.btnCarreras.Text = "                  CARRERAS";
+            this.btnCarreras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCarreras.UseVisualStyleBackColor = true;
+            this.btnCarreras.Click += new System.EventHandler(this.btnCarreras_Click);
             // 
             // panelBarraTitulo
             // 
@@ -425,25 +444,6 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // btnCarreras
-            // 
-            this.btnCarreras.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCarreras.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCarreras.FlatAppearance.BorderSize = 0;
-            this.btnCarreras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(81)))), ((int)(((byte)(9)))));
-            this.btnCarreras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCarreras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCarreras.Image = global::Notas1.Properties.Resources.icons8_maintenance_50;
-            this.btnCarreras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCarreras.Location = new System.Drawing.Point(3, 3);
-            this.btnCarreras.Name = "btnCarreras";
-            this.btnCarreras.Size = new System.Drawing.Size(194, 50);
-            this.btnCarreras.TabIndex = 4;
-            this.btnCarreras.Text = "                  CARRERAS";
-            this.btnCarreras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCarreras.UseVisualStyleBackColor = true;
-            this.btnCarreras.Click += new System.EventHandler(this.btnCarreras_Click);
             // 
             // MenuFondo
             // 
