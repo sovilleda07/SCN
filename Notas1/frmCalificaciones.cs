@@ -439,6 +439,9 @@ namespace Notas1
 
         }
 
-        
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
