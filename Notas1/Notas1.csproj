@@ -164,10 +164,16 @@
     <Compile Include="frmPeriodos.Designer.cs">
       <DependentUpon>frmPeriodos.cs</DependentUpon>
     </Compile>
-    <Compile Include="NotasDataSetCalificaciones.Designer.cs">
+    <Compile Include="MostarReporteCalificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostarReporteCalificaciones.Designer.cs">
+      <DependentUpon>MostarReporteCalificaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotasDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>NotasDataSetCalificaciones.xsd</DependentUpon>
+      <DependentUpon>NotasDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -182,12 +188,6 @@
     </Compile>
     <Compile Include="frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="RPTCalificaciones.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RPTCalificaciones.Designer.cs">
-      <DependentUpon>RPTCalificaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -235,6 +235,9 @@
     <EmbeddedResource Include="frmPeriodos.resx">
       <DependentUpon>frmPeriodos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MostarReporteCalificaciones.resx">
+      <DependentUpon>MostarReporteCalificaciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -252,19 +255,17 @@
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
-    <EmbeddedResource Include="RPTCalificaciones.resx">
-      <DependentUpon>RPTCalificaciones.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include="NotasDataSetCalificaciones.xsc">
-      <DependentUpon>NotasDataSetCalificaciones.xsd</DependentUpon>
+    <EmbeddedResource Include="ReporteCali.rdlc" />
+    <None Include="NotasDataSet1.xsc">
+      <DependentUpon>NotasDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="NotasDataSetCalificaciones.xsd">
+    <None Include="NotasDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>NotasDataSetCalificaciones.Designer.cs</LastGenOutput>
+      <LastGenOutput>NotasDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="NotasDataSetCalificaciones.xss">
-      <DependentUpon>NotasDataSetCalificaciones.xsd</DependentUpon>
+    <None Include="NotasDataSet1.xss">
+      <DependentUpon>NotasDataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -393,6 +394,7 @@
     <Content Include="SQL\sp_Clases.sql" />
     <Content Include="SQL\sp_Periodos.sql" />
     <Content Include="SQL\sp_Registro.sql" />
+    <Content Include="SQL\sp_Reportes.sql" />
     <None Include="Resources\icons8-about-48.png" />
     <None Include="Resources\icons8-about-24.png" />
     <None Include="Resources\icons8-contacts-32.png" />

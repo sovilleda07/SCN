@@ -31,31 +31,22 @@
             this.panelBarraTitulo = new System.Windows.Forms.Panel();
             this.lblcalificaciones = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Clase = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripAlumno = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripClase = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripPDF = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripImprimir = new System.Windows.Forms.ToolStripButton();
+            this.txtClase = new System.Windows.Forms.TextBox();
+            this.txtPeriodo = new System.Windows.Forms.TextBox();
+            this.txtAnio = new System.Windows.Forms.TextBox();
+            this.lblClase = new System.Windows.Forms.Label();
+            this.lblPeriodo = new System.Windows.Forms.Label();
+            this.lblAnio = new System.Windows.Forms.Label();
+            this.toolStripGenerar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSalir = new System.Windows.Forms.ToolStripButton();
+            this.btnPeriodo = new System.Windows.Forms.Button();
+            this.btnClase = new System.Windows.Forms.Button();
             this.panelBarraTitulo.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -84,10 +75,8 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 80);
@@ -98,116 +87,45 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 370);
             this.tableLayoutPanel1.TabIndex = 29;
             // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.pictureBox1, 0, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(403, 3);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 324F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 324F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 324F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 324F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 324F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 324F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(394, 324);
-            this.tableLayoutPanel3.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Notas1.Properties.Resources.Imagen1;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(388, 318);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.dataGridView1, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(394, 324);
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 324F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 324F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(794, 324);
             this.tableLayoutPanel2.TabIndex = 2;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre,
-            this.Clase,
-            this.Nota});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 53);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(388, 308);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Clase
-            // 
-            this.Clase.HeaderText = "Clase";
-            this.Clase.Name = "Clase";
-            // 
-            // Nota
-            // 
-            this.Nota.HeaderText = "Nota";
-            this.Nota.Name = "Nota";
             // 
             // tableLayoutPanel4
             // 
-            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnCount = 3;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel4.Controls.Add(this.comboBox1, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.button1, 1, 0);
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 328F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 269F));
+            this.tableLayoutPanel4.Controls.Add(this.txtAnio, 1, 3);
+            this.tableLayoutPanel4.Controls.Add(this.btnPeriodo, 2, 3);
+            this.tableLayoutPanel4.Controls.Add(this.lblAnio, 0, 3);
+            this.tableLayoutPanel4.Controls.Add(this.txtPeriodo, 1, 2);
+            this.tableLayoutPanel4.Controls.Add(this.lblPeriodo, 0, 2);
+            this.tableLayoutPanel4.Controls.Add(this.btnClase, 2, 1);
+            this.tableLayoutPanel4.Controls.Add(this.txtClase, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.lblClase, 0, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowCount = 5;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(388, 44);
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 75F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(788, 318);
             this.tableLayoutPanel4.TabIndex = 1;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(3, 3);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(332, 21);
-            this.comboBox1.TabIndex = 32;
-            // 
-            // button1
-            // 
-            this.button1.Image = global::Notas1.Properties.Resources.search_icon24;
-            this.button1.Location = new System.Drawing.Point(341, 3);
-            this.button1.MaximumSize = new System.Drawing.Size(38, 32);
-            this.button1.MinimumSize = new System.Drawing.Size(38, 32);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(38, 32);
-            this.button1.TabIndex = 31;
-            this.button1.TabStop = false;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button1.UseMnemonic = false;
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // toolStrip1
             // 
@@ -215,13 +133,7 @@
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripAlumno,
-            this.toolStripSeparator2,
-            this.toolStripClase,
-            this.toolStripSeparator1,
-            this.toolStripPDF,
-            this.toolStripSeparator3,
-            this.toolStripImprimir,
+            this.toolStripGenerar,
             this.toolStripSalir});
             this.toolStrip1.Location = new System.Drawing.Point(0, 411);
             this.toolStrip1.Name = "toolStrip1";
@@ -229,64 +141,91 @@
             this.toolStrip1.TabIndex = 30;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripAlumno
+            // txtClase
             // 
-            this.toolStripAlumno.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
-            this.toolStripAlumno.Image = global::Notas1.Properties.Resources.icons8_contacts_32;
-            this.toolStripAlumno.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripAlumno.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripAlumno.Name = "toolStripAlumno";
-            this.toolStripAlumno.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
-            this.toolStripAlumno.Size = new System.Drawing.Size(114, 36);
-            this.toolStripAlumno.Text = "Alumno";
+            this.txtClase.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtClase.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtClase.Enabled = false;
+            this.txtClase.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClase.Location = new System.Drawing.Point(194, 66);
+            this.txtClase.Multiline = true;
+            this.txtClase.Name = "txtClase";
+            this.txtClase.Size = new System.Drawing.Size(322, 26);
+            this.txtClase.TabIndex = 32;
+            this.txtClase.Tag = "";
             // 
-            // toolStripSeparator2
+            // txtPeriodo
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 39);
+            this.txtPeriodo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPeriodo.Enabled = false;
+            this.txtPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPeriodo.Location = new System.Drawing.Point(194, 136);
+            this.txtPeriodo.Multiline = true;
+            this.txtPeriodo.Name = "txtPeriodo";
+            this.txtPeriodo.Size = new System.Drawing.Size(322, 26);
+            this.txtPeriodo.TabIndex = 34;
             // 
-            // toolStripClase
+            // txtAnio
             // 
-            this.toolStripClase.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
-            this.toolStripClase.Image = global::Notas1.Properties.Resources.icons8_training_32__1_;
-            this.toolStripClase.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripClase.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripClase.Name = "toolStripClase";
-            this.toolStripClase.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
-            this.toolStripClase.Size = new System.Drawing.Size(96, 36);
-            this.toolStripClase.Text = "Clase";
+            this.txtAnio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAnio.Enabled = false;
+            this.txtAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnio.Location = new System.Drawing.Point(194, 211);
+            this.txtAnio.Multiline = true;
+            this.txtAnio.Name = "txtAnio";
+            this.txtAnio.Size = new System.Drawing.Size(322, 26);
+            this.txtAnio.TabIndex = 36;
             // 
-            // toolStripSeparator1
+            // lblClase
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
+            this.lblClase.AutoSize = true;
+            this.lblClase.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClase.Location = new System.Drawing.Point(15, 63);
+            this.lblClase.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
+            this.lblClase.Name = "lblClase";
+            this.lblClase.Size = new System.Drawing.Size(54, 20);
+            this.lblClase.TabIndex = 37;
+            this.lblClase.Text = "Clase";
+            this.lblClase.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // toolStripPDF
+            // lblPeriodo
             // 
-            this.toolStripPDF.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
-            this.toolStripPDF.Image = global::Notas1.Properties.Resources.icons8_pdf_32;
-            this.toolStripPDF.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripPDF.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripPDF.Name = "toolStripPDF";
-            this.toolStripPDF.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
-            this.toolStripPDF.Size = new System.Drawing.Size(87, 36);
-            this.toolStripPDF.Text = "PDF";
+            this.lblPeriodo.AutoSize = true;
+            this.lblPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPeriodo.Location = new System.Drawing.Point(15, 133);
+            this.lblPeriodo.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
+            this.lblPeriodo.Name = "lblPeriodo";
+            this.lblPeriodo.Size = new System.Drawing.Size(70, 20);
+            this.lblPeriodo.TabIndex = 38;
+            this.lblPeriodo.Text = "Periodo";
+            this.lblPeriodo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // toolStripSeparator3
+            // lblAnio
             // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 39);
+            this.lblAnio.AutoSize = true;
+            this.lblAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnio.Location = new System.Drawing.Point(15, 208);
+            this.lblAnio.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
+            this.lblAnio.Name = "lblAnio";
+            this.lblAnio.Size = new System.Drawing.Size(41, 20);
+            this.lblAnio.TabIndex = 39;
+            this.lblAnio.Text = "Año";
+            this.lblAnio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // toolStripImprimir
+            // toolStripGenerar
             // 
-            this.toolStripImprimir.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
-            this.toolStripImprimir.Image = global::Notas1.Properties.Resources.icons8_print_32;
-            this.toolStripImprimir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripImprimir.Name = "toolStripImprimir";
-            this.toolStripImprimir.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
-            this.toolStripImprimir.Size = new System.Drawing.Size(120, 36);
-            this.toolStripImprimir.Text = "Imprimir";
+            this.toolStripGenerar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
+            this.toolStripGenerar.Image = global::Notas1.Properties.Resources.icons8_print_32;
+            this.toolStripGenerar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripGenerar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripGenerar.Name = "toolStripGenerar";
+            this.toolStripGenerar.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
+            this.toolStripGenerar.Size = new System.Drawing.Size(115, 36);
+            this.toolStripGenerar.Text = "Generar";
+            this.toolStripGenerar.Click += new System.EventHandler(this.toolStripGenerar_Click);
             // 
             // toolStripSalir
             // 
@@ -299,6 +238,36 @@
             this.toolStripSalir.Size = new System.Drawing.Size(82, 36);
             this.toolStripSalir.Text = "Salir";
             this.toolStripSalir.Click += new System.EventHandler(this.toolStripSalir_Click);
+            // 
+            // btnPeriodo
+            // 
+            this.btnPeriodo.Image = global::Notas1.Properties.Resources.search_icon24;
+            this.btnPeriodo.Location = new System.Drawing.Point(522, 211);
+            this.btnPeriodo.MaximumSize = new System.Drawing.Size(38, 32);
+            this.btnPeriodo.MinimumSize = new System.Drawing.Size(38, 32);
+            this.btnPeriodo.Name = "btnPeriodo";
+            this.btnPeriodo.Size = new System.Drawing.Size(38, 32);
+            this.btnPeriodo.TabIndex = 35;
+            this.btnPeriodo.TabStop = false;
+            this.btnPeriodo.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnPeriodo.UseMnemonic = false;
+            this.btnPeriodo.UseVisualStyleBackColor = true;
+            this.btnPeriodo.Click += new System.EventHandler(this.btnPeriodo_Click);
+            // 
+            // btnClase
+            // 
+            this.btnClase.Image = global::Notas1.Properties.Resources.search_icon24;
+            this.btnClase.Location = new System.Drawing.Point(522, 66);
+            this.btnClase.MaximumSize = new System.Drawing.Size(38, 32);
+            this.btnClase.MinimumSize = new System.Drawing.Size(38, 32);
+            this.btnClase.Name = "btnClase";
+            this.btnClase.Size = new System.Drawing.Size(38, 32);
+            this.btnClase.TabIndex = 33;
+            this.btnClase.TabStop = false;
+            this.btnClase.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnClase.UseMnemonic = false;
+            this.btnClase.UseVisualStyleBackColor = true;
+            this.btnClase.Click += new System.EventHandler(this.btnClase_Click);
             // 
             // frmReportes
             // 
@@ -313,11 +282,9 @@
             this.Text = "Reportes";
             this.panelBarraTitulo.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -329,25 +296,19 @@
 
         private System.Windows.Forms.Panel panelBarraTitulo;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblcalificaciones;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Clase;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nota;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripAlumno;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton toolStripClase;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton toolStripPDF;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripButton toolStripImprimir;
+        private System.Windows.Forms.ToolStripButton toolStripGenerar;
         private System.Windows.Forms.ToolStripButton toolStripSalir;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtClase;
+        private System.Windows.Forms.Button btnClase;
+        private System.Windows.Forms.TextBox txtPeriodo;
+        private System.Windows.Forms.Button btnPeriodo;
+        private System.Windows.Forms.TextBox txtAnio;
+        private System.Windows.Forms.Label lblClase;
+        private System.Windows.Forms.Label lblPeriodo;
+        private System.Windows.Forms.Label lblAnio;
     }
 }

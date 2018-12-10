@@ -20,17 +20,17 @@ namespace Notas1 {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("NotasDataSetCalificaciones")]
+    [global::System.Xml.Serialization.XmlRootAttribute("NotasDataSet1")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class NotasDataSetCalificaciones : global::System.Data.DataSet {
+    public partial class NotasDataSet1 : global::System.Data.DataSet {
         
-        private VCalificacionesDataTable tableVCalificaciones;
+        private sp_ReporteCalificacionesDataTable tablesp_ReporteCalificaciones;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public NotasDataSetCalificaciones() {
+        public NotasDataSet1() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Notas1 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected NotasDataSetCalificaciones(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected NotasDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Notas1 {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["VCalificaciones"] != null)) {
-                    base.Tables.Add(new VCalificacionesDataTable(ds.Tables["VCalificaciones"]));
+                if ((ds.Tables["sp_ReporteCalificaciones"] != null)) {
+                    base.Tables.Add(new sp_ReporteCalificacionesDataTable(ds.Tables["sp_ReporteCalificaciones"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Notas1 {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public VCalificacionesDataTable VCalificaciones {
+        public sp_ReporteCalificacionesDataTable sp_ReporteCalificaciones {
             get {
-                return this.tableVCalificaciones;
+                return this.tablesp_ReporteCalificaciones;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Notas1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            NotasDataSetCalificaciones cln = ((NotasDataSetCalificaciones)(base.Clone()));
+            NotasDataSet1 cln = ((NotasDataSet1)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Notas1 {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["VCalificaciones"] != null)) {
-                    base.Tables.Add(new VCalificacionesDataTable(ds.Tables["VCalificaciones"]));
+                if ((ds.Tables["sp_ReporteCalificaciones"] != null)) {
+                    base.Tables.Add(new sp_ReporteCalificacionesDataTable(ds.Tables["sp_ReporteCalificaciones"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Notas1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableVCalificaciones = ((VCalificacionesDataTable)(base.Tables["VCalificaciones"]));
+            this.tablesp_ReporteCalificaciones = ((sp_ReporteCalificacionesDataTable)(base.Tables["sp_ReporteCalificaciones"]));
             if ((initTable == true)) {
-                if ((this.tableVCalificaciones != null)) {
-                    this.tableVCalificaciones.InitVars();
+                if ((this.tablesp_ReporteCalificaciones != null)) {
+                    this.tablesp_ReporteCalificaciones.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Notas1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "NotasDataSetCalificaciones";
+            this.DataSetName = "NotasDataSet1";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/NotasDataSetCalificaciones.xsd";
+            this.Namespace = "http://tempuri.org/NotasDataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableVCalificaciones = new VCalificacionesDataTable();
-            base.Tables.Add(this.tableVCalificaciones);
+            this.tablesp_ReporteCalificaciones = new sp_ReporteCalificacionesDataTable();
+            base.Tables.Add(this.tablesp_ReporteCalificaciones);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeVCalificaciones() {
+        private bool ShouldSerializesp_ReporteCalificaciones() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Notas1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            NotasDataSetCalificaciones ds = new NotasDataSetCalificaciones();
+            NotasDataSet1 ds = new NotasDataSet1();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,18 +270,14 @@ namespace Notas1 {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void VCalificacionesRowChangeEventHandler(object sender, VCalificacionesRowChangeEvent e);
+        public delegate void sp_ReporteCalificacionesRowChangeEventHandler(object sender, sp_ReporteCalificacionesRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class VCalificacionesDataTable : global::System.Data.TypedTableBase<VCalificacionesRow> {
-            
-            private global::System.Data.DataColumn columnnombres;
-            
-            private global::System.Data.DataColumn columnapellidos;
+        public partial class sp_ReporteCalificacionesDataTable : global::System.Data.TypedTableBase<sp_ReporteCalificacionesRow> {
             
             private global::System.Data.DataColumn columnnota1;
             
@@ -291,10 +287,24 @@ namespace Notas1 {
             
             private global::System.Data.DataColumn columnpromedio;
             
+            private global::System.Data.DataColumn columnnombres;
+            
+            private global::System.Data.DataColumn columnapellidos;
+            
+            private global::System.Data.DataColumn columnnombre;
+            
+            private global::System.Data.DataColumn columndescripcion;
+            
+            private global::System.Data.DataColumn columnanio;
+            
+            private global::System.Data.DataColumn columnColumn1;
+            
+            private global::System.Data.DataColumn columnColumn2;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public VCalificacionesDataTable() {
-                this.TableName = "VCalificaciones";
+            public sp_ReporteCalificacionesDataTable() {
+                this.TableName = "sp_ReporteCalificaciones";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -302,7 +312,7 @@ namespace Notas1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal VCalificacionesDataTable(global::System.Data.DataTable table) {
+            internal sp_ReporteCalificacionesDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -319,25 +329,9 @@ namespace Notas1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected VCalificacionesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected sp_ReporteCalificacionesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn nombresColumn {
-                get {
-                    return this.columnnombres;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn apellidosColumn {
-                get {
-                    return this.columnapellidos;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -374,6 +368,62 @@ namespace Notas1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn nombresColumn {
+                get {
+                    return this.columnnombres;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn apellidosColumn {
+                get {
+                    return this.columnapellidos;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn nombreColumn {
+                get {
+                    return this.columnnombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn descripcionColumn {
+                get {
+                    return this.columndescripcion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn anioColumn {
+                get {
+                    return this.columnanio;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Column1Column {
+                get {
+                    return this.columnColumn1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Column2Column {
+                get {
+                    return this.columnColumn2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -383,50 +433,55 @@ namespace Notas1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public VCalificacionesRow this[int index] {
+            public sp_ReporteCalificacionesRow this[int index] {
                 get {
-                    return ((VCalificacionesRow)(this.Rows[index]));
+                    return ((sp_ReporteCalificacionesRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event VCalificacionesRowChangeEventHandler VCalificacionesRowChanging;
+            public event sp_ReporteCalificacionesRowChangeEventHandler sp_ReporteCalificacionesRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event VCalificacionesRowChangeEventHandler VCalificacionesRowChanged;
+            public event sp_ReporteCalificacionesRowChangeEventHandler sp_ReporteCalificacionesRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event VCalificacionesRowChangeEventHandler VCalificacionesRowDeleting;
+            public event sp_ReporteCalificacionesRowChangeEventHandler sp_ReporteCalificacionesRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event VCalificacionesRowChangeEventHandler VCalificacionesRowDeleted;
+            public event sp_ReporteCalificacionesRowChangeEventHandler sp_ReporteCalificacionesRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddVCalificacionesRow(VCalificacionesRow row) {
+            public void Addsp_ReporteCalificacionesRow(sp_ReporteCalificacionesRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public VCalificacionesRow AddVCalificacionesRow(string nombres, string apellidos, decimal nota1, decimal nota2, decimal nota3, decimal promedio) {
-                VCalificacionesRow rowVCalificacionesRow = ((VCalificacionesRow)(this.NewRow()));
+            public sp_ReporteCalificacionesRow Addsp_ReporteCalificacionesRow(decimal nota1, decimal nota2, decimal nota3, decimal promedio, string nombres, string apellidos, string nombre, string descripcion, string anio, int Column1, int Column2) {
+                sp_ReporteCalificacionesRow rowsp_ReporteCalificacionesRow = ((sp_ReporteCalificacionesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        nombres,
-                        apellidos,
                         nota1,
                         nota2,
                         nota3,
-                        promedio};
-                rowVCalificacionesRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowVCalificacionesRow);
-                return rowVCalificacionesRow;
+                        promedio,
+                        nombres,
+                        apellidos,
+                        nombre,
+                        descripcion,
+                        anio,
+                        Column1,
+                        Column2};
+                rowsp_ReporteCalificacionesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowsp_ReporteCalificacionesRow);
+                return rowsp_ReporteCalificacionesRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                VCalificacionesDataTable cln = ((VCalificacionesDataTable)(base.Clone()));
+                sp_ReporteCalificacionesDataTable cln = ((sp_ReporteCalificacionesDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -434,27 +489,28 @@ namespace Notas1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new VCalificacionesDataTable();
+                return new sp_ReporteCalificacionesDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnnombres = base.Columns["nombres"];
-                this.columnapellidos = base.Columns["apellidos"];
                 this.columnnota1 = base.Columns["nota1"];
                 this.columnnota2 = base.Columns["nota2"];
                 this.columnnota3 = base.Columns["nota3"];
                 this.columnpromedio = base.Columns["promedio"];
+                this.columnnombres = base.Columns["nombres"];
+                this.columnapellidos = base.Columns["apellidos"];
+                this.columnnombre = base.Columns["nombre"];
+                this.columndescripcion = base.Columns["descripcion"];
+                this.columnanio = base.Columns["anio"];
+                this.columnColumn1 = base.Columns["Column1"];
+                this.columnColumn2 = base.Columns["Column2"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnnombres = new global::System.Data.DataColumn("nombres", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnombres);
-                this.columnapellidos = new global::System.Data.DataColumn("apellidos", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnapellidos);
                 this.columnnota1 = new global::System.Data.DataColumn("nota1", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnota1);
                 this.columnnota2 = new global::System.Data.DataColumn("nota2", typeof(decimal), null, global::System.Data.MappingType.Element);
@@ -463,40 +519,58 @@ namespace Notas1 {
                 base.Columns.Add(this.columnnota3);
                 this.columnpromedio = new global::System.Data.DataColumn("promedio", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpromedio);
+                this.columnnombres = new global::System.Data.DataColumn("nombres", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombres);
+                this.columnapellidos = new global::System.Data.DataColumn("apellidos", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnapellidos);
+                this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombre);
+                this.columndescripcion = new global::System.Data.DataColumn("descripcion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndescripcion);
+                this.columnanio = new global::System.Data.DataColumn("anio", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnanio);
+                this.columnColumn1 = new global::System.Data.DataColumn("Column1", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnColumn1);
+                this.columnColumn2 = new global::System.Data.DataColumn("Column2", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnColumn2);
                 this.columnnombres.AllowDBNull = false;
                 this.columnnombres.MaxLength = 45;
                 this.columnapellidos.AllowDBNull = false;
                 this.columnapellidos.MaxLength = 45;
-                this.columnnota1.AllowDBNull = false;
-                this.columnnota2.AllowDBNull = false;
-                this.columnnota3.AllowDBNull = false;
-                this.columnpromedio.AllowDBNull = false;
+                this.columnnombre.AllowDBNull = false;
+                this.columnnombre.MaxLength = 45;
+                this.columndescripcion.AllowDBNull = false;
+                this.columndescripcion.MaxLength = 20;
+                this.columnanio.AllowDBNull = false;
+                this.columnanio.MaxLength = 5;
+                this.columnColumn1.ReadOnly = true;
+                this.columnColumn2.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public VCalificacionesRow NewVCalificacionesRow() {
-                return ((VCalificacionesRow)(this.NewRow()));
+            public sp_ReporteCalificacionesRow Newsp_ReporteCalificacionesRow() {
+                return ((sp_ReporteCalificacionesRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new VCalificacionesRow(builder);
+                return new sp_ReporteCalificacionesRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(VCalificacionesRow);
+                return typeof(sp_ReporteCalificacionesRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.VCalificacionesRowChanged != null)) {
-                    this.VCalificacionesRowChanged(this, new VCalificacionesRowChangeEvent(((VCalificacionesRow)(e.Row)), e.Action));
+                if ((this.sp_ReporteCalificacionesRowChanged != null)) {
+                    this.sp_ReporteCalificacionesRowChanged(this, new sp_ReporteCalificacionesRowChangeEvent(((sp_ReporteCalificacionesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -504,8 +578,8 @@ namespace Notas1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.VCalificacionesRowChanging != null)) {
-                    this.VCalificacionesRowChanging(this, new VCalificacionesRowChangeEvent(((VCalificacionesRow)(e.Row)), e.Action));
+                if ((this.sp_ReporteCalificacionesRowChanging != null)) {
+                    this.sp_ReporteCalificacionesRowChanging(this, new sp_ReporteCalificacionesRowChangeEvent(((sp_ReporteCalificacionesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -513,8 +587,8 @@ namespace Notas1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.VCalificacionesRowDeleted != null)) {
-                    this.VCalificacionesRowDeleted(this, new VCalificacionesRowChangeEvent(((VCalificacionesRow)(e.Row)), e.Action));
+                if ((this.sp_ReporteCalificacionesRowDeleted != null)) {
+                    this.sp_ReporteCalificacionesRowDeleted(this, new sp_ReporteCalificacionesRowChangeEvent(((sp_ReporteCalificacionesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -522,14 +596,14 @@ namespace Notas1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.VCalificacionesRowDeleting != null)) {
-                    this.VCalificacionesRowDeleting(this, new VCalificacionesRowChangeEvent(((VCalificacionesRow)(e.Row)), e.Action));
+                if ((this.sp_ReporteCalificacionesRowDeleting != null)) {
+                    this.sp_ReporteCalificacionesRowDeleting(this, new sp_ReporteCalificacionesRowChangeEvent(((sp_ReporteCalificacionesRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveVCalificacionesRow(VCalificacionesRow row) {
+            public void Removesp_ReporteCalificacionesRow(sp_ReporteCalificacionesRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -538,7 +612,7 @@ namespace Notas1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                NotasDataSetCalificaciones ds = new NotasDataSetCalificaciones();
+                NotasDataSet1 ds = new NotasDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -556,7 +630,7 @@ namespace Notas1 {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "VCalificacionesDataTable";
+                attribute2.FixedValue = "sp_ReporteCalificacionesDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -600,47 +674,30 @@ namespace Notas1 {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class VCalificacionesRow : global::System.Data.DataRow {
+        public partial class sp_ReporteCalificacionesRow : global::System.Data.DataRow {
             
-            private VCalificacionesDataTable tableVCalificaciones;
+            private sp_ReporteCalificacionesDataTable tablesp_ReporteCalificaciones;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal VCalificacionesRow(global::System.Data.DataRowBuilder rb) : 
+            internal sp_ReporteCalificacionesRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableVCalificaciones = ((VCalificacionesDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string nombres {
-                get {
-                    return ((string)(this[this.tableVCalificaciones.nombresColumn]));
-                }
-                set {
-                    this[this.tableVCalificaciones.nombresColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string apellidos {
-                get {
-                    return ((string)(this[this.tableVCalificaciones.apellidosColumn]));
-                }
-                set {
-                    this[this.tableVCalificaciones.apellidosColumn] = value;
-                }
+                this.tablesp_ReporteCalificaciones = ((sp_ReporteCalificacionesDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public decimal nota1 {
                 get {
-                    return ((decimal)(this[this.tableVCalificaciones.nota1Column]));
+                    try {
+                        return ((decimal)(this[this.tablesp_ReporteCalificaciones.nota1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nota1\' de la tabla \'sp_ReporteCalificaciones\' es DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableVCalificaciones.nota1Column] = value;
+                    this[this.tablesp_ReporteCalificaciones.nota1Column] = value;
                 }
             }
             
@@ -648,10 +705,15 @@ namespace Notas1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public decimal nota2 {
                 get {
-                    return ((decimal)(this[this.tableVCalificaciones.nota2Column]));
+                    try {
+                        return ((decimal)(this[this.tablesp_ReporteCalificaciones.nota2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nota2\' de la tabla \'sp_ReporteCalificaciones\' es DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableVCalificaciones.nota2Column] = value;
+                    this[this.tablesp_ReporteCalificaciones.nota2Column] = value;
                 }
             }
             
@@ -659,10 +721,15 @@ namespace Notas1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public decimal nota3 {
                 get {
-                    return ((decimal)(this[this.tableVCalificaciones.nota3Column]));
+                    try {
+                        return ((decimal)(this[this.tablesp_ReporteCalificaciones.nota3Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nota3\' de la tabla \'sp_ReporteCalificaciones\' es DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableVCalificaciones.nota3Column] = value;
+                    this[this.tablesp_ReporteCalificaciones.nota3Column] = value;
                 }
             }
             
@@ -670,11 +737,178 @@ namespace Notas1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public decimal promedio {
                 get {
-                    return ((decimal)(this[this.tableVCalificaciones.promedioColumn]));
+                    try {
+                        return ((decimal)(this[this.tablesp_ReporteCalificaciones.promedioColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'promedio\' de la tabla \'sp_ReporteCalificaciones\' es DBNul" +
+                                "l.", e);
+                    }
                 }
                 set {
-                    this[this.tableVCalificaciones.promedioColumn] = value;
+                    this[this.tablesp_ReporteCalificaciones.promedioColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string nombres {
+                get {
+                    return ((string)(this[this.tablesp_ReporteCalificaciones.nombresColumn]));
+                }
+                set {
+                    this[this.tablesp_ReporteCalificaciones.nombresColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string apellidos {
+                get {
+                    return ((string)(this[this.tablesp_ReporteCalificaciones.apellidosColumn]));
+                }
+                set {
+                    this[this.tablesp_ReporteCalificaciones.apellidosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string nombre {
+                get {
+                    return ((string)(this[this.tablesp_ReporteCalificaciones.nombreColumn]));
+                }
+                set {
+                    this[this.tablesp_ReporteCalificaciones.nombreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string descripcion {
+                get {
+                    return ((string)(this[this.tablesp_ReporteCalificaciones.descripcionColumn]));
+                }
+                set {
+                    this[this.tablesp_ReporteCalificaciones.descripcionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string anio {
+                get {
+                    return ((string)(this[this.tablesp_ReporteCalificaciones.anioColumn]));
+                }
+                set {
+                    this[this.tablesp_ReporteCalificaciones.anioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int Column1 {
+                get {
+                    try {
+                        return ((int)(this[this.tablesp_ReporteCalificaciones.Column1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Column1\' de la tabla \'sp_ReporteCalificaciones\' es DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_ReporteCalificaciones.Column1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int Column2 {
+                get {
+                    try {
+                        return ((int)(this[this.tablesp_ReporteCalificaciones.Column2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Column2\' de la tabla \'sp_ReporteCalificaciones\' es DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_ReporteCalificaciones.Column2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isnota1Null() {
+                return this.IsNull(this.tablesp_ReporteCalificaciones.nota1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setnota1Null() {
+                this[this.tablesp_ReporteCalificaciones.nota1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isnota2Null() {
+                return this.IsNull(this.tablesp_ReporteCalificaciones.nota2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setnota2Null() {
+                this[this.tablesp_ReporteCalificaciones.nota2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isnota3Null() {
+                return this.IsNull(this.tablesp_ReporteCalificaciones.nota3Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setnota3Null() {
+                this[this.tablesp_ReporteCalificaciones.nota3Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IspromedioNull() {
+                return this.IsNull(this.tablesp_ReporteCalificaciones.promedioColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetpromedioNull() {
+                this[this.tablesp_ReporteCalificaciones.promedioColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsColumn1Null() {
+                return this.IsNull(this.tablesp_ReporteCalificaciones.Column1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetColumn1Null() {
+                this[this.tablesp_ReporteCalificaciones.Column1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsColumn2Null() {
+                return this.IsNull(this.tablesp_ReporteCalificaciones.Column2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetColumn2Null() {
+                this[this.tablesp_ReporteCalificaciones.Column2Column] = global::System.Convert.DBNull;
             }
         }
         
@@ -682,22 +916,22 @@ namespace Notas1 {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class VCalificacionesRowChangeEvent : global::System.EventArgs {
+        public class sp_ReporteCalificacionesRowChangeEvent : global::System.EventArgs {
             
-            private VCalificacionesRow eventRow;
+            private sp_ReporteCalificacionesRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public VCalificacionesRowChangeEvent(VCalificacionesRow row, global::System.Data.DataRowAction action) {
+            public sp_ReporteCalificacionesRowChangeEvent(sp_ReporteCalificacionesRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public VCalificacionesRow Row {
+            public sp_ReporteCalificacionesRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -713,7 +947,7 @@ namespace Notas1 {
         }
     }
 }
-namespace Notas1.NotasDataSetCalificacionesTableAdapters {
+namespace Notas1.NotasDataSet1TableAdapters {
     
     
     /// <summary>
@@ -725,7 +959,7 @@ namespace Notas1.NotasDataSetCalificacionesTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class VCalificacionesTableAdapter : global::System.ComponentModel.Component {
+    public partial class sp_ReporteCalificacionesTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -739,7 +973,7 @@ namespace Notas1.NotasDataSetCalificacionesTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public VCalificacionesTableAdapter() {
+        public sp_ReporteCalificacionesTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -836,13 +1070,18 @@ namespace Notas1.NotasDataSetCalificacionesTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "VCalificaciones";
-            tableMapping.ColumnMappings.Add("nombres", "nombres");
-            tableMapping.ColumnMappings.Add("apellidos", "apellidos");
+            tableMapping.DataSetTable = "sp_ReporteCalificaciones";
             tableMapping.ColumnMappings.Add("nota1", "nota1");
             tableMapping.ColumnMappings.Add("nota2", "nota2");
             tableMapping.ColumnMappings.Add("nota3", "nota3");
             tableMapping.ColumnMappings.Add("promedio", "promedio");
+            tableMapping.ColumnMappings.Add("nombres", "nombres");
+            tableMapping.ColumnMappings.Add("apellidos", "apellidos");
+            tableMapping.ColumnMappings.Add("nombre", "nombre");
+            tableMapping.ColumnMappings.Add("descripcion", "descripcion");
+            tableMapping.ColumnMappings.Add("anio", "anio");
+            tableMapping.ColumnMappings.Add("Column1", "Column1");
+            tableMapping.ColumnMappings.Add("Column2", "Column2");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -859,17 +1098,31 @@ namespace Notas1.NotasDataSetCalificacionesTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT nombres, apellidos, nota1, nota2, nota3, promedio FROM SCN.VCalificaciones" +
-                "";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].CommandText = "dbo.sp_ReporteCalificaciones";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@clase", global::System.Data.SqlDbType.NVarChar, 45, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@periodo", global::System.Data.SqlDbType.NVarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(NotasDataSetCalificaciones.VCalificacionesDataTable dataTable) {
+        public virtual int Fill(NotasDataSet1.sp_ReporteCalificacionesDataTable dataTable, string clase, string periodo) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((clase == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(clase));
+            }
+            if ((periodo == null)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(periodo));
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -881,9 +1134,21 @@ namespace Notas1.NotasDataSetCalificacionesTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual NotasDataSetCalificaciones.VCalificacionesDataTable GetData() {
+        public virtual NotasDataSet1.sp_ReporteCalificacionesDataTable GetData(string clase, string periodo) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            NotasDataSetCalificaciones.VCalificacionesDataTable dataTable = new NotasDataSetCalificaciones.VCalificacionesDataTable();
+            if ((clase == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(clase));
+            }
+            if ((periodo == null)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(periodo));
+            }
+            NotasDataSet1.sp_ReporteCalificacionesDataTable dataTable = new NotasDataSet1.sp_ReporteCalificacionesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -957,7 +1222,7 @@ namespace Notas1.NotasDataSetCalificacionesTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(NotasDataSetCalificaciones dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(NotasDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -967,7 +1232,7 @@ namespace Notas1.NotasDataSetCalificacionesTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(NotasDataSetCalificaciones dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(NotasDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -977,7 +1242,7 @@ namespace Notas1.NotasDataSetCalificacionesTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(NotasDataSetCalificaciones dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(NotasDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1011,7 +1276,7 @@ namespace Notas1.NotasDataSetCalificacionesTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(NotasDataSetCalificaciones dataSet) {
+        public virtual int UpdateAll(NotasDataSet1 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
