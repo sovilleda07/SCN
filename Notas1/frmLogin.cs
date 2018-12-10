@@ -22,27 +22,27 @@ namespace Notas1
         private void btniniciar_Click(object sender, EventArgs e)
         {
 
-            this.Hide();
-            MenuFondo frm2 = new MenuFondo();
-            frm2.Show();
+            //this.Hide();
+            //MenuFondo frm2 = new MenuFondo();
+            //frm2.Show();
 
-            //if (ValidacionCampos())
-            //{
-            //    errorProvider1.Clear();
-            //    usuario.ObtenerUsuario(txtusuario.Text.Trim(), txtclave.Text.Trim());
-            //    if (usuario.usuario != txtusuario.Text.Trim() || usuario.clave != txtclave.Text.Trim())
-            //    {
-            //        errorProvider1.Clear();
-            //        errorProvider1.SetError(txtusuario, "El usuario '" + txtusuario.Text + "' no existe o la clave ingresada en incorrecta");
-            //        LimpiarFormulario();
-            //    }
-            //    else
-            //    {
-            //        this.Hide();
-            //        MenuFondo frm2 = new MenuFondo();
-            //        frm2.Show();
-            //    }
-            //}           
+            if (ValidacionCampos())
+            {
+                errorProvider1.Clear();
+                usuario.ObtenerUsuario(txtusuario.Text.Trim(), txtclave.Text.Trim());
+                if (usuario.usuario != txtusuario.Text.Trim() || usuario.clave != txtclave.Text.Trim())
+                {
+                    errorProvider1.Clear();
+                    errorProvider1.SetError(txtusuario, "El usuario '" + txtusuario.Text + "' no existe o la clave ingresada en incorrecta");
+                    LimpiarFormulario();
+                }
+                else
+                {
+                    this.Hide();
+                    MenuFondo frm2 = new MenuFondo();
+                    frm2.Show();
+                }
+            }
 
         }
 

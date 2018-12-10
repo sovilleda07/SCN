@@ -135,7 +135,7 @@
             // toolStripBuscar
             // 
             this.toolStripBuscar.Font = new System.Drawing.Font("Segoe UI", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
-            this.toolStripBuscar.Image = global::Notas1.Properties.Resources.icons8_broom_32;
+            this.toolStripBuscar.Image = global::Notas1.Properties.Resources.icons8_search_32;
             this.toolStripBuscar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBuscar.Name = "toolStripBuscar";
